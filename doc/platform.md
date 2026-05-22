@@ -4,6 +4,8 @@
 
 ## Diagrams
 
+**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
+
 | | | | | |
 |:---:|:---:|:---:|:---:|:---:|
 | ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
@@ -49,6 +51,7 @@
 
 | Concern | Owner in platform |
 |---------|-------------------|
+| Public homepage (hero, events, announcements) | Platform — see [Public homepage](public-homepage.md) |
 | Family accounts, students, enrollment | Platform |
 | Tuition / class payments | Platform (Stripe, Square, or similar) |
 | Yearly course catalog & master schedule | Admin |

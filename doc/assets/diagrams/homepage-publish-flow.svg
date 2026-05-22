@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" role="img" aria-label="Homepage publishing with permission">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+  <rect width="720" height="200" fill="#FFFFFF"/>
+  
+    <g transform="translate(50,55) scale(1)">
+      <rect x="5" y="22" width="22" height="22" rx="5" fill="#6B5CE7"/>
+      <circle cx="16" cy="12" r="9" fill="#F2C9A0"/>
+      <rect x="24" y="16" width="10" height="3" rx="1" fill="#fff"/>
+    </g>
+    <rect x="30" y="130" width="110" height="40" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#334155" x="85.0" y="150.0"><tspan x="85.0" dy="0">Has permission?</tspan></text>
+    
+    <line x1="140" y1="90" x2="200" y2="90" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+    
+    <rect x="200" y="70" width="120" height="50" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#334155" x="260.0" y="87.0"><tspan x="260.0" dy="0">Create event or</tspan><tspan x="260.0" dy="14">announcement</tspan></text>
+    
+    <line x1="320" y1="95" x2="400" y2="95" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+    
+    <rect x="400" y="70" width="120" height="50" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#334155" x="460.0" y="95.0"><tspan x="460.0" dy="0">Publish</tspan></text>
+    
+    <line x1="520" y1="95" x2="580" y2="95" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+    
+    <g transform="translate(580,45) scale(0.85)">
+      <rect x="4" y="18" width="28" height="20" rx="3" fill="#E8ECF2"/>
+      <polygon points="18,6 32,18 4,18" fill="#D45B5B"/>
+    </g>
+    <rect x="560" y="120" width="130" height="40" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#334155" x="625.0" y="132.0"><tspan x="625.0" dy="0">Shows on</tspan><tspan x="625.0" dy="14">homepage</tspan></text>
+    
+</svg>

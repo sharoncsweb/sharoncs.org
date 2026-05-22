@@ -387,6 +387,44 @@ def diagram_reschedule():
     return wrap("Reschedule one session", b)
 
 
+def diagram_homepage_layout():
+    b = (
+        box(40, 25, 640, 55, "Hero: headline, subtitle, Register / Sign in", "#EEF2FF", "#A5B4FC")
+        + box(40, 95, 300, 70, "Announcements", "#FEF3C7", "#FCD34D")
+        + box(380, 95, 300, 70, "Upcoming events", "#D1FAE5", "#6EE7B7")
+        + box(40, 180, 640, 15, "About, contact, quick links", "#F8FAFC", "#CBD5E1")
+        + char_school(600, 40, 0.7)
+    )
+    return wrap("Public homepage layout", b)
+
+
+def diagram_homepage_publish():
+    b = (
+        char_teacher(50, 55)
+        + box(30, 130, 110, 40, "Has permission?")
+        + arrow(140, 90, 200, 90)
+        + box(200, 70, 120, 50, "Create event or\\nannouncement")
+        + arrow(320, 95, 400, 95)
+        + box(400, 70, 120, 50, "Publish")
+        + arrow(520, 95, 580, 95)
+        + char_school(580, 45, 0.85)
+        + box(560, 120, 130, 40, "Shows on\\nhomepage")
+    )
+    return wrap("Homepage publishing with permission", b)
+
+
+def diagram_homepage_vs_portals():
+    b = (
+        box(40, 50, 200, 90, "Public homepage\\nNo login needed", "#EEF2FF", "#A5B4FC")
+        + arrow(240, 95, 320, 95)
+        + box(320, 50, 120, 50, "Sign in")
+        + arrow(440, 75, 500, 75)
+        + box(500, 35, 180, 80, "Parent / Student /\\nTeacher portals", "#ECFDF5", "#6EE7B7")
+        + char_parent(530, 120, 0.75)
+    )
+    return wrap("Public homepage vs authenticated portals", b)
+
+
 def diagram_vendor_collab():
     b = (
         char_school(60, 55)
@@ -449,6 +487,9 @@ ALL = {
     "platform-layers": diagram_platform_map,
     "platform-payment": diagram_cart_flow,
     "README-platform-map": diagram_platform_map,
+    "homepage-layout": diagram_homepage_layout,
+    "homepage-publish-flow": diagram_homepage_publish,
+    "homepage-vs-portals": diagram_homepage_vs_portals,
 }
 
 for name, fn in ALL.items():

@@ -33,6 +33,7 @@ Replace the aging public website with a modern, easy-to-use experience and add a
 
 | Area | Summary |
 |------|---------|
+| **Public site** | Professional homepage with hero, events, and announcements |
 | **Phase 1** | Parent portal, registration, family profiles, course enrollment, payment |
 | **Platform** | One school only (Sharon Chinese School); no SaaS / subscription to use the platform |
 | **Users** | Parents self-register; manage students; admins can assist when needed |
@@ -50,6 +51,7 @@ Replace the aging public website with a modern, easy-to-use experience and add a
 | Document | Description |
 |----------|-------------|
 | [Project overview](doc/overview.md) | Goals, stakeholders, legacy site, scope |
+| [Public homepage & landing page](doc/public-homepage.md) | Professional hero, events, announcements (permission-based) |
 | [Platform structure](doc/platform.md) | Single-tenant model, funding, high-level architecture |
 | [Glossary](doc/glossary.md) | Terms: Account, User, Student, Staff, TA, etc. |
 

@@ -9,6 +9,7 @@ This folder contains detailed requirements for each component of the Sharon Chin
 | Page | Topic |
 |------|--------|
 | [overview.md](overview.md) | Project goals, stakeholders, scope |
+| [public-homepage.md](public-homepage.md) | Public landing page, hero, events, announcements |
 | [glossary.md](glossary.md) | Term definitions |
 | [platform.md](platform.md) | Single-tenant platform model |
 | [accounts.md](accounts.md) | Account, user, student, enrollment |

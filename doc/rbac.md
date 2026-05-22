@@ -4,6 +4,8 @@
 
 ## Diagrams
 
+**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
+
 | | | | | |
 |:---:|:---:|:---:|:---:|:---:|
 | ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
@@ -71,6 +73,8 @@ Examples that must work without separate logins:
 | Grade assignments | — | — | Yes | Yes |
 | Post school-wide announcement | — | — | — | Yes |
 | Post class announcement | — | — | Yes | — |
+| Post homepage announcement/event | — | — | If granted | Yes |
+| Manage homepage content | — | — | — | Yes |
 | Manage master schedule | — | — | Limited | Yes |
 | Access payment data | Primary | — | — | Yes |
 
@@ -87,7 +91,20 @@ Examples that must work without separate logins:
 | REQ-RBAC-05 | TA permissions are **course-scoped**. | Confirmed |
 | REQ-RBAC-06 | Students restricted to own data. | Confirmed |
 
+## Homepage permissions
+
+Public site publishing is **not** tied to role name alone. Grant explicitly:
+
+- `homepage.post_announcement`
+- `homepage.post_event`
+- `homepage.publish`
+- `homepage.manage` (admin)
+
+See [Public homepage](public-homepage.md).
+
 ## Related documents
 
+- [Public homepage](public-homepage.md)
+- [Announcements](announcements.md)
 - [Accounts & enrollment](accounts.md)
 - [Glossary](glossary.md)

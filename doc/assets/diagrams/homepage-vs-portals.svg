@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" role="img" aria-label="Public homepage vs authenticated portals">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+  <rect width="720" height="200" fill="#FFFFFF"/>
+  
+    <rect x="40" y="50" width="200" height="90" rx="10" fill="#EEF2FF" stroke="#A5B4FC" stroke-width="1.5"/>
+    <text text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#334155" x="140.0" y="87.0"><tspan x="140.0" dy="0">Public homepage</tspan><tspan x="140.0" dy="14">No login needed</tspan></text>
+    
+    <line x1="240" y1="95" x2="320" y2="95" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+    
+    <rect x="320" y="50" width="120" height="50" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#334155" x="380.0" y="75.0"><tspan x="380.0" dy="0">Sign in</tspan></text>
+    
+    <line x1="440" y1="75" x2="500" y2="75" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+    
+    <rect x="500" y="35" width="180" height="80" rx="10" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="1.5"/>
+    <text text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#334155" x="590.0" y="67.0"><tspan x="590.0" dy="0">Parent / Student /</tspan><tspan x="590.0" dy="14">Teacher portals</tspan></text>
+    
+    <g transform="translate(530,120) scale(0.75)">
+      <rect x="6" y="22" width="20" height="22" rx="5" fill="#3D9B8A"/>
+      <circle cx="16" cy="12" r="9" fill="#F2C9A0"/>
+      <path d="M8 10 Q16 4 24 10" fill="#2C2C2C"/>
+    </g>
+</svg>

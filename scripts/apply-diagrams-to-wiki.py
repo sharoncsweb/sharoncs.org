@@ -4,7 +4,9 @@ import re
 from pathlib import Path
 
 DOC = Path(__file__).resolve().parent.parent / "doc"
-CAST = """| | | | | |
+CAST = """**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
+
+| | | | | |
 |:---:|:---:|:---:|:---:|:---:|
 | ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
 | Parent | Student | Teacher | Admin | School |
@@ -86,6 +88,11 @@ PAGE_DIAGRAMS = {
         ("Account, user, and student", "glossary-concepts.svg"),
         ("Four portals", "glossary-portals.svg"),
     ],
+    "public-homepage.md": [
+        ("Homepage layout", "homepage-layout.svg"),
+        ("Permission-based publishing", "homepage-publish-flow.svg"),
+        ("Public site vs logged-in portals", "homepage-vs-portals.svg"),
+    ],
     "vendor-qa.md": [
         ("School and vendor", "vendor-collaboration.svg"),
         ("Requirements timeline", "vendor-timeline.svg"),
@@ -132,18 +139,23 @@ rt = re.sub(
     count=1,
     flags=re.DOTALL,
 )
-rt = rt.replace(
-    "Each page includes **friendly diagrams** (Mermaid + emoji) for families, students (ages 7–13), and the vendor.",
-    "Each page includes **flat-design SVG diagrams** (English labels, simple characters) for the vendor and school team.",
+rt = re.sub(
+    r"\n\nThis wiki is the \*\*source of truth\*\*.*?school team\.\n",
+    "\n",
+    rt,
+    count=1,
+    flags=re.DOTALL,
 )
 readme.write_text(rt, encoding="utf-8")
 print("updated README.md")
 
 doc_readme = DOC / "README.md"
 drt = doc_readme.read_text(encoding="utf-8")
-drt = drt.replace(
-    "Each page has **2–3 Mermaid diagrams** with emoji and bilingual labels (中文/English) explaining the business logic for Sharon Chinese School families and students (~7–13).",
-    "Each page has **2–3 flat SVG diagrams** with English labels and simple character art (students typically ages 7–13).",
+drt = re.sub(
+    r"\n\nEach page has \*\*2–3.*?\n",
+    "\n",
+    drt,
+    count=1,
 )
 doc_readme.write_text(drt, encoding="utf-8")
 print("updated doc/README.md")

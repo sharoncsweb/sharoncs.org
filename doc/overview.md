@@ -10,8 +10,11 @@ Sharon Chinese School (MA Sharon Chinese Language School) needs a **modern publi
 - Parents manage students, class enrollment, and payments in one place
 - Teachers run classes with materials, assignments, and communication similar to Google Classroom
 - Administrators manage courses, schedules, staff, volunteers, and school-wide announcements
+- The **public homepage** is professional and modern, with a hero section and school events/announcements posted by authorized staff
 
 ## Diagrams
+
+**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
 
 | | | | | |
 |:---:|:---:|:---:|:---:|:---:|
@@ -61,7 +64,7 @@ The vendor requested detailed registration fields; the school provided **`WebSit
 ### In scope
 
 - Single-school platform (not multi-tenant SaaS)
-- Public marketing / information pages (modern UX)
+- **Public homepage & landing page** — professional hero, events, announcements ([spec](public-homepage.md))
 - Parent self-service registration and student profiles
 - Class enrollment and payment
 - LMS features supporting **in-person** instruction
@@ -91,6 +94,7 @@ The vendor requested detailed registration fields; the school provided **`WebSit
 
 ## Related documents
 
+- [Public homepage](public-homepage.md)
 - [Parent portal](parent-portal.md)
 - [Registration — user fields](registration-user-fields.md)
 - [Registration & payment](registration-payment.md)
