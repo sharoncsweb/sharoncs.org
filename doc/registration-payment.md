@@ -19,8 +19,6 @@ Send vendors **both**: profile fields (Excel + wiki) and the enrollment/payment 
 
 ## Diagrams
 
-**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
-
 | | | | | |
 |:---:|:---:|:---:|:---:|:---:|
 | ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |

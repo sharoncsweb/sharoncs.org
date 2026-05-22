@@ -20,12 +20,13 @@ def char_parent(x, y, scale=1):
 
 
 def char_student(x, y, scale=1):
+    """Smaller proportions than parent/teacher (target age ~7-13). See DIAGRAM-DESIGN.md."""
     s = scale
     return f"""
     <g transform="translate({x},{y}) scale({s})">
-      <rect x="7" y="24" width="18" height="18" rx="5" fill="#5B8DEF"/>
-      <circle cx="16" cy="14" r="8" fill="#F2C9A0"/>
-      <rect x="22" y="26" width="10" height="14" rx="2" fill="#F4B942"/>
+      <rect x="8" y="26" width="16" height="15" rx="5" fill="#5B8DEF"/>
+      <circle cx="16" cy="13" r="7" fill="#F2C9A0"/>
+      <rect x="22" y="28" width="9" height="12" rx="2" fill="#F4B942"/>
     </g>"""
 
 
@@ -98,7 +99,7 @@ def diagram_stakeholders():
         + box(325, 70, 85, 55, "Parent")
         + arrow(410, 88, 435, 88)
         + char_student(435, 72)
-        + box(490, 70, 95, 55, "Student\\nages 7-13")
+        + box(490, 70, 95, 55, "Student")
         + arrow(585, 88, 610, 88)
         + char_teacher(610, 65)
         + box(665, 70, 45, 55, "Staff")
@@ -197,7 +198,7 @@ def diagram_parent_hub():
 def diagram_student_dashboard():
     b = (
         char_student(60, 55, 1.2)
-        + box(40, 30, 200, 40, "Student portal (ages 7-13)", "#EFF6FF", "#60A5FA")
+        + box(40, 30, 200, 40, "Student portal", "#EFF6FF", "#60A5FA")
         + box(300, 60, 120, 55, "Today schedule")
         + box(440, 60, 120, 55, "To-do work")
         + box(580, 60, 120, 55, "Course pages")
