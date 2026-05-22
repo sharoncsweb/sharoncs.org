@@ -54,7 +54,7 @@ Users sign in with **one of four supported methods**. A single account may **lin
 
 ![Login methods](assets/diagrams/auth-methods.svg)
 
-### Phone + SMS at signup
+### SMS verification at signup
 
 ![SMS verification at signup](assets/diagrams/auth-sms.svg)
 
@@ -62,7 +62,6 @@ Users sign in with **one of four supported methods**. A single account may **lin
 
 ![Link multiple login methods](assets/diagrams/auth-linking.svg)
 
----
 
 ## Security requirements
 

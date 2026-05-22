@@ -50,34 +50,31 @@ flowchart LR
 
 ## Field catalog
 
-| Field (CN) | Field (EN) | Description / details | Applies to |
-|------------|------------|----------------------|------------|
-| 手机号 | Mobile Number | **Phone + SMS** login; OTP at registration. | User (login) |
-| 验证码 | Verification Code | SMS OTP for registration / login. | Registration flow |
-| 密码 | Password | Used with **email + password** or after phone signup. | User (login) |
-| 电子邮箱 | Email Address | **Email + password** login; contact. | User (login) |
-| — | User Name | Display / login name (optional; confirm vs email). | User |
-| 昵称 | Nickname | Display name on the platform. | User |
-| 真实姓名 | English First Name | For official enrollment records. | User / Student |
-| — | English Last Name | For official enrollment records. | User / Student |
-| — | Chinese Name | For official enrollment records. | User / Student |
-| 性别 | Gender | Male / Female / Other. | User / Student |
-| 出生日期 | Date of Birth | Used to determine age group / level. | Student (primarily) |
-| 微信号 | WeChat ID | For communication and notifications (not a login method). | User |
-| 居住地址 | Address | Residential address (street). | Account / User |
-| — | City | Residential city. | Account / User |
-| — | State | Residential state. | Account / User |
-| — | Zip Code | Residential ZIP (source sheet: “Recidential Zip” — use **Residential** in UI). | Account / User |
-| — | Family Identifier | System-generated family ID. | Account |
-| — | Family Relationship | **Self**, **Spouse**, **Child** | Links person to family account |
-| — | School Assigned Role | Multiple allowed. See [roles](#school-assigned-role). | User |
-| — | Current Regular School Name | Student’s weekday / regular school. | Student |
-| — | Current Grade at Regular School | Used for placement and level hints. | Student |
+Chinese labels exist only in `WebSiteUserFields.xlsx` (for the school committee). **Vendor UI and this wiki use English only.**
 
-### Notes on bilingual labels
-
-- Rows with **CN** “真实姓名” map to **English First Name** in the spreadsheet; **English Last Name** and **Chinese Name** are separate fields (CN labels TBD in Excel).
-- **User Name** has no CN label in the current sheet — confirm UI copy with school.
+| Field (EN) | Description / details | Applies to |
+|------------|----------------------|------------|
+| Mobile Number | **Phone + SMS** login; OTP at registration. | User (login) |
+| Verification Code | SMS OTP for registration / login. | Registration flow |
+| Password | Used with **email + password** or after phone signup. | User (login) |
+| Email Address | **Email + password** login; contact. | User (login) |
+| User Name | Display name (optional; confirm vs email login). | User |
+| Nickname | Display name on the platform. | User |
+| English First Name | For official enrollment records. | User / Student |
+| English Last Name | For official enrollment records. | User / Student |
+| Chinese Name | For official enrollment records. | User / Student |
+| Gender | Male / Female / Other. | User / Student |
+| Date of Birth | Used to determine age group / level. | Student (primarily) |
+| WeChat ID | Communication (not a login method). | User |
+| Address | Residential address (street). | Account / User |
+| City | Residential city. | Account / User |
+| State | Residential state. | Account / User |
+| Zip Code | Residential ZIP (use **Residential** in UI; fix typo from source sheet). | Account / User |
+| Family Identifier | System-generated family ID. | Account |
+| Family Relationship | **Self**, **Spouse**, **Child** | Links person to family account |
+| School Assigned Role | Multiple allowed. See [roles](#school-assigned-role). | User |
+| Current Regular School Name | Student’s weekday / regular school. | Student |
+| Current Grade at Regular School | Used for placement and level hints. | Student |
 
 ---
 
@@ -164,7 +161,7 @@ Recommended order for the vendor:
 | WeChat notifications | In-app only in v1, or WeChat API integration? |
 | Child login | Do students get credentials when role = Student? |
 | Address scope | One address per **account** vs per **user**? |
-| CN UI labels | Complete Chinese labels for User Name, Last Name, City, State, etc. |
+| Bilingual UI (optional) | If the school wants Chinese UI labels, provide copy in the spreadsheet — not required for phase 1 vendor build. |
 
 ---
 

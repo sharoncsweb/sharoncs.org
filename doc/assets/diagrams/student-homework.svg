@@ -11,8 +11,8 @@
       <circle cx="16" cy="12" r="9" fill="#F2C9A0"/>
       <path d="M8 10 Q16 4 24 10" fill="#2C2C2C"/>
     </g>
-    <rect x="110" y="75" width="120" height="50" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
-    <text text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#334155" x="170.0" y="92.0"><tspan x="170.0" dy="0">Mobile +</tspan><tspan x="170.0" dy="14">verification</tspan></text>
+    <rect x="100" y="75" width="130" height="50" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#334155" x="165.0" y="92.0"><tspan x="165.0" dy="0">Choose login</tspan><tspan x="165.0" dy="14">OAuth / email / SMS</tspan></text>
     
     <line x1="230" y1="100" x2="280" y2="100" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
     

@@ -17,6 +17,7 @@
 
 ![Four portals](assets/diagrams/glossary-portals.svg)
 
+
 ## Terms
 
 | Term | Definition |

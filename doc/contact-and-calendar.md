@@ -28,7 +28,7 @@ A dedicated **Contact us** page is required on the public site (legacy: `/school
 
 ## School calendar (public)
 
-Legacy: [校历和课程安排](https://www.sharoncs.org/school/page/school_calendar).
+Legacy: [School calendar and schedule](https://www.sharoncs.org/school/page/school_calendar).
 
 | Requirement | Detail |
 |-------------|--------|

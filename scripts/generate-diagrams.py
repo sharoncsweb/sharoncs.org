@@ -166,7 +166,7 @@ def diagram_relationships():
 def diagram_registration_sequence():
     b = (
         char_parent(40, 60)
-        + box(110, 75, 120, 50, "Mobile +\\nverification")
+        + box(100, 75, 130, 50, "Choose login\\nOAuth / email / SMS")
         + arrow(230, 100, 280, 100)
         + box(280, 75, 110, 50, "Profile\\n(Self)")
         + arrow(390, 100, 440, 100)
@@ -176,6 +176,28 @@ def diagram_registration_sequence():
         + char_student(640, 55, 0.85)
     )
     return wrap("Registration flow", b)
+
+
+def diagram_registration_field_groups():
+    b = (
+        box(40, 55, 150, 75, "Login\\nPhone, email, OAuth", "#FEF3C7", "#FCD34D")
+        + box(220, 55, 150, 75, "Identity\\nNames, DOB", "#EFF6FF", "#93C5FD")
+        + box(400, 55, 150, 75, "Family\\nID, relationship", "#ECFDF5", "#6EE7B7")
+    )
+    return wrap("Registration field groups", b)
+
+
+def diagram_registration_who_fills():
+    b = (
+        char_parent(60, 70)
+        + box(40, 140, 120, 40, "Parent fills\\nSelf")
+        + arrow(160, 90, 220, 90)
+        + box(220, 70, 130, 50, "Family account")
+        + arrow(350, 90, 420, 90)
+        + char_student(420, 75, 0.9)
+        + box(400, 140, 130, 40, "Child profile")
+    )
+    return wrap("Who fills which fields", b)
 
 
 def diagram_parent_hub():
@@ -437,8 +459,8 @@ ALL = {
     "admin-volunteer": diagram_volunteer_reminder,
     "admin-reschedule": diagram_reschedule,
     "registration-signup-steps": diagram_registration_sequence,
-    "registration-field-groups": diagram_relationships,
-    "registration-who-fills": diagram_family_account,
+    "registration-field-groups": diagram_registration_field_groups,
+    "registration-who-fills": diagram_registration_who_fills,
     "payment-cart": diagram_cart_flow,
     "payment-discounts": diagram_phase_timeline,
     "payment-checkout": diagram_family_account,

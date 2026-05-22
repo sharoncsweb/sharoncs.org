@@ -35,9 +35,9 @@ Migrate and refine from [legacy About our school](https://www.sharoncs.org/schoo
 - Promote mutual understanding through cultural exchange activities  
 - Partner with our local communities to provide outreach and service  
 
-### Chinese (for bilingual About page)
+### Chinese on public site (optional)
 
-**办学宗旨** — preserve and update from legacy site; school committee to approve final text.
+If the school wants a bilingual About page, provide approved Chinese mission text separately. **Default vendor build: English only** on the public site.
 
 ---
 
@@ -88,7 +88,7 @@ The [public homepage](public-homepage.md) should not hide mission behind many cl
 |------|------------|----------|
 | Board of directors | `/school/page/board_of_directors` | High — trust |
 | Administration team | `/school/page/administration_team` | High |
-| PTO (家长会) | `/school/page/pto` | Medium |
+| PTO (Parent organization) | `/school/page/pto` | Medium |
 | Youth leadership club | `/school/page/about_youth` | Medium |
 
 Content can start as **CMS/static pages** editable by admin; full CMS permissions TBD.

@@ -186,20 +186,21 @@ See REQ-ACC-03 in [Accounts & enrollment](accounts.md).
 
 ## Diagrams
 
+**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
+
 | | | | | |
 |:---:|:---:|:---:|:---:|:---:|
 | ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
 | Parent | Student | Teacher | Admin | School |
 
-### Complete flow
+### Complete registration flow
 
 ![Complete registration flow](assets/diagrams/registration-flow-complete.svg)
 
-### Profile vs enrollment
+### Registration sequence
 
 ![Registration sequence](assets/diagrams/accounts-registration-flow.svg)
 
----
 
 ## Document map
 

@@ -142,6 +142,8 @@ Both types are **public** (visible without login). Logged-in users may see the s
 
 ## Diagrams
 
+**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
+
 | | | | | |
 |:---:|:---:|:---:|:---:|:---:|
 | ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
@@ -157,9 +159,8 @@ Both types are **public** (visible without login). Logged-in users may see the s
 
 ### Public site vs logged-in portals
 
-![Public site vs portals](assets/diagrams/homepage-vs-portals.svg)
+![Public site vs logged-in portals](assets/diagrams/homepage-vs-portals.svg)
 
----
 
 ## Related documents
 

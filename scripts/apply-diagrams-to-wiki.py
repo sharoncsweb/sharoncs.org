@@ -4,14 +4,19 @@ import re
 from pathlib import Path
 
 DOC = Path(__file__).resolve().parent.parent / "doc"
-CAST = """**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
-
-| | | | | |
+CAST = """| | | | | |
 |:---:|:---:|:---:|:---:|:---:|
 | ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
 | Parent | Student | Teacher | Admin | School |
 
 """
+
+
+def strip_all_mermaid(content: str) -> str:
+    """Remove any leftover Mermaid blocks (legacy Chinese diagrams)."""
+    content = re.sub(r"```mermaid\s*\n.*?```\s*\n", "", content, flags=re.DOTALL)
+    content = re.sub(r"\*\*Characters:\*\*[^\n]*\n\n", "", content)
+    return content
 
 PAGE_DIAGRAMS = {
     "overview.md": [
@@ -48,10 +53,6 @@ PAGE_DIAGRAMS = {
         ("Yearly course setup", "admin-year-setup.svg"),
         ("Volunteer duty reminder", "admin-volunteer.svg"),
         ("Reschedule one session", "admin-reschedule.svg"),
-    ],
-    "registration-flow.md": [
-        ("Complete registration flow", "registration-flow-complete.svg"),
-        ("Registration sequence", "accounts-registration-flow.svg"),
     ],
     "registration-user-fields.md": [
         ("Signup steps", "registration-signup-steps.svg"),
@@ -92,11 +93,6 @@ PAGE_DIAGRAMS = {
         ("Account, user, and student", "glossary-concepts.svg"),
         ("Four portals", "glossary-portals.svg"),
     ],
-    "public-homepage.md": [
-        ("Homepage layout", "homepage-layout.svg"),
-        ("Permission-based publishing", "homepage-publish-flow.svg"),
-        ("Public site vs logged-in portals", "homepage-vs-portals.svg"),
-    ],
     "vendor-qa.md": [
         ("School and vendor", "vendor-collaboration.svg"),
         ("Requirements timeline", "vendor-timeline.svg"),
@@ -128,7 +124,7 @@ for page, diagrams in PAGE_DIAGRAMS.items():
     path = DOC / page
     text = path.read_text(encoding="utf-8")
     section = build_section(diagrams)
-    path.write_text(replace_diagrams(text, section), encoding="utf-8")
+    path.write_text(strip_all_mermaid(replace_diagrams(text, section)), encoding="utf-8")
     print("updated", page)
 
 readme = Path(__file__).resolve().parent.parent / "README.md"
@@ -143,23 +139,18 @@ rt = re.sub(
     count=1,
     flags=re.DOTALL,
 )
-rt = re.sub(
-    r"\n\nThis wiki is the \*\*source of truth\*\*.*?school team\.\n",
-    "\n",
-    rt,
-    count=1,
-    flags=re.DOTALL,
+rt = rt.replace(
+    "Each page includes **friendly diagrams** (Mermaid + emoji) for families, students (ages 7–13), and the vendor.",
+    "Each page includes **flat-design SVG diagrams** (English labels, simple characters) for the vendor and school team.",
 )
 readme.write_text(rt, encoding="utf-8")
 print("updated README.md")
 
 doc_readme = DOC / "README.md"
 drt = doc_readme.read_text(encoding="utf-8")
-drt = re.sub(
-    r"\n\nEach page has \*\*2–3.*?\n",
-    "\n",
-    drt,
-    count=1,
+drt = drt.replace(
+    "Each page has **2–3 Mermaid diagrams** with emoji and bilingual labels (中文/English) explaining the business logic for Sharon Chinese School families and students (~7–13).",
+    "Each page has **2–3 flat SVG diagrams** with English labels and simple character art (students typically ages 7–13).",
 )
 doc_readme.write_text(drt, encoding="utf-8")
 print("updated doc/README.md")
