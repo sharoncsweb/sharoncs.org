@@ -15,5 +15,8 @@
 | **LMS** | Learning Management System — assignments, materials, announcements, progress within courses. |
 | **RBAC** | Role-Based Access Control — permissions via roles and optional per-user grants. |
 | **Delivery mode** | How course content is delivered: `internal` (platform), `google_classroom`, or `hybrid` (future). |
+| **Family Identifier** | System-generated ID linking users and students on one account. |
+| **Family Relationship** | How a person links to the account: **Self**, **Spouse**, or **Child**. |
+| **Parent portal** | Authenticated UI for guardians: family, enrollment, payments, student oversight. |
 
-See [Accounts & enrollment](accounts.md) for relationship diagrams.
+See [Parent portal](parent-portal.md), [Accounts & enrollment](accounts.md), and [Registration — user fields](registration-user-fields.md).

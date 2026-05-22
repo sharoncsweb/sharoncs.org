@@ -25,6 +25,17 @@ The current site at [www.sharoncs.org](https://www.sharoncs.org/) is dated and d
 | **Administrators** | Yearly course setup, schedules, rosters, payments |
 | **The Web Design LLC** | Design and implementation ([thewebdesignllc.com](https://thewebdesignllc.com/)) |
 
+## Implementation priority
+
+Agreed with **The Web Design LLC** (May 2026):
+
+| Phase | Focus | Documentation |
+|-------|--------|----------------|
+| **1 (now)** | Registration, **parent portal**, course enrollment, payment | [Parent portal](parent-portal.md), [User fields](registration-user-fields.md), [Registration & payment](registration-payment.md) |
+| **2+** | Student/teacher LMS depth, materials, assignments, full admin tooling | [Student](student-portal.md), [Teacher](teacher-portal.md), [Admin](admin-portal.md) portals |
+
+The vendor requested detailed registration fields; the school provided **`WebSiteUserFields.xlsx`** (see wiki).
+
 ## Scope
 
 ### In scope
@@ -60,5 +71,8 @@ The current site at [www.sharoncs.org](https://www.sharoncs.org/) is dated and d
 
 ## Related documents
 
+- [Parent portal](parent-portal.md)
+- [Registration — user fields](registration-user-fields.md)
+- [Registration & payment](registration-payment.md)
 - [Platform structure](platform.md)
 - [Vendor Q&A log](vendor-qa.md)

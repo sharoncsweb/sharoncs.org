@@ -4,7 +4,7 @@
 
 ## Audience
 
-Logged-in **students** (and possibly parents viewing on behalf of younger children — confirm UX).
+Logged-in **students**. Parents monitor and manage children through the **[Parent portal](parent-portal.md)** (schedule, assignments, progress)—not by default through this portal. Confirm whether young students without their own login ever use this UI via a parent “act as student” mode (TBD).
 
 ## Primary features
 
@@ -46,6 +46,7 @@ Each schedule entry should support at minimum:
 
 ## Related documents
 
+- [Parent portal](parent-portal.md)
 - [Courses & learning](courses.md)
 - [Teacher portal](teacher-portal.md)
 - [School structure](school-structure.md)

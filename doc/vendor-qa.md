@@ -137,6 +137,21 @@ Documented in consolidated requirements — see [Authentication](authentication.
 
 ---
 
+## 12. Vendor meeting — registration priority (May 2026)
+
+**Context:** Meeting with The Web Design LLC. School emphasized **registration / course enrollment first**.
+
+**Vendor request:** More detail on registration data.
+
+**School response:** Kyna provided profile field specification:
+
+- WeChat summary table → **`WebSiteUserFields.xlsx`**
+- Wiki: [Registration — user fields](registration-user-fields.md)
+
+**Fields cover:** mobile login, SMS verification, password, username, profile names (EN/CN), nickname, gender, DOB, WeChat ID, email, address, family ID/relationship, school roles, student’s regular school and grade.
+
+---
+
 ## Original question document
 
 Full vendor question list (without answers): see parent project `documents/ShaornCS-lms-queries (1).docx`.

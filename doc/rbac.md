@@ -15,7 +15,7 @@
 
 | Role | Typical user | Notes |
 |------|--------------|-------|
-| **Parent** | Guardian on account | Registration, payments (if primary owner), view student progress |
+| **Parent** | Guardian on account | [Parent portal](parent-portal.md): family, enrollment, payments (primary owner), student oversight |
 | **Student** | Enrolled child | Own schedule, courses, submissions |
 | **Teacher** | Instructor | Course content, grading, class announcements |
 | **Staff** | Teachers, TAs, volunteers | School-wide ops, duties, some announcements |

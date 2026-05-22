@@ -18,16 +18,26 @@ This wiki is the **source of truth** for product and technical requirements. Det
 
 ---
 
+## Phase 1 priority (May 2026)
+
+**Registration and course enrollment** are the first deliverables (vendor meeting with The Web Design LLC).
+
+1. **[User & profile fields](doc/registration-user-fields.md)** — Kyna’s field spec (`WebSiteUserFields.xlsx`)
+2. **[Enrollment & payment](doc/registration-payment.md)** — class cart, discounts, Stripe/Square
+
+---
+
 ## At a glance
 
 | Area | Summary |
 |------|---------|
+| **Phase 1** | Parent portal, registration, family profiles, course enrollment, payment |
 | **Platform** | One school only (Sharon Chinese School); no SaaS / subscription to use the platform |
 | **Users** | Parents self-register; manage students; admins can assist when needed |
 | **Learning** | In-person classes first; LMS for materials, assignments, schedules, communication |
 | **Payments** | Parents enroll students in classes and pay (cart, discounts, Stripe/Square) |
 | **Roles** | RBAC with Parent, Student, Teacher, TA, Staff, Admin; multiple roles per person |
-| **Auth** | Password, Google, Microsoft, Facebook/Instagram, SMS OTP; account linking |
+| **Auth** | Mobile/SMS, password, username; also Google, Microsoft, social (see auth doc) |
 
 ---
 
@@ -61,15 +71,18 @@ This wiki is the **source of truth** for product and technical requirements. Det
 
 | Document | Description |
 |----------|-------------|
+| [Parent portal](doc/parent-portal.md) | Family account, enrollment, payments, student oversight |
 | [Student portal](doc/student-portal.md) | Schedule, course pages, tasks, progress |
 | [Teacher portal](doc/teacher-portal.md) | Materials, assignments, exams, grading |
 | [Admin & management portal](doc/admin-portal.md) | Staff, schedules, substitutes, volunteers |
 
-### Commerce
+### Registration (phase 1)
 
 | Document | Description |
 |----------|-------------|
-| [Registration & payment](doc/registration-payment.md) | Cart, discounts, gateways, admin reporting |
+| [Registration — user fields](doc/registration-user-fields.md) | Signup profile fields (CN/EN), family model, roles |
+| [Registration & payment](doc/registration-payment.md) | Enrollment flow, cart, discounts, gateways |
+| [WebSiteUserFields.xlsx](doc/WebSiteUserFields.xlsx) | Original spreadsheet from Kyna |
 
 ### Vendor collaboration
 
@@ -86,6 +99,7 @@ Requirements were consolidated from school materials (also kept locally in the p
 - `Sharon_Chinese_School_LMS_Requirements.docx` — consolidated requirements
 - `sharon_chinese_school-lms-queries.docx` — vendor questions with answers (Kyna, 2026-03-21)
 - `ShaornCS-lms-queries (1).docx` — original vendor question set
+- `WebSiteUserFields.xlsx` — registration profile fields (Kyna, May 2026); copy in [`doc/`](doc/WebSiteUserFields.xlsx)
 
 When the wiki and Word docs disagree, **prefer the answered Q&A** (`vendor-qa.md`) and update the wiki.
 
@@ -108,4 +122,4 @@ When the wiki and Word docs disagree, **prefer the answered Q&A** (`vendor-qa.md
 | Application code | Not started in this repo |
 | Legacy site | Still live at [www.sharoncs.org](https://www.sharoncs.org/) |
 
-*Last updated: 2026-05-22*
+*Last updated: 2026-05-22 (registration field spec added)*

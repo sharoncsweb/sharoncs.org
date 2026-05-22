@@ -4,8 +4,11 @@
 
 ## Supported login methods
 
+**Phase 1 (registration):** mobile number + **verification code (SMS OTP)** + password; optional **username** as login name. See [Registration — user fields](registration-user-fields.md).
+
 | Method | Status |
 |--------|--------|
+| Mobile + SMS OTP | Confirmed (phase 1) |
 | Username / password | Confirmed |
 | Google | Confirmed |
 | Microsoft | Confirmed |

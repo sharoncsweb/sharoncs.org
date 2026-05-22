@@ -19,7 +19,7 @@
 ├─────────────────────────────────────────────────────────┤
 │  Public site          │  Authenticated LMS + portals   │
 │  (marketing, info)    │  Parent / Student / Teacher /  │
-│                       │  Staff / Admin                  │
+│                       │  Staff / Admin portals         │
 ├───────────────────────┴─────────────────────────────────┤
 │  Registration & payments │  Schedules │  Courses       │
 └─────────────────────────────────────────────────────────┘

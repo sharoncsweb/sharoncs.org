@@ -47,13 +47,25 @@ Student ──required──► one Account
 | REQ-ACC-04 | Each account has one **primary owner** with exclusive rights to billing, payments, and adding/removing users. | Confirmed |
 | REQ-ACC-05 | Non-primary parents may have full access initially; **limited access** is a future option. | Future |
 
+## Profile data at registration
+
+When parents and students are created, collect the fields defined in **[Registration — user fields](registration-user-fields.md)** (source: `WebSiteUserFields.xlsx`):
+
+- **Login:** mobile number, verification code, password, username
+- **Identity:** nickname, English/Chinese names, gender, date of birth (students)
+- **Contact:** WeChat ID, email, residential address (street, city, state, ZIP)
+- **Family:** system **Family Identifier**, **Family Relationship** (Self, Spouse, Child)
+- **Roles:** **School Assigned Role** (multiple allowed)
+- **Placement:** current regular school name and grade (students)
+
 ## Enrollment flow (happy path)
 
-1. Parent creates user account (or signs in via social/SMS — see [Authentication](authentication.md)).
-2. Parent creates or joins a family **account** (if not auto-created on first signup).
-3. Parent adds **student** profile(s).
-4. Parent selects classes and pays — see [Registration & payment](registration-payment.md).
-5. Student and parent gain portal access per role.
+1. Parent registers with **mobile + SMS verification** and password (see [Authentication](authentication.md)).
+2. Parent completes **Self** profile; system assigns **Family Identifier** (account).
+3. Parent adds **Spouse** and/or **Child** members with relationship and profile fields.
+4. Parent assigns **school roles** per person where applicable.
+5. Parent selects classes per student and pays — see [Registration & payment](registration-payment.md).
+6. Parent uses the **[Parent portal](parent-portal.md)**; students use the [Student portal](student-portal.md) when they have credentials.
 
 ## Admin-assisted enrollment
 
@@ -69,6 +81,8 @@ Student ──required──► one Account
 
 ## Related documents
 
+- [Parent portal](parent-portal.md)
+- [Registration — user fields](registration-user-fields.md)
 - [Glossary](glossary.md)
 - [RBAC](rbac.md)
 - [Authentication](authentication.md)
