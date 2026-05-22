@@ -179,7 +179,7 @@ Documented in consolidated requirements — see [Authentication](authentication.
 - WeChat summary table → **`WebSiteUserFields.xlsx`**
 - Wiki: [Registration — user fields](registration-user-fields.md)
 
-**Fields cover:** mobile login, SMS verification, password, username, profile names (EN/CN), nickname, gender, DOB, WeChat ID, email, address, family ID/relationship, school roles, student’s regular school and grade.
+**Fields cover:** login (Google, Microsoft, email/password, phone/SMS), profile names (EN/CN), nickname, gender, DOB, WeChat ID, email, address, family ID/relationship, school roles, student’s regular school and grade.
 
 ---
 

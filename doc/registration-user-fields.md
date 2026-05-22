@@ -111,7 +111,7 @@ Family Relationship:
 
 | Relationship | Entity | Typical fields |
 |--------------|--------|----------------|
-| **Self** | User (parent) | Mobile, password, username, nickname, WeChat, email, address, roles |
+| **Self** | User (parent) | Login via OAuth, email, or phone; nickname, WeChat, address, roles |
 | **Spouse** | User (parent) | Same profile fields; permissions may differ from primary owner |
 | **Child** | Student | Legal names (EN/CN), gender, DOB, regular school, grade; school roles if student logs in |
 
