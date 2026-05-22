@@ -8,45 +8,23 @@
 
 ## Diagrams
 
-### 📱 注册四步（像填表）
+| | | | | |
+|:---:|:---:|:---:|:---:|:---:|
+| ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
+| Parent | Student | Teacher | Admin | School |
 
-```mermaid
-flowchart LR
-  S1["1️⃣ 📱 手机+验证码"] --> S2["2️⃣ 🔐 密码+用户名"]
-  S2 --> S3["3️⃣ 👤 填家长信息"]
-  S3 --> S4["4️⃣ 👦👧 加孩子"]
-  style S1 fill:#fff3cd
-```
+### Signup steps
 
-### 🗂️ 字段分三组
+![Signup steps](assets/diagrams/registration-signup-steps.svg)
 
-```mermaid
-flowchart TB
-  subgraph login["🔐 登录"]
-    PH["手机号"]
-    OTP["验证码"]
-    PW["密码"]
-  end
-  subgraph person["😊 是谁"]
-    NM["中英文名"]
-    BD["生日→分班"]
-  end
-  subgraph family["🏠 家庭"]
-    FID["Family ID"]
-    REL["关系 Self/Spouse/Child"]
-  end
-```
+### Field groups
 
-### 🏠 填表时谁在填什么
+![Field groups](assets/diagrams/registration-field-groups.svg)
 
-```mermaid
-flowchart LR
-  P["👨‍👩‍👧 家长填\nSelf 自己"] --> ACC["🏠 家庭账号"]
-  P --> C["👧 Child 孩子行\n姓名 · 学校年级"]
-  ACC --> ROLE["🎭 角色\nParent/Student..."]
-```
+### Who fills which fields
 
----
+![Who fills which fields](assets/diagrams/registration-who-fills.svg)
+
 
 ## Field catalog
 

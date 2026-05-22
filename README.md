@@ -14,6 +14,8 @@ Welcome to the requirements wiki for the new **Sharon Chinese School** website a
 
 Replace the aging public website with a modern, easy-to-use experience and add a **single-school Learning Management System (LMS)** so families can register, pay, and stay connected while teachers and staff run classes day to day.
 
+This wiki is the **source of truth** for product and technical requirements. Detailed specs live under [`doc/`](doc/). Each page includes **flat-design SVG diagrams** (English labels, simple characters) for the vendor and school team.
+
 ### Platform map
 
 ![Platform map](doc/assets/diagrams/README-platform-map.svg)
@@ -22,14 +24,10 @@ Replace the aging public website with a modern, easy-to-use experience and add a
 
 ## Phase 1 priority (May 2026)
 
-Agreed with **The Web Design LLC**: deliver a **professional public homepage** and **registration / course enrollment** together.
+**Registration and course enrollment** are the first deliverables (vendor meeting with The Web Design LLC).
 
-| Track | Deliverables |
-|-------|----------------|
-| **Public website** | [Homepage](doc/public-homepage.md) (hero, mission, events, announcements) · [About](doc/about-school.md) · [Contact](doc/contact-and-calendar.md) · [Public content map](doc/public-site-content.md) |
-| **Registration** | [Registration flow](doc/registration-flow.md) · [User fields](doc/registration-user-fields.md) · [Enrollment & payment](doc/registration-payment.md) · [Tuition policies](doc/tuition-policies.md) |
-
-**Vendor start here:** [Registration flow](doc/registration-flow.md) + [Public homepage](doc/public-homepage.md)
+1. **[User & profile fields](doc/registration-user-fields.md)** — Kyna’s field spec (`WebSiteUserFields.xlsx`)
+2. **[Enrollment & payment](doc/registration-payment.md)** — class cart, discounts, Stripe/Square
 
 ---
 
@@ -37,14 +35,13 @@ Agreed with **The Web Design LLC**: deliver a **professional public homepage** a
 
 | Area | Summary |
 |------|---------|
-| **Public site** | Mission, About, homepage, course catalog, contact, tuition policies |
 | **Phase 1** | Public homepage (mission, events) + registration, parent portal, enrollment, payment |
 | **Platform** | One school only (Sharon Chinese School); no SaaS / subscription to use the platform |
 | **Users** | Parents self-register; manage students; admins can assist when needed |
 | **Learning** | In-person classes first; LMS for materials, assignments, schedules, communication |
 | **Payments** | Parents enroll students in classes and pay (cart, discounts, Stripe/Square) |
 | **Roles** | RBAC with Parent, Student, Teacher, TA, Staff, Admin; multiple roles per person |
-| **Auth** | Google OAuth, Microsoft OAuth, email + password, phone + SMS |
+| **Auth** | Mobile/SMS, password, username; also Google, Microsoft, social (see auth doc) |
 
 ---
 
@@ -57,17 +54,6 @@ Agreed with **The Web Design LLC**: deliver a **professional public homepage** a
 | [Project overview](doc/overview.md) | Goals, stakeholders, legacy site, scope |
 | [Platform structure](doc/platform.md) | Single-tenant model, funding, high-level architecture |
 | [Glossary](doc/glossary.md) | Terms: Account, User, Student, Staff, TA, etc. |
-
-### Public website (professional nonprofit presence)
-
-| Document | Description |
-|----------|-------------|
-| [Public homepage](doc/public-homepage.md) | Hero, mission line, events, announcements |
-| [About the school](doc/about-school.md) | Mission, history, nonprofit, leadership |
-| [Public site content](doc/public-site-content.md) | Course catalog, news, priorities P0–P2 |
-| [Contact & school calendar](doc/contact-and-calendar.md) | Contact page, academic calendar |
-| [Tuition, discounts & refunds](doc/tuition-policies.md) | Enrollment business rules |
-| [Legacy content migration](doc/legacy-content-migration.md) | Checklist from old site |
 
 ### Data & access
 
@@ -98,8 +84,7 @@ Agreed with **The Web Design LLC**: deliver a **professional public homepage** a
 
 | Document | Description |
 |----------|-------------|
-| **[Registration flow (complete guide)](doc/registration-flow.md)** | **Start here** — end-to-end flow for vendor |
-| [Registration — user fields](doc/registration-user-fields.md) | Signup profile fields (CN/EN), family model, roles |
+| [Registration — user fields](doc/registration-user-fields.md) | Signup profile fields (English), family model, roles |
 | [Registration & payment](doc/registration-payment.md) | Enrollment flow, cart, discounts, gateways |
 | [WebSiteUserFields.xlsx](doc/WebSiteUserFields.xlsx) | Original spreadsheet from Kyna |
 
