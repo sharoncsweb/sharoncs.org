@@ -1,6 +1,6 @@
 # Registration — user & profile fields
 
-[← Wiki home](../README.md) · [Registration & payment](registration-payment.md)
+[← Wiki home](../README.md) · **[Registration flow](registration-flow.md)** · [Registration & payment](registration-payment.md)
 
 **Phase 1 priority** (agreed with The Web Design LLC, May 2026): registration and course enrollment. This document specifies **data collected at signup** and when adding family members.
 

@@ -24,8 +24,9 @@ Replace the aging public website with a modern, easy-to-use experience and add a
 
 **Registration and course enrollment** are the first deliverables (vendor meeting with The Web Design LLC).
 
-1. **[User & profile fields](doc/registration-user-fields.md)** — Kyna’s field spec (`WebSiteUserFields.xlsx`)
-2. **[Enrollment & payment](doc/registration-payment.md)** — class cart, discounts, Stripe/Square
+1. **[Registration flow (complete guide)](doc/registration-flow.md)** — end-to-end for vendor
+2. **[User & profile fields](doc/registration-user-fields.md)** — Kyna’s field spec (`WebSiteUserFields.xlsx`)
+3. **[Enrollment & payment](doc/registration-payment.md)** — class cart, discounts, Stripe/Square
 
 ---
 
@@ -84,6 +85,7 @@ Replace the aging public website with a modern, easy-to-use experience and add a
 
 | Document | Description |
 |----------|-------------|
+| **[Registration flow (complete guide)](doc/registration-flow.md)** | **Start here** — end-to-end flow for vendor |
 | [Registration — user fields](doc/registration-user-fields.md) | Signup profile fields (CN/EN), family model, roles |
 | [Registration & payment](doc/registration-payment.md) | Enrollment flow, cart, discounts, gateways |
 | [WebSiteUserFields.xlsx](doc/WebSiteUserFields.xlsx) | Original spreadsheet from Kyna |

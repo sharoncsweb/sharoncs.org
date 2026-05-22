@@ -22,7 +22,8 @@ This folder contains detailed requirements for each component of the Sharon Chin
 | [announcements.md](announcements.md) | Feeds and visibility |
 | [rbac.md](rbac.md) | Roles and permissions |
 | [authentication.md](authentication.md) | Login and security |
-| [registration-user-fields.md](registration-user-fields.md) | **Phase 1** signup profile fields (CN/EN) |
+| [registration-flow.md](registration-flow.md) | **Phase 1** end-to-end registration (vendor guide) |
+| [registration-user-fields.md](registration-user-fields.md) | Signup profile fields (CN/EN) |
 | [registration-payment.md](registration-payment.md) | Enrollment, cart, and payments |
 | [WebSiteUserFields.xlsx](WebSiteUserFields.xlsx) | Kyna’s field spreadsheet |
 | [vendor-qa.md](vendor-qa.md) | Vendor questions and school answers |

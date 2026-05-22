@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" role="img" aria-label="Complete registration flow phase 1">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+  <rect width="720" height="200" fill="#FFFFFF"/>
+  
+    <rect x="30" y="85" width="95" height="45" rx="10" fill="#FEF3C7" stroke="#FCD34D" stroke-width="1.5"/>
+    <text text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#334155" x="77.5" y="99.5"><tspan x="77.5" dy="0">1. Register</tspan><tspan x="77.5" dy="14">Mobile + SMS</tspan></text>
+    
+    <line x1="125" y1="108" x2="155" y2="108" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+    
+    <rect x="155" y="85" width="95" height="45" rx="10" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="1.5"/>
+    <text text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#334155" x="202.5" y="99.5"><tspan x="202.5" dy="0">2. Parent</tspan><tspan x="202.5" dy="14">profile</tspan></text>
+    
+    <line x1="250" y1="108" x2="280" y2="108" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+    
+    <rect x="280" y="85" width="95" height="45" rx="10" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+    <text text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#334155" x="327.5" y="99.5"><tspan x="327.5" dy="0">3. Add</tspan><tspan x="327.5" dy="14">children</tspan></text>
+    
+    <line x1="375" y1="108" x2="405" y2="108" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+    
+    <rect x="405" y="85" width="95" height="45" rx="10" fill="#E0E7FF" stroke="#A5B4FC" stroke-width="1.5"/>
+    <text text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#334155" x="452.5" y="99.5"><tspan x="452.5" dy="0">4. Pick</tspan><tspan x="452.5" dy="14">classes</tspan></text>
+    
+    <line x1="500" y1="108" x2="530" y2="108" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+    
+    <rect x="530" y="85" width="95" height="45" rx="10" fill="#D1FAE5" stroke="#34D399" stroke-width="1.5"/>
+    <text text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#334155" x="577.5" y="107.5"><tspan x="577.5" dy="0">5. Pay</tspan></text>
+    
+    <line x1="625" y1="108" x2="655" y2="108" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+    
+    <rect x="655" y="85" width="55" height="45" rx="10" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#334155" x="682.5" y="107.5"><tspan x="682.5" dy="0">Done</tspan></text>
+    
+    <g transform="translate(50,35) scale(0.9)">
+      <rect x="6" y="22" width="20" height="22" rx="5" fill="#3D9B8A"/>
+      <circle cx="16" cy="12" r="9" fill="#F2C9A0"/>
+      <path d="M8 10 Q16 4 24 10" fill="#2C2C2C"/>
+    </g>
+    <g transform="translate(300,38) scale(0.85)">
+      <rect x="8" y="26" width="16" height="15" rx="5" fill="#5B8DEF"/>
+      <circle cx="16" cy="13" r="7" fill="#F2C9A0"/>
+      <rect x="22" y="28" width="9" height="12" rx="2" fill="#F4B942"/>
+    </g>
+</svg>

@@ -68,7 +68,7 @@ For each child on the account:
 
 ### Registration & enrollment (phase 1)
 
-Central to phase 1 delivery ([Registration & payment](registration-payment.md)):
+Central to phase 1 delivery — see **[Registration flow](registration-flow.md)** and [Registration & payment](registration-payment.md):
 
 1. Browse **course catalog** by grade / level (using student DOB and regular-school grade as hints)
 2. Select classes per student → **cart**

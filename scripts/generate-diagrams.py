@@ -387,42 +387,23 @@ def diagram_reschedule():
     return wrap("Reschedule one session", b)
 
 
-def diagram_homepage_layout():
+def diagram_registration_flow_complete():
     b = (
-        box(40, 25, 640, 55, "Hero: headline, subtitle, Register / Sign in", "#EEF2FF", "#A5B4FC")
-        + box(40, 95, 300, 70, "Announcements", "#FEF3C7", "#FCD34D")
-        + box(380, 95, 300, 70, "Upcoming events", "#D1FAE5", "#6EE7B7")
-        + box(40, 180, 640, 15, "About, contact, quick links", "#F8FAFC", "#CBD5E1")
-        + char_school(600, 40, 0.7)
+        box(30, 85, 95, 45, "1. Register\\nMobile + SMS", "#FEF3C7", "#FCD34D")
+        + arrow(125, 108, 155, 108)
+        + box(155, 85, 95, 45, "2. Parent\\nprofile", "#ECFDF5", "#6EE7B7")
+        + arrow(250, 108, 280, 108)
+        + box(280, 85, 95, 45, "3. Add\\nchildren", "#EFF6FF", "#93C5FD")
+        + arrow(375, 108, 405, 108)
+        + box(405, 85, 95, 45, "4. Pick\\nclasses", "#E0E7FF", "#A5B4FC")
+        + arrow(500, 108, 530, 108)
+        + box(530, 85, 95, 45, "5. Pay", "#D1FAE5", "#34D399")
+        + arrow(625, 108, 655, 108)
+        + box(655, 85, 55, 45, "Done", "#F1F5F9", "#CBD5E1")
+        + char_parent(50, 35, 0.9)
+        + char_student(300, 38, 0.85)
     )
-    return wrap("Public homepage layout", b)
-
-
-def diagram_homepage_publish():
-    b = (
-        char_teacher(50, 55)
-        + box(30, 130, 110, 40, "Has permission?")
-        + arrow(140, 90, 200, 90)
-        + box(200, 70, 120, 50, "Create event or\\nannouncement")
-        + arrow(320, 95, 400, 95)
-        + box(400, 70, 120, 50, "Publish")
-        + arrow(520, 95, 580, 95)
-        + char_school(580, 45, 0.85)
-        + box(560, 120, 130, 40, "Shows on\\nhomepage")
-    )
-    return wrap("Homepage publishing with permission", b)
-
-
-def diagram_homepage_vs_portals():
-    b = (
-        box(40, 50, 200, 90, "Public homepage\\nNo login needed", "#EEF2FF", "#A5B4FC")
-        + arrow(240, 95, 320, 95)
-        + box(320, 50, 120, 50, "Sign in")
-        + arrow(440, 75, 500, 75)
-        + box(500, 35, 180, 80, "Parent / Student /\\nTeacher portals", "#ECFDF5", "#6EE7B7")
-        + char_parent(530, 120, 0.75)
-    )
-    return wrap("Public homepage vs authenticated portals", b)
+    return wrap("Complete registration flow phase 1", b)
 
 
 def diagram_vendor_collab():
@@ -487,9 +468,7 @@ ALL = {
     "platform-layers": diagram_platform_map,
     "platform-payment": diagram_cart_flow,
     "README-platform-map": diagram_platform_map,
-    "homepage-layout": diagram_homepage_layout,
-    "homepage-publish-flow": diagram_homepage_publish,
-    "homepage-vs-portals": diagram_homepage_vs_portals,
+    "registration-flow-complete": diagram_registration_flow_complete,
 }
 
 for name, fn in ALL.items():

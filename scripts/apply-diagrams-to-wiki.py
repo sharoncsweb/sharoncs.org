@@ -49,6 +49,10 @@ PAGE_DIAGRAMS = {
         ("Volunteer duty reminder", "admin-volunteer.svg"),
         ("Reschedule one session", "admin-reschedule.svg"),
     ],
+    "registration-flow.md": [
+        ("Complete registration flow", "registration-flow-complete.svg"),
+        ("Registration sequence", "accounts-registration-flow.svg"),
+    ],
     "registration-user-fields.md": [
         ("Signup steps", "registration-signup-steps.svg"),
         ("Field groups", "registration-field-groups.svg"),

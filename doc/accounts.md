@@ -80,6 +80,8 @@ When parents and students are created, collect the fields defined in **[Registra
 - **Roles:** **School Assigned Role** (multiple allowed)
 - **Placement:** current regular school name and grade (students)
 
+Full step-by-step guide: **[Registration flow (complete)](registration-flow.md)**.
+
 ## Enrollment flow (happy path)
 
 1. Parent registers with **mobile + SMS verification** and password (see [Authentication](authentication.md)).

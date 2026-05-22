@@ -1,6 +1,6 @@
 # Registration & payment
 
-[← Wiki home](../README.md)
+[← Wiki home](../README.md) · **[Complete registration flow](registration-flow.md)**
 
 ## Phase 1 priority
 
