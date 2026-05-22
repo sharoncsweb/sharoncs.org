@@ -59,15 +59,28 @@ See [Registration — user fields](registration-user-fields.md) for steps before
 - Enforce prerequisites or capacity limits if school defines them (TBD)
 - One cart may include multiple students and multiple classes
 
-## Discounts
+## Public course catalog
 
-| Type | Status |
-|------|--------|
-| Early bird | Confirmed (concept) |
-| Sibling | Confirmed (concept) |
-| Multi-class | Confirmed (concept) |
+Before login, visitors can **browse** the current semester course list (name, schedule summary, tuition, early vs regular price). See [Public site content](public-site-content.md) and legacy `/course`.
 
-*Exact rules, amounts, and date windows — define with school business office.*
+| ID | Requirement | Status |
+|----|-------------|--------|
+| REQ-CAT-01 | Anonymous course catalog browse | Confirmed |
+
+---
+
+## Discounts & refunds
+
+Detailed rules (amounts, exclusions, late enrollment, refunds) are documented in **[Tuition, discounts & refunds](tuition-policies.md)** — migrated from the legacy site. Summary:
+
+| Type | Legacy rule (confirm annually) |
+|------|-------------------------------|
+| Early registration | $15 off per course by deadline |
+| Multi-course (3+ youth) | $30/year or $15/semester for 3rd+ course |
+| Teacher’s child / Military | $30/year or $15/semester per course |
+| Stacking | Discounts **cannot be combined** (legacy) |
+
+Checkout must show applied discounts and link to the full policy page.
 
 ## Payment integration
 
@@ -93,13 +106,15 @@ See [Registration — user fields](registration-user-fields.md) for steps before
 | Topic | Notes |
 |-------|--------|
 | Course catalog fields | Class ID, fee, capacity, schedule — vendor sheet TBD |
-| Refund policy | Business rules + UI |
 | Waitlist | When class is full |
-| Installment plans | Not in consolidated doc — confirm |
-| Tax / fee line items | Confirm with school |
+| Payment processor | Stripe/Square vs legacy PayPal fee wording |
+| Policy dates | Early-bird deadlines per semester |
 
 ## Related documents
 
+- [Tuition, discounts & refunds](tuition-policies.md)
+- [Registration flow](registration-flow.md)
+- [Public site content](public-site-content.md)
 - [Parent portal](parent-portal.md)
 - [Registration — user fields](registration-user-fields.md)
 - [Accounts & enrollment](accounts.md)

@@ -4,7 +4,9 @@
 
 ## Summary
 
-The **public homepage** is the first thing visitors see (prospective families, current parents, and the community). It must look **professional and modern**, with a strong **hero section**, and it must surface **school events** and **announcements** published by authorized staff—not a static brochure only.
+The **public homepage** is the first thing visitors see (prospective families, current parents, and the community). As a **nonprofit** school, it must look **professional and modern**, state **who we are** (mission), and surface **events** and **announcements**—while pointing visitors to About, courses, and registration.
+
+Authorized staff post homepage content via **permissions** (see [RBAC](rbac.md)). Full mission and history live on **[About the school](about-school.md)**.
 
 Publishing is **permission-based**: administrators, teachers, staff, and other roles may post **only if** they are granted the right permissions (see [RBAC](rbac.md)).
 
@@ -15,6 +17,7 @@ Publishing is **permission-based**: administrators, teachers, staff, and other r
 | Goal | Detail |
 |------|--------|
 | **Professional first impression** | Clean layout, readable typography, consistent branding, works on mobile and desktop |
+| **Nonprofit credibility** | Mission visible; link to About, leadership, and policies |
 | **Modern landing experience** | Contemporary patterns (clear hierarchy, spacing, calls-to-action)—not the cluttered legacy site |
 | **Timely public content** | Events and announcements updated by the school without developer involvement |
 | **Controlled publishing** | Only users with explicit permissions can add or edit homepage content |
@@ -29,9 +32,11 @@ The hero is the top of the landing page and sets the tone for the whole site.
 
 | Element | Requirement |
 |---------|-------------|
-| **Headline** | Clear value proposition (e.g. Sharon Chinese School — community, language, culture) |
-| **Supporting line** | Short subtitle (location, weekend program, registration window) |
-| **Primary CTA** | Prominent action: Register / Sign in / Learn more |
+| **Headline** | School name + clear value (Chinese language and culture for the community) |
+| **Mission line** | **One sentence** from [mission](about-school.md) under the headline (e.g. preserve culture, serve families, partner with community) |
+| **Supporting line** | Canton location, weekend program, registration window |
+| **Primary CTA** | **Register** (primary) · **Sign in** · **View courses** |
+| **Secondary CTA** | **About us** · **Contact** |
 | **Visual** | Professional imagery or illustration (school-appropriate; vendor to propose) |
 | **Layout** | Full-width, balanced whitespace; readable on phone and desktop |
 
@@ -41,12 +46,22 @@ The hero is the top of the landing page and sets the tone for the whole site.
 
 | Section | Purpose |
 |---------|---------|
-| **Announcements** | Important short notices (closures, registration dates, policy reminders) |
-| **Events** | Upcoming school events (open house, performances, holidays, community activities) |
-| **Quick links** | About, classes, contact, login (as needed) |
-| **Optional** | Gallery, teaching highlights, or news—migrate from legacy site over time |
+| **Mission strip** (recommended) | 2–4 mission bullets or “Who we are” + link to [About](about-school.md) |
+| **Announcements** | Short notices (closures, registration dates, policy reminders) |
+| **Events** | Upcoming activities (open house, performances, holidays) |
+| **Quick links** | About · **Course catalog** · Tuition & policies · Contact · Register · Sign in |
+| **Optional (phase 2)** | Gallery, news articles, teaching highlights — see [public site content](public-site-content.md) |
 
-Order and exact blocks can be refined with The Web Design LLC; announcements and events are **required** on the homepage.
+Announcements and events are **required**. Mission strip and quick links are **required** for a professional nonprofit presence.
+
+### Site footer (all public pages)
+
+| Element | Detail |
+|---------|---------|
+| Contact | admin@sharoncs.org · (781) 363-1186 |
+| Location | Canton High School address — see [contact](contact-and-calendar.md) |
+| Nonprofit | Sharon Chinese Language School — nonprofit organization |
+| Links | About · Contact · Policies · Register |
 
 ---
 
@@ -104,6 +119,9 @@ Both types are **public** (visible without login). Logged-in users may see the s
 | REQ-HOME-05 | Users **without** permission cannot publish to the homepage. | Confirmed |
 | REQ-HOME-06 | Homepage is **mobile-friendly** and accessible. | Confirmed |
 | REQ-HOME-07 | Legacy *Announcement* / *News* content migrates into this model over time. | Planned |
+| REQ-HOME-08 | Homepage shows a **short mission** statement and link to About. | Confirmed |
+| REQ-HOME-09 | Footer includes contact, location, and nonprofit identity. | Confirmed |
+| REQ-HOME-10 | Quick links to **course catalog**, registration, and tuition policies. | Confirmed |
 
 ---
 
@@ -120,8 +138,6 @@ Both types are **public** (visible without login). Logged-in users may see the s
 
 ## Diagrams
 
-**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
-
 | | | | | |
 |:---:|:---:|:---:|:---:|:---:|
 | ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
@@ -137,13 +153,16 @@ Both types are **public** (visible without login). Logged-in users may see the s
 
 ### Public site vs logged-in portals
 
-![Public site vs logged-in portals](assets/diagrams/homepage-vs-portals.svg)
+![Public site vs portals](assets/diagrams/homepage-vs-portals.svg)
 
+---
 
 ## Related documents
 
-- [Announcements & activity feed](announcements.md) — school-wide and class feeds inside the platform
-- [RBAC](rbac.md) — permissions and roles
-- [Admin portal](admin-portal.md) — content and configuration
-- [Project overview](overview.md) — legacy site and overall scope
-- [Platform structure](platform.md)
+- [About the school](about-school.md) — mission, history, leadership
+- [Public site content](public-site-content.md) — catalog, news, migration priorities
+- [Contact & school calendar](contact-and-calendar.md)
+- [Tuition, discounts & refunds](tuition-policies.md)
+- [Announcements & activity feed](announcements.md) — logged-in feeds
+- [Legacy content migration](legacy-content-migration.md)
+- [RBAC](rbac.md) · [Registration flow](registration-flow.md)

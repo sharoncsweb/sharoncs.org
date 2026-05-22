@@ -14,8 +14,6 @@ Sharon Chinese School (MA Sharon Chinese Language School) needs a **modern publi
 
 ## Diagrams
 
-**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
-
 | | | | | |
 |:---:|:---:|:---:|:---:|:---:|
 | ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
@@ -64,7 +62,9 @@ The vendor requested detailed registration fields; the school provided **`WebSit
 ### In scope
 
 - Single-school platform (not multi-tenant SaaS)
-- **Public homepage & landing page** — professional hero, events, announcements ([spec](public-homepage.md))
+- **Public website** — professional homepage with **mission**, About, contact, course catalog, policies ([public-site-content](public-site-content.md))
+- **Public homepage** — hero, mission line, events, announcements ([spec](public-homepage.md))
+- **About the school** — nonprofit mission, history, leadership ([about-school](about-school.md))
 - Parent self-service registration and student profiles
 - Class enrollment and payment
 - LMS features supporting **in-person** instruction
@@ -94,7 +94,11 @@ The vendor requested detailed registration fields; the school provided **`WebSit
 
 ## Related documents
 
+- [Public site content](public-site-content.md)
+- [About the school](about-school.md)
 - [Public homepage](public-homepage.md)
+- [Tuition policies](tuition-policies.md)
+- [Legacy content migration](legacy-content-migration.md)
 - [Parent portal](parent-portal.md)
 - [Registration — user fields](registration-user-fields.md)
 - [Registration & payment](registration-payment.md)

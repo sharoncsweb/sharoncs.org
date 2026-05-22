@@ -9,7 +9,12 @@ This folder contains detailed requirements for each component of the Sharon Chin
 | Page | Topic |
 |------|--------|
 | [overview.md](overview.md) | Project goals, stakeholders, scope |
-| [public-homepage.md](public-homepage.md) | Public landing page, hero, events, announcements |
+| [public-homepage.md](public-homepage.md) | Landing page, hero, mission, events |
+| [about-school.md](about-school.md) | Mission, history, nonprofit, leadership |
+| [public-site-content.md](public-site-content.md) | Public pages map and course catalog |
+| [contact-and-calendar.md](contact-and-calendar.md) | Contact and school calendar |
+| [tuition-policies.md](tuition-policies.md) | Discounts, refunds, late enrollment |
+| [legacy-content-migration.md](legacy-content-migration.md) | Migrate from www.sharoncs.org |
 | [glossary.md](glossary.md) | Term definitions |
 | [platform.md](platform.md) | Single-tenant platform model |
 | [accounts.md](accounts.md) | Account, user, student, enrollment |

@@ -34,7 +34,7 @@ Replace the aging public website with a modern, easy-to-use experience and add a
 
 | Area | Summary |
 |------|---------|
-| **Public site** | Professional homepage with hero, events, and announcements |
+| **Public site** | Mission, About, homepage, course catalog, contact, tuition policies |
 | **Phase 1** | Parent portal, registration, family profiles, course enrollment, payment |
 | **Platform** | One school only (Sharon Chinese School); no SaaS / subscription to use the platform |
 | **Users** | Parents self-register; manage students; admins can assist when needed |
@@ -52,9 +52,19 @@ Replace the aging public website with a modern, easy-to-use experience and add a
 | Document | Description |
 |----------|-------------|
 | [Project overview](doc/overview.md) | Goals, stakeholders, legacy site, scope |
-| [Public homepage & landing page](doc/public-homepage.md) | Professional hero, events, announcements (permission-based) |
 | [Platform structure](doc/platform.md) | Single-tenant model, funding, high-level architecture |
 | [Glossary](doc/glossary.md) | Terms: Account, User, Student, Staff, TA, etc. |
+
+### Public website (professional nonprofit presence)
+
+| Document | Description |
+|----------|-------------|
+| [Public homepage](doc/public-homepage.md) | Hero, mission line, events, announcements |
+| [About the school](doc/about-school.md) | Mission, history, nonprofit, leadership |
+| [Public site content](doc/public-site-content.md) | Course catalog, news, priorities P0–P2 |
+| [Contact & school calendar](doc/contact-and-calendar.md) | Contact page, academic calendar |
+| [Tuition, discounts & refunds](doc/tuition-policies.md) | Enrollment business rules |
+| [Legacy content migration](doc/legacy-content-migration.md) | Checklist from old site |
 
 ### Data & access
 

@@ -39,7 +39,7 @@ Public site (Register) → Sign in / Sign up
 
 | Item | Detail |
 |------|--------|
-| **Where** | Public homepage — [hero / CTA](public-homepage.md) (Register, Sign in) |
+| **Where** | Public homepage — [hero / mission / CTA](public-homepage.md) (Register, Sign in, View courses) |
 | **Who** | New or returning parent |
 | **Outcome** | Directed to registration or login |
 
@@ -200,6 +200,9 @@ See REQ-ACC-03 in [Accounts & enrollment](accounts.md).
 |------|------|
 | Every form field | [registration-user-fields.md](registration-user-fields.md), [WebSiteUserFields.xlsx](WebSiteUserFields.xlsx) |
 | Cart, discounts, payments | [registration-payment.md](registration-payment.md) |
+| Discount/refund rules | [tuition-policies.md](tuition-policies.md) |
+| Browse courses (public) | [public-site-content.md](public-site-content.md) |
+| Mission & trust pages | [about-school.md](about-school.md) |
 | Account / family rules | [accounts.md](accounts.md) |
 | Parent UI after signup | [parent-portal.md](parent-portal.md) |
 | Login methods | [authentication.md](authentication.md) |
