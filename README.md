@@ -14,8 +14,6 @@ Welcome to the requirements wiki for the new **Sharon Chinese School** website a
 
 Replace the aging public website with a modern, easy-to-use experience and add a **single-school Learning Management System (LMS)** so families can register, pay, and stay connected while teachers and staff run classes day to day.
 
-This wiki is the **source of truth** for product and technical requirements. Detailed specs live under [`doc/`](doc/). Each page includes **flat-design SVG diagrams** (English labels, simple characters) for the vendor and school team.
-
 ### Platform map
 
 ![Platform map](doc/assets/diagrams/README-platform-map.svg)

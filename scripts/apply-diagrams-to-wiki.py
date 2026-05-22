@@ -134,18 +134,23 @@ rt = re.sub(
     count=1,
     flags=re.DOTALL,
 )
-rt = rt.replace(
-    "Each page includes **friendly diagrams** (Mermaid + emoji) for families, students (ages 7–13), and the vendor.",
-    "Each page includes **flat-design SVG diagrams** (English labels, simple characters) for the vendor and school team.",
+rt = re.sub(
+    r"\n\nThis wiki is the \*\*source of truth\*\*.*?school team\.\n",
+    "\n",
+    rt,
+    count=1,
+    flags=re.DOTALL,
 )
 readme.write_text(rt, encoding="utf-8")
 print("updated README.md")
 
 doc_readme = DOC / "README.md"
 drt = doc_readme.read_text(encoding="utf-8")
-drt = drt.replace(
-    "Each page has **2–3 Mermaid diagrams** with emoji and bilingual labels (中文/English) explaining the business logic for Sharon Chinese School families and students (~7–13).",
-    "Each page has **2–3 flat SVG diagrams** with English labels and simple character art (students typically ages 7–13).",
+drt = re.sub(
+    r"\n\nEach page has \*\*2–3.*?\n",
+    "\n",
+    drt,
+    count=1,
 )
 doc_readme.write_text(drt, encoding="utf-8")
 print("updated doc/README.md")
