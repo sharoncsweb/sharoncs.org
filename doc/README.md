@@ -4,6 +4,8 @@ This folder contains detailed requirements for each component of the Sharon Chin
 
 **Start here:** [Wiki home (README)](../README.md)
 
+Each page has **2–3 Mermaid diagrams** with emoji and bilingual labels (中文/English) explaining the business logic for Sharon Chinese School families and students (~7–13).
+
 ## Pages
 
 | Page | Topic |

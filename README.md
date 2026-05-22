@@ -14,7 +14,19 @@ Welcome to the requirements wiki for the new **Sharon Chinese School** website a
 
 Replace the aging public website with a modern, easy-to-use experience and add a **single-school Learning Management System (LMS)** so families can register, pay, and stay connected while teachers and staff run classes day to day.
 
-This wiki is the **source of truth** for product and technical requirements. Detailed specs live under [`doc/`](doc/).
+This wiki is the **source of truth** for product and technical requirements. Detailed specs live under [`doc/`](doc/). Each page includes **friendly diagrams** (Mermaid + emoji) for families, students (ages 7–13), and the vendor.
+
+### 🗺️ 平台大地图
+
+```mermaid
+flowchart TB
+  WEB["🌐 公开网站\n招生信息"] --> LOGIN["🔐 登录"]
+  LOGIN --> PAR["🏠 家长门户\n注册·付款·看孩子"]
+  LOGIN --> STU["🎒 学生门户\n课表·作业·7-13岁"]
+  LOGIN --> TCH["👩‍🏫 老师门户"]
+  LOGIN --> ADM["📋 管理门户"]
+  PAR --> PAY["💳 选课缴费 Phase 1"]
+```
 
 ---
 

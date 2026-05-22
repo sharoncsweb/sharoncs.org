@@ -2,6 +2,37 @@
 
 [← Wiki home](../README.md)
 
+## Diagrams
+
+### 🌳 年级 → 多个班
+
+```mermaid
+flowchart TB
+  G["📚 二年级中文\nGrade 2 Chinese"]
+  G --> A["🅰️ 甲班 Class A\n周六 9:00 · 李老师"]
+  G --> B["🅱️ 乙班 Class B\n周六 11:00 · 王老师"]
+  A --> S1["👦 学生..."]
+  B --> S2["👧 学生..."]
+```
+
+### 🎒 一个学生选哪一班
+
+```mermaid
+flowchart LR
+  STU["👧 小美"] --> PICK["选 Class A 或 B"]
+  PICK --> ROSTER["📋 进班级名单"]
+  ROSTER --> SCHED["📅 她的课表"]
+```
+
+### 🏫 和平时上的学校不同
+
+```mermaid
+flowchart LR
+  REG["🏫 平时学校\nCurrent regular school"] --> GR["几年级"]
+  GR --> HINT["💡 帮助选\n中文班级别"]
+  HINT --> CN["📚 莎伦中文课"]
+```
+
 ## Hierarchy
 
 Sharon Chinese School organizes instruction roughly as:

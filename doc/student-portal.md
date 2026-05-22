@@ -6,6 +6,40 @@
 
 Logged-in **students**. Parents monitor and manage children through the **[Parent portal](parent-portal.md)** (schedule, assignments, progress)—not by default through this portal. Confirm whether young students without their own login ever use this UI via a parent “act as student” mode (TBD).
 
+## Diagrams
+
+### 🎒 学生门户（7–13 岁）
+
+```mermaid
+flowchart TB
+  STU["👦👧 你好！学生门户"]
+  STU --> TODAY["📅 今天课表\n几点上中文课?"]
+  STU --> TODO["📝 待办作业\n要交什么?"]
+  STU --> CLASS["📚 进入课程\n材料 · 公告"]
+  style STU fill:#dfe6ff
+```
+
+### 📚 一节课里有什么
+
+```mermaid
+flowchart LR
+  C["📖 二年级中文 A"] --> M["🎬 视频/笔记"]
+  C --> H["📝 作业 Homework"]
+  C --> AN["📢 老师公告"]
+  C --> PR["⭐ 我的进度"]
+```
+
+### 📤 交作业小流程
+
+```mermaid
+flowchart LR
+  P["🖨️ 打印附件"] --> W["✏️ 纸上完成"]
+  W --> U["📷 拍照或 PDF"]
+  U --> S["🚀 上传"]
+  S --> G["⏳ 等老师批改"]
+  G --> SM["😊 成绩反馈"]
+```
+
 ## Primary features
 
 ### Dashboard

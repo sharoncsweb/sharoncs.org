@@ -2,6 +2,37 @@
 
 [← Wiki home](../README.md)
 
+## Diagrams
+
+### 📋 管理员：开学前搭好架子
+
+```mermaid
+flowchart TB
+  A["📋 Admin Portal"]
+  A --> Y["📅 新学年课程\n时间 · 教室 · 老师"]
+  A --> R["👥 报名名单 · 收款"]
+  A --> V["🙋 志愿者值班表"]
+  style A fill:#f8d7da
+```
+
+### 🔔 志愿者提醒
+
+```mermaid
+flowchart LR
+  CAL["📅 排班\n前台/走廊"] --> WAIT["⏳ 几天前"]
+  WAIT --> MSG["📱 提醒志愿者\n别忘记值班!"]
+  MSG --> OK["✅ 到岗 😊"]
+```
+
+### 🔄 单节课调整
+
+```mermaid
+flowchart LR
+  PLAN["📅 全年课表"] --> OOPS["😅 某天冲突"]
+  OOPS --> MOVE["🔀 改时间"]
+  OOPS --> SUB["👩‍🏫 换 SUBSTITUTE 代课老师"]
+```
+
 ## Audience
 
 **School administrators** and designated **staff** with elevated permissions.

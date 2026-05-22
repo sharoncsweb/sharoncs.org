@@ -2,6 +2,31 @@
 
 [← Wiki home](../README.md)
 
+## Diagrams
+
+### 🧩 名词一张图看懂
+
+```mermaid
+flowchart TB
+  ACC["🏠 Account 家庭账号\nFamily ID"]
+  U["👤 User 登录的人\n多半是家长"]
+  S["👦👧 Student 孩子\n7–13 岁"]
+  ACC --> U
+  ACC --> S
+  U -->|"Self/Spouse"| ACC
+  S -->|"Child 只属于一个家"| ACC
+```
+
+### 🚪 四个门户谁进哪扇门
+
+```mermaid
+flowchart LR
+  P["👨‍👩‍👧"] --> PP["家长门户"]
+  S["👦👧"] --> SP["学生门户"]
+  T["👩‍🏫"] --> TP["老师门户"]
+  A["📋"] --> AP["管理门户"]
+```
+
 | Term | Definition |
 |------|------------|
 | **Account** | A family / billing unit. Has one **primary owner**, zero or more **users** (parents/guardians), and one or more **students**. |

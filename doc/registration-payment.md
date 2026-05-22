@@ -17,6 +17,38 @@ Phase 1 breaks into two parts:
 
 Send vendors **both**: profile fields (Excel + wiki) and the enrollment/payment requirements below.
 
+## Diagrams
+
+### 🛒 选课付款一条龙
+
+```mermaid
+flowchart LR
+  A["👨‍👩‍👧 选孩子"] --> B["📚 挑班级"]
+  B --> C["🛒 购物车"]
+  C --> D["🏷️ 折扣"]
+  D --> E["💳 付款"]
+  E --> F["🧾 收据 ✅"]
+  style E fill:#d4edda
+```
+
+### 🏷️ 三种常见折扣
+
+```mermaid
+flowchart TB
+  CART["🛒 购物车"] --> E["🐦 早鸟 Early bird"]
+  CART --> S["👫 兄弟姐妹 Sibling"]
+  CART --> M["📚 多班 Multi-class"]
+```
+
+### 👨‍👩‍👧 谁按下付款键
+
+```mermaid
+flowchart TB
+  PO["⭐ 主家长\n能付款"] --> CHECKOUT["💳 Checkout"]
+  SP["配偶\n一般只看"] -.-> CHECKOUT
+  CHECKOUT --> OK["✅ 报名成功\n孩子进班级名单"]
+```
+
 ---
 
 ## Overview

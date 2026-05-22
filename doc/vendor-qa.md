@@ -4,6 +4,37 @@
 
 Questions from **The Web Design LLC** and answers from the school (primarily **Kyna**, 2026-03-21). Use this page when resolving ambiguities; update the component docs when answers change.
 
+## Diagrams
+
+### 🤝 学校 ↔ 外包公司怎么协作
+
+```mermaid
+flowchart LR
+  SCH["🏫 学校委员会\nKyna 等"] -->|需求/答疑| VEN["🖥️ The Web Design LLC"]
+  VEN -->|问题清单| SCH
+  SCH -->|答案+字段表| WIKI["📖 本 Wiki"]
+  WIKI --> VEN
+```
+
+### 📅 问答时间线
+
+```mermaid
+flowchart LR
+  Q1["❓ _vendor 问题 doc_\nMar 2026"] --> A1["✅ Kyna 回答"]
+  A1 --> MTG["🤝 会议: 注册优先\nMay 2026"]
+  MTG --> XLS["📊 WebSiteUserFields.xlsx"]
+```
+
+### 🥇 他们现在最该做什么
+
+```mermaid
+flowchart TB
+  NOW["🎯 现在 Focus"] --> REG["📝 注册+家庭字段"]
+  NOW --> ENR["🛒 选课+付款"]
+  NOW --> PAR["🏠 家长门户"]
+  LATER["⏳ 稍后"] --> LMS["📚 完整 LMS 功能"]
+```
+
 ---
 
 ## 1. Platform structure

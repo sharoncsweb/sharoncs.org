@@ -2,6 +2,39 @@
 
 [← Wiki home](../README.md)
 
+## Diagrams
+
+### 🎭 学校里的角色（像徽章）
+
+```mermaid
+flowchart TB
+  subgraph roles["角色 Roles"]
+    PA["👨‍👩‍👧 Parent 家长"]
+    ST["👦👧 Student 学生"]
+    TE["👩‍🏫 Teacher 老师"]
+    TA["🧑‍🎓 TA 助教"]
+    VO["🙋 Volunteer 志愿者"]
+    AD["📋 Admin 管理员"]
+  end
+```
+
+### 🧑‍🎓 TA 魔法：一班当老师，另一班当学生
+
+```mermaid
+flowchart LR
+  U["同一个人"] --> A["在 A 班\n👩‍🏫 老师权限"]
+  U --> B["在 B 班\n🎒 学生权限"]
+```
+
+### 👨‍👩‍🏫 一个人两个角色
+
+```mermaid
+flowchart TB
+  LOGIN["🔐 一次登录"] --> P["家长门户"]
+  LOGIN --> T["老师门户"]
+  NOTE["例如：家长也是老师\n不用两个账号"] --- LOGIN
+```
+
 ## Principles
 
 | Principle | Detail |

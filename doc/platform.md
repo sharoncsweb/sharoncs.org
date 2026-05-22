@@ -2,6 +2,38 @@
 
 [← Wiki home](../README.md)
 
+## Diagrams
+
+### 🏠 One school, one home
+
+```mermaid
+flowchart TB
+  WORLD["🌎 互联网 Internet"] --> SITE["🏫 莎伦中文学校\n只有这一所学校"]
+  SITE --> PUB["📰 公开网页\n招生 · 公告"]
+  SITE --> APP["🔐 登录后平台\n家长 · 学生 · 老师"]
+  style SITE fill:#d4edda
+```
+
+### 🧩 What lives on the platform
+
+```mermaid
+flowchart LR
+  subgraph platform["平台 Platform"]
+    R["📝 注册缴费\n家长做主"]
+    L["📚 上课支持\n作业 · 材料"]
+    N["📢 通知公告"]
+  end
+  R --- L --- N
+```
+
+### 💰 钱怎么收（不是月费会员）
+
+```mermaid
+flowchart LR
+  FREE["🆓 用平台\n不收月费"] --> PAY["💳 家长付\n所选课程学费"]
+  PAY --> SCHOOL["🏫 学校收到\nStripe / Square"]
+```
+
 ## Requirements
 
 | ID | Requirement | Status |
