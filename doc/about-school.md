@@ -93,6 +93,57 @@ The [public homepage](public-homepage.md) should not hide mission behind many cl
 
 Content can start as **CMS/static pages** editable by admin; full CMS permissions TBD.
 
+### Workflow — update About content (school)
+
+1. Committee drafts mission, history, and leadership bios in English (Chinese optional block).
+2. Admin enters copy in **Admin → Content → Pages → About** and leadership subsections.
+3. Preview public About page; confirm nonprofit wording with board.
+4. Publish; verify homepage mission strip and footer still align with full About text.
+
+### Acceptance criteria
+
+- About page includes mission, history, nonprofit statement, and leadership (board + administration) at launch.
+- Homepage shows short mission or tagline linking to full About (REQ-ABT-02).
+- Nonprofit status uses board-approved wording (REQ-ABT-03).
+- CTAs on About reach Register, Contact, and course catalog.
+- English content complete; Chinese only if school supplies approved copy (REQ-ABT-05).
+
+### Edge cases
+
+- **Outdated board list** — admin can unpublish a bio without removing the whole page.
+- **Youth program not ready** — omit section or mark “coming soon” rather than legacy broken links.
+- **Donation page not live** — About does not promise online giving until [donations](public-site-content.md#donations) is published.
+- **Conflicting history facts** — single source of truth in About; homepage uses summary only.
+
+---
+
+## Page sections (detailed)
+
+| Section | Content elements | Update frequency | Admin path |
+|---------|------------------|------------------|------------|
+| **Hero / intro** | School name, one-line purpose, photo | Rarely | **Content → Pages → About** |
+| **Mission** | Bullet list (EN); optional CN block | Annually or when board revises | Same |
+| **History** | Founding story, milestones, community role | Every few years | Same |
+| **Nonprofit** | 501(c) statement, link to donations when live | When legal wording changes | Same |
+| **Leadership — board** | Name, role, optional photo, short bio | When board changes | Same |
+| **Leadership — administration** | Principal, registrar, key contacts | When staff changes | Same |
+| **Programs** | Weekend Chinese program summary | Annually | Same |
+| **Youth & outreach** | Youth activities, community events | Seasonal | Same or link to youth pages |
+| **CTA strip** | Register · Contact · Course catalog | Static links | Navigation config |
+
+### Leadership content guidelines
+
+- Use **consistent titles** (Chair, Treasurer, Principal) — avoid mixing legacy titles with new roles.
+- Bios: 2–4 sentences max; no personal contact info unless school explicitly approves.
+- Photos: consistent aspect ratio; alt text with name and role for accessibility.
+- Order: board alphabetically by last name unless school requests seniority order.
+
+### Trust and compliance
+
+- Do not publish tax ID or EIN on the public site unless the board approves.
+- Donation language must match the live donation page — no conflicting “tax deductible” claims.
+- External links (PTO, youth programs) open in same tab or new tab consistently site-wide.
+
 ---
 
 ## Requirements

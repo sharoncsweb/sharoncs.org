@@ -90,6 +90,25 @@ Family Relationship:
 
 **Primary owner** (billing, add/remove parents) is not a separate field — derive from **Self** registrant or explicit designation in admin tools.
 
+### Address scope
+
+| Model | When to use |
+|-------|-------------|
+| **One address per account** | Simpler billing and mailings; spouse and children inherit unless overridden |
+| **Address per user** | Needed if parents live separately but share one family account — confirm with school |
+
+Until decided, collect address on **Self** at signup and allow admin to add per-user addresses later.
+
+### Validation rules (recommended)
+
+| Field | Validation |
+|-------|------------|
+| Mobile | E.164 or US format; unique per user where phone is login |
+| Email | Valid format; unique when used as login |
+| Date of birth | Required for **Child** before class enrollment; used for age-band hints |
+| ZIP | US ZIP or ZIP+4; label **Residential** in UI (not “Residental”) |
+| Family relationship | Exactly one **Self** on initial signup; **Child** rows require legal names |
+
 ---
 
 ## Registration flow (phase 1)
@@ -102,6 +121,43 @@ Recommended order for the vendor:
 4. **Add family members** — Spouse and/or Child rows with relationship + profile fields.
 5. **School assigned role(s)** — per person; enforce RBAC after save.
 6. **Course enrollment** — select classes per student, cart, payment — see [Registration & payment](registration-payment.md).
+
+Families may **save profile and return later** to enroll if the school allows a split wizard; minimum data before checkout must include at least one **Child** with DOB and grade when enrolling students.
+
+### Workflow — new family (happy path)
+
+1. Parent opens **Register** from the public homepage.
+2. Chooses Google, Microsoft, email + password, or phone + SMS; completes verification where required.
+3. Fills **Self** profile; system assigns **Family Identifier** and sets registrant as **primary owner**.
+4. Adds one or more **Child** records (names, DOB, regular school, grade).
+5. Optionally adds **Spouse** as second parent user on the same account.
+6. Proceeds to class selection per child — see [Registration flow](registration-flow.md).
+
+### Workflow — returning family
+
+1. Parent **Signs in** with any linked method.
+2. Updates profiles or adds a new child from the parent portal.
+3. Enrolls additional students or classes in a new season without recreating the account.
+
+### Acceptance criteria
+
+- All catalog fields in the table above are persisted on the correct entity (User vs Student vs Account).
+- Phone + SMS and email + password paths both create the same underlying user record type; OAuth paths merge into one user after consent.
+- Family Identifier is generated once per new account, visible to the family, and stable across seasons.
+- Family Relationship is restricted to Self, Spouse, Child; UI prevents marking a child as Self.
+- Multiple school roles can be stored per user; RBAC enforces effective permissions after save.
+- Student DOB and regular-school grade are available to the enrollment engine for placement hints.
+- Profile field required/optional flags are driven from **Admin → Registration → Profile fields** when implemented (see [frontend-backend-config.md](frontend-backend-config.md)).
+
+### Edge cases
+
+- **Duplicate phone or email** — block registration with a clear “Sign in” path if the identifier already exists.
+- **OAuth email differs from typed email** — offer linking in account settings; do not create a second family account silently.
+- **Two parents, one registers first** — second parent joins via invite or Spouse row; only one primary owner for billing unless admin reassigns.
+- **Child already on another account** — school policy may forbid duplicate students; admin merge or support ticket (TBD).
+- **Adult student** — rare; may register as User with Student role; DOB and placement rules still apply.
+- **Incomplete profile at checkout** — block pay until required student fields for enrolled children are complete.
+- **TA or Teacher self-signup** — role assignment may require admin approval before elevated permissions activate.
 
 ```
 ┌─────────────┐     ┌──────────────┐     ┌─────────────────┐     ┌─────────────┐

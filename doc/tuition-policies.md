@@ -98,6 +98,38 @@ Do not apply discounts to (legacy list — confirm annually):
 | **Public policy page** | Full text (or summary + PDF) linked from course catalog and registration |
 | **Parent portal** | Payment history and refund status |
 
+### Workflow — parent sees policy at checkout
+
+1. Parent adds classes to cart; system loads active tuition and discount rules from admin.
+2. Review screen lists each line: base price, early bird adjustment, one policy discount if eligible, exclusions noted.
+3. Parent opens linked tuition policy page for full legal text before paying.
+4. After payment, refund requests follow school office process; portal shows status when admin updates.
+
+### Workflow — admin configures season rules
+
+1. Admin sets early-bird deadline and per-course prices in **Courses → Pricing**.
+2. Configures discount rules, excluded courses, late tiers, and refund schedule in **Pricing**.
+3. Updates public tuition page copy in **Content → Pages → Tuition** to match engine behavior.
+4. Runs test carts for early bird, sibling, multi-class, excluded course, and late registration scenarios.
+
+### Acceptance criteria
+
+- Early bird applies automatically before configured deadline (REQ-TUIT-01).
+- Checkout applies at most one policy discount per course unless school changes stacking (REQ-TUIT-02).
+- Excluded courses never receive policy discounts (REQ-TUIT-03).
+- Late registration charges prorated tuition per configured week bands (REQ-TUIT-04).
+- Refund amounts follow week-of-withdrawal table after admin processes withdrawal (REQ-TUIT-05).
+- Public tuition page is linked from catalog and registration and matches enforced rules (REQ-TUIT-06).
+
+### Edge cases
+
+- **Register day before vs after early-bird deadline** — price changes at deadline boundary in server timezone (confirm with school).
+- **Three youth courses — multi-class vs teacher-child** — legacy: no combining; system picks single best discount or school-defined priority.
+- **Withdrawal Saturday boundary** — refund tier uses “before Saturday of Nth class” per legacy wording; define class session calendar in admin.
+- **Registration fee non-refundable** — shown on checkout even if 100% course refund applies.
+- **Processor fee on partial refund** — card fee portion may be non-refundable; disclose on policy page.
+- **Class cancelled by school for low enrollment** — full refund path per office policy (automate TBD).
+
 ---
 
 ## Requirements

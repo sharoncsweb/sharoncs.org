@@ -162,3 +162,47 @@ See [Authentication](authentication.md).
 Profile fields: [`WebSiteUserFields.xlsx`](WebSiteUserFields.xlsx) and [Registration — user fields](registration-user-fields.md).
 
 **Fields cover:** login (Google, Microsoft, email/password, phone/SMS), profile names (EN/CN), nickname, gender, DOB, WeChat ID, email, address, family ID/relationship, school roles, student’s regular school and grade.
+
+---
+
+## 13. Public homepage & content (phase 1)
+
+**Q:** What must the homepage include for launch?
+
+**A:**
+
+- Professional hero with Register, Sign in, View courses
+- Mission line and link to About
+- Announcements and events sections with permission-based publishing
+- Footer contact and nonprofit identity
+- See [public-homepage.md](public-homepage.md) and [public-site-content.md](public-site-content.md)
+
+**Open:** approval workflow for non-admin publishers; bilingual toggle — school to confirm.
+
+---
+
+## 14. Tuition, discounts, refunds
+
+**Q:** Are legacy discount rules binding for the new system?
+
+**A:**
+
+- Migrate amounts and rules from [tuition-policies.md](tuition-policies.md); committee confirms each academic year before go-live
+- System must enforce non-combined discounts and excluded courses unless school updates policy
+- See open items on [registration-payment.md](registration-payment.md) for waitlist and installments
+
+---
+
+## Index of resolved topics
+
+| # | Topic | Primary spec |
+|---|--------|----------------|
+| 1 | Platform / single school | [platform.md](platform.md) |
+| 2 | Accounts / self-registration | [accounts.md](accounts.md) |
+| 3 | Courses / delivery | [courses.md](courses.md) |
+| 4–6 | Portals | [student](student-portal.md), [teacher](teacher-portal.md), [admin](admin-portal.md) |
+| 7 | School structure | [school-structure.md](school-structure.md) |
+| 8 | Announcements | [announcements.md](announcements.md) |
+| 9–10 | RBAC, auth | [rbac.md](rbac.md), [authentication.md](authentication.md) |
+| 11–12 | Registration phase 1 | [registration-payment.md](registration-payment.md), [registration-user-fields.md](registration-user-fields.md) |
+| 13–14 | Public site, tuition | [public-homepage.md](public-homepage.md), [tuition-policies.md](tuition-policies.md) |

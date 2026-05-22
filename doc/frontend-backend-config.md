@@ -81,6 +81,22 @@ Every **dynamic** item on the public site or in a portal is loaded from data sta
 - **Example 1:** Staff publishes a photo gallery of the spring festival in **Admin → Content → Gallery**; visitors browse albums on the public site.
 - **Example 2:** A news article about a competition result is posted in **Admin → Content → News** and linked from the homepage quick links.
 
+### Acceptance criteria — public website
+
+- Every row in the public website table above maps to a documented admin path and requirement ID.
+- Publishing homepage hero, announcement, or event updates the live public site without code deploy after cache invalidation.
+- Contact and footer values always read from **Settings → School contact** — no hard-coded email or phone in templates.
+- Catalog list, fees, and class days reflect **Academic year → Courses** with publish-to-catalog enabled.
+- Registration open/closed messaging follows **Registration → Seasons & deadlines** on homepage CTA and catalog enroll buttons.
+
+### Edge cases — public website
+
+- **Staff preview vs public** — draft content never visible to anonymous visitors.
+- **Cached homepage after publish** — invalidate within agreed SLA (e.g. one minute) or provide manual purge.
+- **Course unpublished while on catalog bookmark** — return 404 or “not available” with link to catalog index.
+- **Early-bird deadline during active session** — catalog price updates on next page load; cart recalculates at checkout.
+- **Missing hero image** — hero falls back to text-only layout without broken layout shift.
+
 ---
 
 ## Registration & checkout
@@ -125,6 +141,22 @@ Every **dynamic** item on the public site or in a portal is loaded from data sta
 - **Example 1:** After payment, parent sees a receipt in the portal; **Admin → Enrollment → Payments** shows status **Paid** for that family.
 - **Example 2:** Admin issues a partial refund for a dropped class; payment status updates to **Refunded** and the student is removed from the roster.
 
+### Acceptance criteria — registration & checkout
+
+- Sign-up required/optional fields match **Registration → Profile fields** for the active season.
+- Cart line amounts match **Courses → Pricing** and active tuition rules at time of payment submission.
+- Discount engine applies configured rules consistently on review screen and in admin payment reports.
+- Payment gateway keys in **Settings → Payment gateways** control sandbox vs live without UI code change.
+- Paid enrollment status in **Enrollment → Payments** matches roster visibility rules agreed with school.
+
+### Edge cases — registration & checkout
+
+- **Profile field toggled mid-registration** — form validation updates on next step load; do not fail silently on old cached form.
+- **Capacity reached between add-to-cart and pay** — block charge and name full classes.
+- **Spouse session at checkout** — payment API rejects non-primary owner.
+- **Gateway success, UI timeout** — reconciliation via payment id prevents duplicate enrollment rows.
+- **Offline mark paid** — roster updates without double card charge if family pays check later.
+
 ---
 
 ## Parent portal
@@ -164,6 +196,22 @@ Every **dynamic** item on the public site or in a portal is loaded from data sta
 - **Example 1:** Parent opens child’s Grade 2 Class A page and sees the teacher’s homework reminder posted in **Teacher portal → Course → Announcements**.
 - **Example 2:** Parent with two children sees class announcements scoped separately per child’s enrollments.
 
+### Acceptance criteria — parent portal
+
+- Family and student profile edits persist to the same records created at registration.
+- Enrollable course list respects registration season and published courses only.
+- Cart and checkout read the same pricing and discount admin config as public registration.
+- Payment history shows all family transactions recorded in **Enrollment → Payments**.
+- School-wide and class announcements appear only for appropriate scope and enrollment.
+
+### Edge cases — parent portal
+
+- **Primary owner change** — open carts and pay button follow new owner; spouse loses pay unless policy changes.
+- **Child removed from class** — course tile remains with “dropped” or disappears per product rule; payment history retained.
+- **Closed season with active enrollments** — past enrollments visible; add-class hidden.
+- **Announcement for class parent not enrolled in** — not shown in that child’s feed.
+- **Concurrent profile edit by parent and admin** — last write wins with audit log on admin side.
+
 ---
 
 ## Student portal
@@ -198,6 +246,22 @@ Every **dynamic** item on the public site or in a portal is loaded from data sta
 - **Example 1:** Teacher grades the homework upload with a score and comment in **Course → Grading**; student sees feedback in the portal.
 - **Example 2:** Student reviews returned exam PDF with annotated feedback visible only after the teacher releases grades for that assignment.
 
+### Acceptance criteria — student portal
+
+- Schedule reflects **Master schedule** plus per-session reschedule for enrolled sections only.
+- Course list matches **Enrollment → Rosters** for the logged-in student.
+- Materials and assignments visible only when teacher releases them in **Course → Content** / **Assignments**.
+- Class announcements never leak to non-enrolled courses.
+- Grades hidden until teacher releases them in **Course → Grading**.
+
+### Edge cases — student portal
+
+- **Student in two sections same time slot** — display conflict warning on schedule (admin should avoid).
+- **Substitute teacher session** — schedule shows session; course page may note substitute via announcement.
+- **Dropped mid-year** — portal access to course ends; historical grades policy TBD.
+- **Assignment due timezone** — due Sunday 8 p.m. Eastern unless school configures otherwise.
+- **Large PDF upload on mobile** — show progress and size limit error clearly.
+
 ---
 
 ## Teacher portal
@@ -231,6 +295,22 @@ Every **dynamic** item on the public site or in a portal is loaded from data sta
 #### Class announcements (teacher post)
 - **Example 1:** Teacher posts “Quiz moved to next week” in **Course → Announcements**; parents and students in that class receive it in their feeds.
 - **Example 2:** TA with class permissions posts a field-trip reminder; it appears on the course page but not school-wide.
+
+### Acceptance criteria — teacher portal
+
+- **My courses** lists only sections assigned in **Academic year → Courses**.
+- Session schedule matches admin master data and approved reschedules.
+- Content visibility toggles in **Course → Settings** immediately affect student view.
+- Assignments support attachments, due dates, and per-student differentiation where specified.
+- Class announcements reach enrolled families only; TA posts require course-scoped permission.
+
+### Edge cases — teacher portal
+
+- **Teacher removed from course mid-year** — lose edit access; historical posts remain visible per policy.
+- **TA in class A, student in class B** — TA permissions do not grant teacher tools in class B.
+- **Hidden module accidentally released** — teacher can re-hide; students who already downloaded retain file (acceptable).
+- **Reschedule not yet approved** — teacher sees pending state; families not notified until admin publishes.
+- **Exam upload from student outside enrollment** — reject upload with clear error.
 
 ---
 
@@ -335,6 +415,64 @@ Every **dynamic** item on the public site or in a portal is loaded from data sta
 #### Settings → Roles & permissions
 - **Example 1:** Admin grants a teacher `homepage.post_event` for one semester so they can publish the class performance on the public homepage.
 - **Example 2:** Admin creates a “Communications volunteer” custom role with school-wide announcement rights but no payment access.
+
+### Acceptance criteria — admin configuration
+
+- Academic year setup (grades, courses, master schedule) drives all portal and catalog surfaces for that year.
+- Pricing and discount changes apply to new carts without manual database edits.
+- Registration season and profile-field changes take effect on next sign-up or enrollment attempt.
+- Homepage, calendar, and static page content publish from **Content** admin paths documented in the table above.
+- Role and permission changes affect authorization on next request (or within documented cache window).
+
+### Edge cases — admin configuration
+
+- **Copy academic year** — duplicated courses start unpublished until admin reviews pricing and teachers.
+- **Price change with open unpaid carts** — recalculate on checkout submit, not silent charge at old price.
+- **Disable login method while users mid-session** — existing sessions may persist until expiry; new logins blocked.
+- **Rotate payment keys** — brief maintenance window; failed payments retry after keys saved.
+- **Volunteer permission too broad** — custom role without payment or roster delete prevents accidental data loss.
+
+---
+
+## Cross-cutting data sync rules
+
+| Rule | Applies to | Behavior |
+|------|------------|----------|
+| **Single writer** | Prices, discounts | Catalog, cart, and tuition policy page read the same pricing tables — no duplicate spreadsheets in code. |
+| **Publish flag** | Courses, homepage items | Unpublished admin records never appear on anonymous pages. |
+| **Time zones** | Events, early bird, registration close | Store UTC; display in **America/New_York** (confirm with school). |
+| **Roster drives portal** | Student/parent course lists | Enrollment changes propagate within one minute to portals (or on next refresh). |
+| **Schedule overrides** | Session reschedule | Override wins over recurring rule for that session date only. |
+| **Announcement scope** | School vs class | School-wide posts never appear as class posts without explicit cross-post (if supported). |
+
+### Configure link UX (staff)
+
+| Context | Link label | Destination |
+|---------|------------|-------------|
+| Public homepage (staff preview) | Manage homepage content | **Admin → Content → Homepage** |
+| Course catalog row (staff) | Edit course | **Admin → Academic year → Courses → {id}** |
+| Parent cart (support staff) | View pricing rules | **Admin → Pricing** (read-only if not treasurer) |
+| Teacher course page | Course settings | **Teacher portal → Course → Settings** |
+| Empty announcements feed | Post school announcement | **Communications → School announcements** |
+
+Links require appropriate RBAC; hide entirely for users without access.
+
+---
+
+## QA testing matrix (sample)
+
+| Surface | Test | Pass when |
+|---------|------|-----------|
+| Homepage hero | Change headline in admin → publish | Anonymous visitor sees new text |
+| Announcement | Set end date yesterday | Item hidden on homepage |
+| Catalog | Unpublish one course | Course absent from catalog and cart |
+| Early bird | Set deadline to tomorrow 23:59 | Today shows early price; tomorrow shows regular |
+| Cart discount | Two siblings, three courses each | Correct discount per rules; only one discount type if non-combined |
+| Checkout | Decline card in test mode | Clear error; enrollment not created |
+| Paid enrollment | Successful payment | Roster shows student; parent sees receipt |
+| Master schedule | Reschedule one session | Student schedule shows new time that week only |
+| Class announcement | Teacher post | Only that class’s families see it in portal |
+| School contact | Change phone in settings | Contact page and footer update |
 
 ---
 

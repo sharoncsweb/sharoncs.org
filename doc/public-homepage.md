@@ -99,6 +99,40 @@ Admins assign these to **roles** or **individual users** (same model as the rest
 4. Publishes (or submits for admin approval—**TBD** with school).
 5. Item appears in the correct homepage section; optional end date hides it automatically.
 
+### Workflow — publish announcement (staff)
+
+1. User with `homepage.post_announcement` signs in to staff or admin UI.
+2. Creates draft: title, short body, optional link, start and end visibility dates.
+3. Previews on homepage layout (desktop and mobile).
+4. Publishes immediately or submits for admin approval per school policy.
+5. Item appears in announcements strip; auto-hides after end date.
+
+### Workflow — publish event (staff)
+
+1. User with `homepage.post_event` creates event with date, time, location, description.
+2. Sets sort order or featured flag if school uses pinned events.
+3. Publishes; event appears in upcoming list sorted by date.
+4. Past events move to archive or hide per retention rules (TBD).
+
+### Acceptance criteria
+
+- Homepage loads in under three seconds on typical mobile connection (vendor target); hero, mission line, and primary CTAs visible without horizontal scroll.
+- At least one announcement and one upcoming event visible when school has published content (empty state copy when none).
+- Users without homepage permissions cannot access publish APIs or UI.
+- Changes made in **Admin → Content → Homepage** appear on the live site after publish without deployment.
+- Footer on homepage matches **Admin → Settings → School contact** and includes nonprofit identity, Canton location, Register and Sign in links.
+- Quick links reach course catalog, tuition policies, About, and Contact within one click from homepage body or footer.
+
+### Edge cases
+
+- **No published events** — show friendly empty state, not a broken section.
+- **Expired announcement** — hidden automatically; direct URL returns 404 or archive per vendor choice.
+- **Draft visible to public** — never; preview only for signed-in authorized users.
+- **Teacher without permission** — no publish UI; read-only public view.
+- **Scheduled publish** — if supported, item hidden until start datetime (TBD).
+- **Hero image missing** — fallback to text-only hero with acceptable layout.
+- **Very long announcement** — truncate on homepage with “read more” to full page or modal (TBD).
+
 ---
 
 ## Announcements vs events

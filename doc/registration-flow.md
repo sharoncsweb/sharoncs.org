@@ -22,6 +22,23 @@
 
 See [Public homepage](public-homepage.md) and [Public site content](public-site-content.md).
 
+### Phase 1 acceptance criteria (end-to-end)
+
+- A new visitor can start from the public homepage, complete account creation, add at least one student, enroll in one or more classes, pay as primary owner, and land in the parent portal with paid status visible.
+- A returning parent can sign in, add classes for an existing student, and pay without re-entering family ID.
+- Registration closed season shows clear messaging on homepage and blocks new enrollments while preserving sign-in.
+- Admin can complete or fix a family record via assisted registration with audit trail.
+- All dynamic steps (catalog, cart, prices, registration window) reflect admin configuration without deploy.
+
+### Edge cases (flow-level)
+
+- **Split wizard vs single flow** — school may require profile completion before catalog; system must not lose cart when user signs out mid-flow.
+- **OAuth without mobile on file** — prompt for required fields before enrollment if phone is mandatory for school contact.
+- **Zero children at enroll step** — redirect to add child or block with actionable message.
+- **Spouse attempts checkout** — deny with explanation and name of primary owner contact.
+- **Class full at pay** — reconcile cart before gateway charge.
+- **Browser back after pay** — show confirmation, not double charge.
+
 ## Backend configuration
 
 Every dynamic step (homepage, catalog, cart, payment) maps to an admin screen — **[Frontend ↔ backend configuration map](frontend-backend-config.md)**.
@@ -53,6 +70,11 @@ Public site (Register) → Sign in / Sign up
 
 Returning users **Sign in** with Google OAuth, Microsoft OAuth, email + password, or phone + SMS (see [Authentication](authentication.md)).
 
+| Acceptance criteria | Edge cases |
+|---------------------|------------|
+| Register and Sign in CTAs visible above the fold on mobile and desktop | User bookmarks old `/register` URL — redirect to new flow |
+| Logged-in user clicking Register goes to parent portal or enrollment, not duplicate signup | Session expired mid-flow — return to login with cart preserved if possible |
+
 ---
 
 ## Step 2 — Create account (choose login method)
@@ -67,6 +89,12 @@ Returning users **Sign in** with Google OAuth, Microsoft OAuth, email + password
 All paths merge into the same **user** record. User may link additional methods later in settings.
 
 **Requirements:** REQ-AUTH-01, REQ-REG-02, REQ-REG-02b, REQ-REG-03 · See [Authentication](authentication.md).
+
+| Acceptance criteria | Edge cases |
+|---------------------|------------|
+| All four login methods create or attach to one user record | Same email used for Google and email/password — offer account linking |
+| SMS OTP expires and can be resent with rate limit | International phone format — confirm supported countries with vendor |
+| User can link additional login methods later in settings | Child attempts to register as primary — block or route to parent flow (TBD) |
 
 ---
 
@@ -89,6 +117,12 @@ Full field list: [Registration — user fields](registration-user-fields.md) and
 
 ![Signup steps](assets/diagrams/registration-signup-steps.svg)
 
+| Acceptance criteria | Edge cases |
+|---------------------|------------|
+| Family Identifier assigned before adding children | User refreshes during step 3 — no duplicate family accounts |
+| Registrant becomes primary owner automatically | Admin later changes primary owner — billing follows new owner |
+| Required fields enforced per admin profile-field config | Address optional at signup but required before pay — clear messaging |
+
 ---
 
 ## Step 4 — Add family members (optional)
@@ -109,6 +143,12 @@ Same account; relationship drives entity type.
 
 ![Family structure](assets/diagrams/accounts-family.svg)
 
+| Acceptance criteria | Edge cases |
+|---------------------|------------|
+| Each child is a Student on the same family account | Duplicate child name — allow but warn; duplicate student policy TBD |
+| Spouse added as User with relationship Spouse, not primary owner | Spouse needs pay rights — only via policy change or admin |
+| Student role assigned when child will use student portal | Under-age student login — parent-only until credentials policy set |
+
 ---
 
 ## Step 5 — Enroll in classes
@@ -125,6 +165,12 @@ Done in the **[Parent portal](parent-portal.md)** (or continuation of registrati
 
 ![Enrollment and payment](assets/diagrams/payment-cart.svg)
 
+| Acceptance criteria | Edge cases |
+|---------------------|------------|
+| Catalog respects registration season open/closed | User adds class then admin closes season — validate at checkout |
+| Cart shows fees, discounts, and total before gateway | Sibling discount across two students in one cart — one discount per rules |
+| Waitlist or full class handled before pay | Placement suggestion ignored by parent — allow override if school permits |
+
 ---
 
 ## Step 6 — Payment & confirmation
@@ -139,6 +185,12 @@ Done in the **[Parent portal](parent-portal.md)** (or continuation of registrati
 **Requirements:** REQ-PAY-01 through REQ-PAY-07 · See [Registration & payment](registration-payment.md).
 
 ![Who can checkout](assets/diagrams/payment-checkout.svg)
+
+| Acceptance criteria | Edge cases |
+|---------------------|------------|
+| Only primary owner reaches payment gateway | Payment succeeds but email fails — receipt still in portal |
+| Receipt and paid status within one minute of success | Double-click pay — idempotent charge |
+| Enrollment summary lists student, class, schedule snippet | Partial refund later — portal shows updated status |
 
 ---
 
@@ -161,6 +213,20 @@ Done in the **[Parent portal](parent-portal.md)** (or continuation of registrati
 | Policy | **Not** the primary path; audit who created/changed records |
 
 See REQ-ACC-03 in [Accounts & enrollment](accounts.md).
+
+| Acceptance criteria | Edge cases |
+|---------------------|------------|
+| Admin action logged with staff user and timestamp | Admin creates duplicate enrollment — detect and merge |
+| Family notified when admin completes enrollment on their behalf | Wrong student assigned to class — admin correction without new payment |
+
+### Workflow — committee UAT (recommended)
+
+1. Browse public homepage and catalog as anonymous user.
+2. Register new family with phone path; add two children; enroll each in different classes.
+3. Apply early bird and sibling scenarios in separate test accounts.
+4. Complete Stripe/Square test payment; verify receipt and admin payment row.
+5. Sign in as spouse; confirm cannot pay.
+6. Close registration season in admin; confirm public CTA and cart behavior.
 
 ---
 

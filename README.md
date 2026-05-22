@@ -16,6 +16,29 @@ Replace the aging public website with a modern, easy-to-use experience and add a
 
 This wiki documents product and technical requirements. Detailed specs live under [`doc/`](doc/). Each page includes **flat-design SVG diagrams** (English labels) for the vendor and school team.
 
+### Who should read what
+
+| Reader | Start here | Then |
+|--------|------------|------|
+| **Vendor (The Web Design LLC)** | [Registration flow](doc/registration-flow.md) · [Frontend ↔ backend config](doc/frontend-backend-config.md) | Component specs under [Public site & registration](#public-site--registration-phase-1) |
+| **School committee** | [Project overview](doc/overview.md) · [Vendor Q&A](doc/vendor-qa.md) | [Tuition policies](doc/tuition-policies.md) · open items on each page |
+| **Future maintainers** | This README · [Glossary](doc/glossary.md) | [RBAC](doc/rbac.md) · [Accounts](doc/accounts.md) |
+
+### Acceptance criteria (wiki as a deliverable)
+
+- Every phase 1 feature has a linked spec with requirements IDs, workflows, and open items marked for school confirmation.
+- Vendor can trace any dynamic UI element to an admin configuration path via [frontend-backend-config.md](doc/frontend-backend-config.md).
+- Registration, payment, and public homepage specs are complete enough to estimate and build without guessing field names or policy rules.
+- Diagrams and tables use English labels only; bilingual public copy is optional and called out explicitly where relevant.
+
+### Edge cases (program-wide)
+
+- **Legacy site stays live** until cutover; URLs and bookmarks must redirect or be documented in [legacy content migration](doc/legacy-content-migration.md).
+- **Single school only** — no multi-tenant branding, billing for platform use, or cross-school data.
+- **Primary owner vs spouse** — billing and checkout permissions differ; specs assume primary owner pays unless school changes policy.
+- **Admin-assisted registration** — supported as exception path; must be auditable and not the default family experience.
+- **Policy changes mid-season** — tuition, discounts, and registration windows are configured per academic year; mid-year rule changes require admin updates and may affect in-flight carts.
+
 ### Platform map
 
 ![Platform map](doc/assets/diagrams/README-platform-map.svg)
@@ -31,6 +54,16 @@ Build in order: **phase 1 first**, then student/teacher LMS, then ongoing improv
 ### Phase 1 (now) — Public site + registration
 
 Launch a professional public site and end-to-end family signup.
+
+**Workflow (committee + vendor):** finalize P0 page copy and tuition rules → vendor implements public site + registration → school UAT on staging (homepage, catalog, full register-to-pay path) → production cutover with legacy redirects.
+
+**Phase 1 acceptance criteria (summary):**
+
+- Anonymous visitor can browse homepage, About, contact, course catalog, and tuition policies on mobile and desktop.
+- New parent completes self-registration (OAuth, email, or phone), creates family profile, adds at least one student, enrolls in classes, applies configured discounts, pays, and receives a receipt.
+- Primary owner is the only role that can complete checkout; spouse can view family data per permissions.
+- Staff with homepage permissions can publish announcements and events without a code deploy.
+- Admin can configure courses, prices, discounts, registration season, and payment gateway; changes appear on the public site and in checkout without developer edits.
 
 | Area | Deliverables | Specs |
 |------|--------------|-------|
@@ -140,7 +173,17 @@ Enhancements and legacy content migration as the school prioritizes.
 1. Edit markdown under `doc/` for component-level detail.
 2. Keep **README** as the navigation hub (add links when you add pages).
 3. Use clear headings, tables, and requirement IDs where helpful (e.g. `REQ-AUTH-01`).
-4. Open a pull request or commit to `main` so the vendor and school committee stay aligned.
+4. When adding or changing behavior, include **acceptance criteria**, **edge cases**, and a short **workflow** where the page does not already have them.
+5. Open a pull request or commit to `main` so the vendor and school committee stay aligned.
+
+### Document conventions
+
+| Element | Usage |
+|---------|--------|
+| **REQ-* IDs** | Traceable requirements; reference in vendor estimates and test plans |
+| **Open items** | Decisions still needed from the school — do not invent answers in build |
+| **Backend configuration tables** | Link frontend surfaces to admin screens; keep in sync with [frontend-backend-config.md](doc/frontend-backend-config.md) |
+| **P0 / P1 / P2** | Launch priority for public content ([public site content](doc/public-site-content.md)) |
 
 ---
 
@@ -152,4 +195,4 @@ Enhancements and legacy content migration as the school prioritizes.
 | Application code | Not started in this repo |
 | Legacy site | Still live at [www.sharoncs.org](https://www.sharoncs.org/) |
 
-*Last updated: 2026-05-22 (implementation phases on homepage)*
+*Last updated: 2026-05-22 (expanded acceptance criteria, edge cases, workflows)*

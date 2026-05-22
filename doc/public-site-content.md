@@ -29,6 +29,29 @@ Pages and features visitors expect from [www.sharoncs.org](https://www.sharoncs.
 
 **P0** = needed for a professional nonprofit school launch. **P1** = soon after. **P2** = migrate when ready.
 
+### Launch workflow (P0)
+
+1. School confirms copy for About, contact, tuition policies, and mission snippets.
+2. Admin publishes academic year courses to catalog with fees and schedules.
+3. Vendor wires homepage, catalog, registration CTAs, and footer contact from admin config.
+4. Committee runs anonymous browse + register-to-pay UAT before DNS cutover.
+5. P1 pages (calendar, registration instructions, news) follow within agreed weeks after launch.
+
+### Acceptance criteria (P0 public site)
+
+- All P0 rows in the site map are reachable from homepage navigation or footer within two clicks.
+- Course catalog is readable without login and shows current semester offerings with fees and schedule summary.
+- Every catalog course offers a path to Register or sign-in to enroll.
+- Tuition policies page matches checkout rules and links from catalog and cart.
+- Contact information is consistent on Contact page, footer, and About CTAs.
+
+### Edge cases (site-wide)
+
+- **Stale semester** — catalog defaults to active academic year configured in admin; old year hidden from browse.
+- **Registration closed** — catalog may still browse; enroll CTA explains closed season and contact path.
+- **Mixed P0 and P2 links** — do not expose broken nav to unmigrated legacy pages; omit or “coming soon” until ready.
+- **PDF-only calendar** — page must still state key dates in HTML for accessibility when PDF is primary (P1).
+
 ---
 
 ## Public course catalog
@@ -43,6 +66,27 @@ Legacy site lets visitors **browse courses before registering** (semester, name 
 | REQ-CAT-04 | Link to [tuition policies](tuition-policies.md) from catalog and checkout. | Confirmed |
 
 Filters (legacy): class day, course type — preserve if still used by school.
+
+### Workflow — family discovers courses
+
+1. Visitor opens **View courses** from homepage or catalog nav.
+2. Filters by day or type if enabled; compares fees and schedules for children’s levels.
+3. Opens tuition policies from catalog banner or footer link.
+4. Clicks **Register** on a course or global CTA → registration or sign-in → enrollment flow.
+
+### Acceptance criteria (catalog)
+
+- REQ-CAT-01 through REQ-CAT-04 satisfied on mobile and desktop.
+- Early bird price label changes automatically after deadline configured in admin.
+- Courses not published to catalog do not appear in public list.
+- Excluded-from-discount courses still appear with full price clearly labeled.
+
+### Edge cases (catalog)
+
+- **No courses for semester** — admin message, not empty broken grid.
+- **Course hidden mid-season** — removed from browse; enrolled families still see class in portal.
+- **Fee change after browse** — cart recalculates at checkout from current admin price.
+- **Bilingual course title** — display EN/CN per course record if school enters both.
 
 ### Backend configuration
 
@@ -85,6 +129,12 @@ Migrate as readable public pages (CMS or markdown), no special LMS logic in v1:
 - Student behavior guideline  
 - Teacher behavior guideline  
 - Classroom usage guideline  
+
+### Workflow — migrate static guideline (P2)
+
+1. School supplies approved markdown or docx to committee.
+2. Admin creates page under **Content → Pages** with slug matching nav plan.
+3. Link from footer “Policies” or About when ready; no LMS logic required in v1.
 
 ---
 

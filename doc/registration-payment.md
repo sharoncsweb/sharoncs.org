@@ -51,6 +51,8 @@ Full map: **[Frontend ↔ backend configuration map](frontend-backend-config.md#
 
 Parents register students for **specific classes** and pay tuition/fees through an integrated checkout flow. There is **no** subscription to use the platform itself.
 
+Payment status drives **roster eligibility**: students should appear as enrolled in class rosters only when the business rules say they are paid (or explicitly waived by admin). Unpaid carts do not hold seats indefinitely unless the school configures a hold window (TBD).
+
 ## User flow
 
 ```
@@ -66,6 +68,16 @@ See [Registration — user fields](registration-user-fields.md) for steps before
 - Use student **Date of Birth** and **Current Grade at Regular School** to suggest or restrict levels (rules TBD)
 - Enforce prerequisites or capacity limits if school defines them (TBD)
 - One cart may include multiple students and multiple classes
+- Catalog browse may happen **before** login; cart and checkout require a signed-in primary owner (or continuation of registration wizard)
+
+### Placement and capacity
+
+| Rule | Behavior |
+|------|----------|
+| **DOB + regular-school grade** | Suggest or filter class levels; hard blocks only if school configures them |
+| **Capacity** | When class is full, show waitlist or “full” per admin setting |
+| **Prerequisites** | Optional; block add-to-cart or warn at review (TBD) |
+| **Excluded discount courses** | Listed in [tuition policies](tuition-policies.md); full price at checkout |
 
 ## Discounts
 
@@ -76,6 +88,43 @@ See [Registration — user fields](registration-user-fields.md) for steps before
 | Multi-class | Confirmed (concept) |
 
 *Exact rules, amounts, and date windows — define with school business office.*
+
+Discount evaluation order (recommended): compute **line price** (including early bird by date) → apply **at most one** qualifying policy discount per course unless school updates stacking → show breakdown on review screen. Legacy policy: discounts **do not combine** — see [tuition-policies.md](tuition-policies.md).
+
+### Workflow — checkout (primary owner)
+
+1. Select student(s) and add classes to cart from catalog or parent portal.
+2. Review line items: course name, schedule summary, base fee, early bird adjustment, applied policy discount.
+3. Confirm total; redirect to payment gateway (Stripe or Square).
+4. On success: mark enrollment **paid**, send receipt, show confirmation with class list.
+5. On failure: keep cart intact; show retry; do not create duplicate charges for the same cart session.
+
+### Workflow — admin payment oversight
+
+1. Admin opens **Enrollment → Payments** for the active season.
+2. Filters unpaid, partial, or disputed families; exports roster/payment report.
+3. Records offline payment (check/cash) or issues refund per school process; roster updates accordingly.
+
+### Acceptance criteria
+
+- Cart supports multiple students and multiple classes in one checkout session.
+- Prices and early-bird deadlines match **Admin → Courses → Pricing** and **Pricing → Tuition rules** without code changes.
+- Configured discounts appear as separate lines on the review step; excluded courses never receive policy discounts.
+- Only the **primary owner** can submit payment; spouse sees cart state if permitted but cannot complete pay.
+- Successful card payment sets status to **paid**, generates a receipt (email and/or download), and updates admin enrollment views.
+- Failed or abandoned payment does not mark students as paid on the roster.
+- Admin can mark paid offline and export enrollment/payment reports for the season.
+
+### Edge cases
+
+- **Cart abandoned overnight** — early-bird eligibility recalculates at payment time based on current date rules.
+- **Class becomes full while in cart** — block checkout for that line or offer waitlist; message names the class.
+- **Partial payment** — if school allows installments (TBD), track **partial** status and block roster until satisfied.
+- **Duplicate enrollment** — same student + same class in cart twice should be prevented.
+- **Refund after pay** — admin adjusts status to refunded and removes or freezes roster seat per policy.
+- **Discount rule change mid-checkout** — recalculate on review/submit; show notice if total changed.
+- **Gateway timeout** — idempotent retry; admin reconciles via payment dashboard if charge succeeded but UI failed.
+- **Primary owner transfer** — only new primary owner can pay open carts after admin reassignment.
 
 ## Payment integration
 
@@ -95,6 +144,17 @@ See [Registration — user fields](registration-user-fields.md) for steps before
 - Export roster / payment reports
 - Manual adjustments (waivers, refunds) — process TBD
 - Mark students paid offline if needed (check/cash) — recommended
+- Reconcile gateway payouts with internal payment reports (export format TBD)
+
+### Receipt content (minimum)
+
+| Field | Included |
+|-------|----------|
+| Family / payer name | Yes |
+| Payment date and transaction reference | Yes |
+| Per-class lines with student name | Yes |
+| Discount breakdown | Yes |
+| School contact for billing questions | Yes |
 
 ## Open items
 

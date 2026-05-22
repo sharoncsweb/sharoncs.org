@@ -37,6 +37,32 @@ Legacy: [School calendar and schedule](https://www.sharoncs.org/school/page/scho
 | **Updates** | Admin or staff with permission republish each year |
 | **Distinction** | Not the same as per-student **class schedule** in the LMS (see [student portal](student-portal.md)) |
 
+### Workflow — update contact (admin)
+
+1. Treasurer or admin edits **Admin → Settings → School contact**.
+2. Saves email, phone, class location, and labeled mailing address.
+3. Contact page and all public footers refresh from the same settings record.
+
+### Workflow — publish school calendar (admin)
+
+1. Admin uploads annual PDF and/or enters key dates in **Admin → Content → School calendar**.
+2. Aligns registration deadline dates with **Registration → Seasons & deadlines**.
+3. Publishes; public calendar page and optional homepage link show new year.
+
+### Acceptance criteria
+
+- Contact page shows click-to-call phone, mailto email, class location with map link, and clearly labeled mailing address once school confirms (REQ-CON-01, REQ-CON-02).
+- Footer on every public page includes email, phone, and Canton class location (REQ-CON-04).
+- School calendar displays academic year boundaries, holidays, and no-school days (REQ-CON-03).
+- Registration help section links to [registration flow](registration-flow.md).
+
+### Edge cases
+
+- **Two addresses without labels** — never show mailing and class addresses ambiguously; use “Classes meet at” vs “Mail to”.
+- **Calendar PDF inaccessible** — provide HTML list of dates and PDF download side by side.
+- **Wrong year published** — admin can unpublish calendar until corrected; homepage should not link stale PDF.
+- **Snow day added late** — admin adds exception date; optional mirror as homepage announcement.
+
 ## Backend configuration
 
 | Frontend (dynamic) | Configure in admin |
