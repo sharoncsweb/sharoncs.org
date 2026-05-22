@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" role="img" aria-label="TA dual role per class">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+  <rect width="720" height="200" fill="#FFFFFF"/>
+  
+    <g transform="translate(280,50) scale(1.1)">
+      <rect x="7" y="24" width="18" height="18" rx="5" fill="#5B8DEF"/>
+      <circle cx="16" cy="14" r="8" fill="#F2C9A0"/>
+      <rect x="22" y="26" width="10" height="14" rx="2" fill="#F4B942"/>
+    </g>
+    <rect x="250" y="25" width="140" height="35" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#334155" x="320.0" y="42.5"><tspan x="320.0" dy="0">Same person</tspan></text>
+    
+    <line x1="300" y1="95" x2="120" y2="120" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+    
+    <line x1="340" y1="95" x2="520" y2="120" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+    
+    <rect x="60" y="120" width="150" height="55" rx="10" fill="#FEF3C7" stroke="#FCD34D" stroke-width="1.5"/>
+    <text text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#334155" x="135.0" y="139.5"><tspan x="135.0" dy="0">In Class A</tspan><tspan x="135.0" dy="14">Teacher rights</tspan></text>
+    
+    <rect x="480" y="120" width="150" height="55" rx="10" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+    <text text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#334155" x="555.0" y="139.5"><tspan x="555.0" dy="0">In Class B</tspan><tspan x="555.0" dy="14">Student rights</tspan></text>
+    
+    <g transform="translate(90,135) scale(0.9)">
+      <rect x="5" y="22" width="22" height="22" rx="5" fill="#6B5CE7"/>
+      <circle cx="16" cy="12" r="9" fill="#F2C9A0"/>
+      <rect x="24" y="16" width="10" height="3" rx="1" fill="#fff"/>
+    </g>
+    <g transform="translate(520,140) scale(0.9)">
+      <rect x="7" y="24" width="18" height="18" rx="5" fill="#5B8DEF"/>
+      <circle cx="16" cy="14" r="8" fill="#F2C9A0"/>
+      <rect x="22" y="26" width="10" height="14" rx="2" fill="#F4B942"/>
+    </g>
+</svg>

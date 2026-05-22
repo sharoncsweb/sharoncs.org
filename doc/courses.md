@@ -4,35 +4,25 @@
 
 ## Diagrams
 
-### 📅 课程一年生命周期
+**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
 
-```mermaid
-flowchart LR
-  ADM["📋 管理员\n开学前定课"] --> TCH["👩‍🏫 老师\n上传材料"]
-  TCH --> STU["👦👧 学生\n看课 · 交作业"]
-  style ADM fill:#f8d7da
-  style TCH fill:#e8f5e9
-  style STU fill:#dfe6ff
-```
+| | | | | |
+|:---:|:---:|:---:|:---:|:---:|
+| ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
+| Parent | Student | Teacher | Admin | School |
 
-### 🏫 主要是面对面上课
+### Course lifecycle
 
-```mermaid
-flowchart TB
-  REAL["🏫 教室上课\n面对面"] --> LMS["💻 LMS 帮忙\n作业 · 通知 · 材料"]
-  LMS -.->|"不是"| ONLINE["📺 纯网课平台"]
-  style REAL fill:#d4edda
-```
+![Course lifecycle](assets/diagrams/courses-lifecycle.svg)
 
-### 📖 课程页像 Google Classroom
+### In-person plus LMS
 
-```mermaid
-flowchart TB
-  C["📖 课程 Course"] --> MOD["📁 模块/资料"]
-  C --> HW["📝 作业"]
-  C --> EX["📋 考试"]
-  TCH["👩‍🏫 老师决定\n学生能看到什么"] --> C
-```
+![In-person plus LMS](assets/diagrams/courses-in-person.svg)
+
+### Course page layout
+
+![Course page layout](assets/diagrams/courses-classroom-style.svg)
+
 
 ## Philosophy
 

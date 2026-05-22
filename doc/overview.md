@@ -13,38 +13,25 @@ Sharon Chinese School (MA Sharon Chinese Language School) needs a **modern publi
 
 ## Diagrams
 
-### 🏫 Who we are building for
+**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
 
-```mermaid
-flowchart TB
-  subgraph school["🏫 莎伦中文学校 Sharon Chinese School"]
-    P["👨‍👩‍👧 家长 Parent\n帮家庭注册缴费"]
-    S["👦👧 学生 Student\n7–13 岁 · 学中文"]
-    T["👩‍🏫 老师 Teacher\n教课 · 批改作业"]
-    A["📋 管理员 Admin\n排课 · 收款"]
-  end
-  P -->|"管理"| S
-  T -->|"教"| S
-  A -->|"安排课程"| T
-  P -->|"选课付款"| A
-```
+| | | | | |
+|:---:|:---:|:---:|:---:|:---:|
+| ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
+| Parent | Student | Teacher | Admin | School |
 
-### 📅 Build order (phase 1 first)
+### Who we are building for
 
-```mermaid
-flowchart LR
-  P1["🥇 Phase 1\n家长门户 + 注册缴费"] --> P2["🥈 Phase 2\n学生/老师 LMS"]
-  P2 --> P3["🥉 持续改进\n通知 · 更多功能"]
-  style P1 fill:#fff3cd
-```
+![Who we are building for](assets/diagrams/overview-stakeholders.svg)
 
-### 😅 Old site → ✨ New platform
+### Build order (phase 1 first)
 
-```mermaid
-flowchart LR
-  OLD["😵 旧网站\n难找 · 难注册"] --> NEW["✨ 新平台\n清晰 · 一家一户账号"]
-  NEW --> LMS["📚 LMS\n作业 · 课表 · 公告"]
-```
+![Build order (phase 1 first)](assets/diagrams/overview-phases.svg)
+
+### Legacy site to new platform
+
+![Legacy site to new platform](assets/diagrams/overview-legacy-new.svg)
+
 
 ## Problem with the legacy site
 

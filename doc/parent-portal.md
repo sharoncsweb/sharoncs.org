@@ -10,42 +10,25 @@ Parents who also hold **Teacher**, **Staff**, or other roles use the same login;
 
 ## Diagrams
 
-### 🏠 家长门户 = 家庭指挥中心
+**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
 
-```mermaid
-flowchart TB
-  HUB["🏠 家长门户 Parent Portal"]
-  HUB --> KIDS["👦👧 我的孩子们"]
-  HUB --> ENR["🛒 选课报名"]
-  HUB --> PAY["💳 付款收据"]
-  HUB --> SEE["👀 课表 · 作业 · 成绩"]
-  HUB --> NEWS["📢 学校公告"]
-  style HUB fill:#ffeaa7
-```
+| | | | | |
+|:---:|:---:|:---:|:---:|:---:|
+| ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
+| Parent | Student | Teacher | Admin | School |
 
-### 📱 家长的一天（典型）
+### Parent portal hub
 
-```mermaid
-flowchart LR
-  M["🌅 登录"] --> A["📢 看公告"]
-  A --> B["📅 看孩子课表"]
-  B --> C{"要报名?"}
-  C -->|是| D["🛒 选课付款"]
-  C -->|否| E["✅ 检查作业交了没"]
-```
+![Parent portal hub](assets/diagrams/parent-portal-hub.svg)
 
-### ⭐ 主家长 vs 配偶
+### Typical parent session
 
-```mermaid
-flowchart TB
-  PO["⭐ 主家长\n能付款 · 加人"]
-  SP["👤 配偶\n管孩子 · 看进度"]
-  PO --> PAY["💳 Checkout"]
-  SP --> VIEW["👀 查看"]
-  SP -.->|"通常不能"| PAY
-```
+![Typical parent session](assets/diagrams/parent-portal-day.svg)
 
----
+### Primary parent vs spouse
+
+![Primary parent vs spouse](assets/diagrams/parent-primary-spouse.svg)
+
 
 ## Purpose
 

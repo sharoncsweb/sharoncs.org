@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 80" role="img" aria-label="School">
+  <rect x="10" y="32" width="44" height="36" rx="4" fill="#E8ECF2"/>
+  <polygon points="32,12 54,32 10,32" fill="#D45B5B"/>
+  <rect x="26" y="44" width="12" height="24" fill="#B8C4D4"/>
+  <rect x="16" y="40" width="8" height="8" fill="#9AD4E8"/>
+  <rect x="40" y="40" width="8" height="8" fill="#9AD4E8"/>
+</svg>

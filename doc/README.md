@@ -4,7 +4,7 @@ This folder contains detailed requirements for each component of the Sharon Chin
 
 **Start here:** [Wiki home (README)](../README.md)
 
-Each page has **2–3 Mermaid diagrams** with emoji and bilingual labels (中文/English) explaining the business logic for Sharon Chinese School families and students (~7–13).
+Each page has **2–3 flat SVG diagrams** with English labels and simple character art (students typically ages 7–13).
 
 ## Pages
 

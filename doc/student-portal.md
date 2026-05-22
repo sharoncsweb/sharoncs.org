@@ -8,37 +8,25 @@ Logged-in **students**. Parents monitor and manage children through the **[Paren
 
 ## Diagrams
 
-### 🎒 学生门户（7–13 岁）
+**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
 
-```mermaid
-flowchart TB
-  STU["👦👧 你好！学生门户"]
-  STU --> TODAY["📅 今天课表\n几点上中文课?"]
-  STU --> TODO["📝 待办作业\n要交什么?"]
-  STU --> CLASS["📚 进入课程\n材料 · 公告"]
-  style STU fill:#dfe6ff
-```
+| | | | | |
+|:---:|:---:|:---:|:---:|:---:|
+| ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
+| Parent | Student | Teacher | Admin | School |
 
-### 📚 一节课里有什么
+### Student dashboard
 
-```mermaid
-flowchart LR
-  C["📖 二年级中文 A"] --> M["🎬 视频/笔记"]
-  C --> H["📝 作业 Homework"]
-  C --> AN["📢 老师公告"]
-  C --> PR["⭐ 我的进度"]
-```
+![Student dashboard](assets/diagrams/student-dashboard.svg)
 
-### 📤 交作业小流程
+### Inside a course
 
-```mermaid
-flowchart LR
-  P["🖨️ 打印附件"] --> W["✏️ 纸上完成"]
-  W --> U["📷 拍照或 PDF"]
-  U --> S["🚀 上传"]
-  S --> G["⏳ 等老师批改"]
-  G --> SM["😊 成绩反馈"]
-```
+![Inside a course](assets/diagrams/student-course-page.svg)
+
+### Submit homework
+
+![Submit homework](assets/diagrams/student-homework.svg)
+
 
 ## Primary features
 

@@ -4,39 +4,25 @@
 
 ## Diagrams
 
-### 🔐 多种登录方式（选你方便的）
+**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
 
-```mermaid
-flowchart TB
-  YOU["😊 用户"] --> PH["📱 手机+短信码\nPhase 1 主力"]
-  YOU --> UN["👤 用户名+密码"]
-  YOU --> G["Google"]
-  YOU --> MS["Microsoft"]
-  YOU --> FB["Facebook/Instagram"]
-  style PH fill:#fff3cd
-```
+| | | | | |
+|:---:|:---:|:---:|:---:|:---:|
+| ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
+| Parent | Student | Teacher | Admin | School |
 
-### 📱 注册时短信验证
+### Login methods
 
-```mermaid
-sequenceDiagram
-  participant 家长 as 👨‍👩‍👧
-  participant 系统 as 🖥️
-  家长->>系统: 输入手机号
-  系统->>家长: 📲 发验证码
-  家长->>系统: 输入验证码 ✅
-  系统->>家长: 设置密码 · 继续填资料
-```
+![Login methods](assets/diagrams/auth-methods.svg)
 
-### 🔗 账号可以绑在一起
+### SMS verification at signup
 
-```mermaid
-flowchart LR
-  ONE["😊 一个用户"] --> M1["📱 手机"]
-  ONE --> M2["Google"]
-  ONE --> M3["用户名"]
-  NOTE["任意一种都能登录\n像钥匙串"] --- ONE
-```
+![SMS verification at signup](assets/diagrams/auth-sms.svg)
+
+### Link multiple login methods
+
+![Link multiple login methods](assets/diagrams/auth-linking.svg)
+
 
 ## Supported login methods
 

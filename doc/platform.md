@@ -4,35 +4,25 @@
 
 ## Diagrams
 
-### 🏠 One school, one home
+**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
 
-```mermaid
-flowchart TB
-  WORLD["🌎 互联网 Internet"] --> SITE["🏫 莎伦中文学校\n只有这一所学校"]
-  SITE --> PUB["📰 公开网页\n招生 · 公告"]
-  SITE --> APP["🔐 登录后平台\n家长 · 学生 · 老师"]
-  style SITE fill:#d4edda
-```
+| | | | | |
+|:---:|:---:|:---:|:---:|:---:|
+| ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
+| Parent | Student | Teacher | Admin | School |
 
-### 🧩 What lives on the platform
+### One school, one platform
 
-```mermaid
-flowchart LR
-  subgraph platform["平台 Platform"]
-    R["📝 注册缴费\n家长做主"]
-    L["📚 上课支持\n作业 · 材料"]
-    N["📢 通知公告"]
-  end
-  R --- L --- N
-```
+![One school, one platform](assets/diagrams/platform-one-school.svg)
 
-### 💰 钱怎么收（不是月费会员）
+### Platform layers
 
-```mermaid
-flowchart LR
-  FREE["🆓 用平台\n不收月费"] --> PAY["💳 家长付\n所选课程学费"]
-  PAY --> SCHOOL["🏫 学校收到\nStripe / Square"]
-```
+![Platform layers](assets/diagrams/platform-layers.svg)
+
+### How tuition is collected
+
+![How tuition is collected](assets/diagrams/platform-payment.svg)
+
 
 ## Requirements
 

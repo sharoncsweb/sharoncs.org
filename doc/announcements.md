@@ -4,41 +4,25 @@
 
 ## Diagrams
 
-### 📢 谁能发什么公告
+**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
 
-```mermaid
-flowchart TB
-  SW["📣 全校公告\nSnow day · 报名开放"]
-  CL["📋 班级公告\n本周作业提醒"]
-  AD["📋 Admin"] --> SW
-  ST["🙋 Staff/志愿者"] --> SW
-  TE["👩‍🏫 Teacher/TA"] --> CL
-```
+| | | | | |
+|:---:|:---:|:---:|:---:|:---:|
+| ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
+| Parent | Student | Teacher | Admin | School |
 
-### 👀 谁看到什么（气泡）
+### Who can post
 
-```mermaid
-flowchart TB
-  subgraph all["🏫 全校 Everyone"]
-    N1["放假通知"]
-  end
-  subgraph class["📖 仅本班 Class A"]
-    N2["带拼音的作业 😊"]
-  end
-  P["👨‍👩‍👧 家长"] --> all
-  P --> class
-  S["👦 学生"] --> class
-```
+![Who can post](assets/diagrams/announcements-who-posts.svg)
 
-### 📱 信息怎么传到家庭
+### Who sees what
 
-```mermaid
-flowchart LR
-  POST["📢 老师发帖"] --> FEED["📰 活动流 Feed"]
-  FEED --> PAR["👨‍👩‍👧 家长门户"]
-  FEED --> STU["👦 学生门户"]
-  FEED -.->|"以后?"| WX["微信 WeChat"]
-```
+![Who sees what](assets/diagrams/announcements-visibility.svg)
+
+### How families receive news
+
+![How families receive news](assets/diagrams/announcements-delivery.svg)
+
 
 ## Overview
 

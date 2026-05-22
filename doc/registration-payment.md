@@ -19,37 +19,25 @@ Send vendors **both**: profile fields (Excel + wiki) and the enrollment/payment 
 
 ## Diagrams
 
-### 🛒 选课付款一条龙
+**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
 
-```mermaid
-flowchart LR
-  A["👨‍👩‍👧 选孩子"] --> B["📚 挑班级"]
-  B --> C["🛒 购物车"]
-  C --> D["🏷️ 折扣"]
-  D --> E["💳 付款"]
-  E --> F["🧾 收据 ✅"]
-  style E fill:#d4edda
-```
+| | | | | |
+|:---:|:---:|:---:|:---:|:---:|
+| ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
+| Parent | Student | Teacher | Admin | School |
 
-### 🏷️ 三种常见折扣
+### Enrollment and payment
 
-```mermaid
-flowchart TB
-  CART["🛒 购物车"] --> E["🐦 早鸟 Early bird"]
-  CART --> S["👫 兄弟姐妹 Sibling"]
-  CART --> M["📚 多班 Multi-class"]
-```
+![Enrollment and payment](assets/diagrams/payment-cart.svg)
 
-### 👨‍👩‍👧 谁按下付款键
+### Discount types
 
-```mermaid
-flowchart TB
-  PO["⭐ 主家长\n能付款"] --> CHECKOUT["💳 Checkout"]
-  SP["配偶\n一般只看"] -.-> CHECKOUT
-  CHECKOUT --> OK["✅ 报名成功\n孩子进班级名单"]
-```
+![Discount types](assets/diagrams/payment-discounts.svg)
 
----
+### Who can checkout
+
+![Who can checkout](assets/diagrams/payment-checkout.svg)
+
 
 ## Overview
 

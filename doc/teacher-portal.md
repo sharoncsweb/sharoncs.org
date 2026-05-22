@@ -4,39 +4,25 @@
 
 ## Diagrams
 
-### 👩‍🏫 老师工作台
+**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
 
-```mermaid
-flowchart TB
-  T["👩‍🏫 老师 Teacher Portal"]
-  T --> LIST["📋 我的班级"]
-  T --> POST["📢 发班级公告"]
-  T --> HW["📝 布置作业/考试"]
-  T --> GRADE["✅ 批改上传"]
-  style T fill:#e8f5e9
-```
+| | | | | |
+|:---:|:---:|:---:|:---:|:---:|
+| ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
+| Parent | Student | Teacher | Admin | School |
 
-### 📝 批改作业（像判卷子）
+### Teacher workspace
 
-```mermaid
-sequenceDiagram
-  participant 师 as 👩‍🏫 老师
-  participant 生 as 👦 学生
-  师->>生: 发布作业 + 附件
-  生->>师: 上传 PDF/照片
-  师->>生: 分数 + 评语 ⭐
-```
+![Teacher workspace](assets/diagrams/teacher-workspace.svg)
 
-### 🎭 助教 TA：两顶帽子
+### Grading flow
 
-```mermaid
-flowchart TB
-  TA["🧑‍🎓 张同学\n也是 TA"]
-  TA --> C1["班级 A\n👩‍🏫 像老师"]
-  TA --> C2["班级 B\n🎒 像学生"]
-  style C1 fill:#fff3cd
-  style C2 fill:#dfe6ff
-```
+![Grading flow](assets/diagrams/teacher-grading.svg)
+
+### TA has two roles
+
+![TA has two roles](assets/diagrams/teacher-ta-dual.svg)
+
 
 ## Audience
 

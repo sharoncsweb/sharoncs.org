@@ -4,44 +4,25 @@
 
 ## Diagrams
 
-### 👨‍👩‍👧 一家人 = 一个 Account
+**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
 
-```mermaid
-flowchart TB
-  ACC["🏠 家庭账号 Account\nFamily ID 系统生成"]
-  PO["⭐ 主家长 Primary\n付款 · 加人"]
-  U2["👤 配偶 Spouse\n可选"]
-  C1["👦 孩子 Student A\n7–13 岁"]
-  C2["👧 孩子 Student B"]
-  ACC --> PO
-  ACC --> U2
-  ACC --> C1
-  ACC --> C2
-  PO -.->|"只有主家长"| PAY["💳 付款"]
-```
+| | | | | |
+|:---:|:---:|:---:|:---:|:---:|
+| ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
+| Parent | Student | Teacher | Admin | School |
 
-### 🔗 三种家庭关系
+### One family account
 
-```mermaid
-flowchart LR
-  SELF["自己 Self\n家长本人"] --> LOGIN["📱 登录账号"]
-  SPOUSE["配偶 Spouse\n另一位家长"] --> LOGIN
-  CHILD["孩子 Child\n学生档案"] --> STUD["🎒 上课 · 作业"]
-```
+![One family account](assets/diagrams/accounts-family.svg)
 
-### 🛤️ 注册后怎么走
+### Family relationships
 
-```mermaid
-sequenceDiagram
-  participant 家长 as 👨‍👩‍👧 家长
-  participant 系统 as 🖥️ 系统
-  participant 孩子 as 👧 学生
-  家长->>系统: 手机号 + 验证码 注册
-  家长->>系统: 填自己 Self + 家庭信息
-  家长->>系统: 添加孩子 Child
-  家长->>系统: 选课 · 付款
-  系统->>孩子: 开通学生视图
-```
+![Family relationships](assets/diagrams/accounts-relationships.svg)
+
+### Registration flow
+
+![Registration flow](assets/diagrams/accounts-registration-flow.svg)
+
 
 ## Core concepts
 
