@@ -28,7 +28,7 @@ See [Public homepage](public-homepage.md) and [Public site content](public-site-
 
 ```
 Public site (Register) → Sign in / Sign up
-  → Mobile + SMS verification + password
+  → Sign up (Google / Microsoft / email / phone+SMS)
   → Parent profile (Self) → Family ID created
   → Add Spouse and/or Children (optional)
   → Enroll each child in classes → Cart → Discounts → Pay
@@ -47,19 +47,22 @@ Public site (Register) → Sign in / Sign up
 | **Who** | New or returning parent |
 | **Outcome** | Directed to registration or login |
 
-Returning users with an account skip to **Sign in** (mobile/SMS, password, or linked social account).
+Returning users **Sign in** with Google OAuth, Microsoft OAuth, email + password, or phone + SMS (see [Authentication](authentication.md)).
 
 ---
 
-## Step 2 — Create account (login credentials)
+## Step 2 — Create account (choose login method)
 
-| # | Screen / action | Data collected | Notes |
-|---|-----------------|----------------|-------|
-| 2.1 | Enter mobile number | Mobile number | Primary login for phase 1 |
-| 2.2 | Verify phone | Verification code (SMS OTP) | Required for new registration |
-| 2.3 | Set security | Password, User name (optional) | Username/password also supported later |
+| # | Option | Flow |
+|---|--------|------|
+| 2a | **Google OAuth** | OAuth consent → profile completion if needed |
+| 2b | **Microsoft OAuth** | OAuth consent → profile completion if needed |
+| 2c | **Email + password** | Email → verify email (recommended) → password |
+| 2d | **Phone + SMS** | Mobile → SMS OTP → password (optional) |
 
-**Requirements:** REQ-REG-02, REQ-REG-03 · See [Authentication](authentication.md).
+All paths merge into the same **user** record. User may link additional methods later in settings.
+
+**Requirements:** REQ-AUTH-01, REQ-REG-02, REQ-REG-02b, REQ-REG-03 · See [Authentication](authentication.md).
 
 ---
 

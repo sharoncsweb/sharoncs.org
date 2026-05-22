@@ -44,7 +44,7 @@ Agreed with **The Web Design LLC**: deliver a **professional public homepage** a
 | **Learning** | In-person classes first; LMS for materials, assignments, schedules, communication |
 | **Payments** | Parents enroll students in classes and pay (cart, discounts, Stripe/Square) |
 | **Roles** | RBAC with Parent, Student, Teacher, TA, Staff, Admin; multiple roles per person |
-| **Auth** | Mobile/SMS, password, username; also Google, Microsoft, social (see auth doc) |
+| **Auth** | Google OAuth, Microsoft OAuth, email + password, phone + SMS |
 
 ---
 

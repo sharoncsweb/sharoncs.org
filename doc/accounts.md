@@ -4,25 +4,44 @@
 
 ## Diagrams
 
-**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
+### 👨‍👩‍👧 一家人 = 一个 Account
 
-| | | | | |
-|:---:|:---:|:---:|:---:|:---:|
-| ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
-| Parent | Student | Teacher | Admin | School |
+```mermaid
+flowchart TB
+  ACC["🏠 家庭账号 Account\nFamily ID 系统生成"]
+  PO["⭐ 主家长 Primary\n付款 · 加人"]
+  U2["👤 配偶 Spouse\n可选"]
+  C1["👦 孩子 Student A\n7–13 岁"]
+  C2["👧 孩子 Student B"]
+  ACC --> PO
+  ACC --> U2
+  ACC --> C1
+  ACC --> C2
+  PO -.->|"只有主家长"| PAY["💳 付款"]
+```
 
-### One family account
+### 🔗 三种家庭关系
 
-![One family account](assets/diagrams/accounts-family.svg)
+```mermaid
+flowchart LR
+  SELF["自己 Self\n家长本人"] --> LOGIN["📱 登录账号"]
+  SPOUSE["配偶 Spouse\n另一位家长"] --> LOGIN
+  CHILD["孩子 Child\n学生档案"] --> STUD["🎒 上课 · 作业"]
+```
 
-### Family relationships
+### 🛤️ 注册后怎么走
 
-![Family relationships](assets/diagrams/accounts-relationships.svg)
-
-### Registration flow
-
-![Registration flow](assets/diagrams/accounts-registration-flow.svg)
-
+```mermaid
+sequenceDiagram
+  participant 家长 as 👨‍👩‍👧 家长
+  participant 系统 as 🖥️ 系统
+  participant 孩子 as 👧 学生
+  家长->>系统: 手机号 + 验证码 注册
+  家长->>系统: 填自己 Self + 家庭信息
+  家长->>系统: 添加孩子 Child
+  家长->>系统: 选课 · 付款
+  系统->>孩子: 开通学生视图
+```
 
 ## Core concepts
 
@@ -73,18 +92,16 @@ Student ──required──► one Account
 
 When parents and students are created, collect the fields defined in **[Registration — user fields](registration-user-fields.md)** (source: `WebSiteUserFields.xlsx`):
 
-- **Login:** mobile number, verification code, password, username
+- **Login:** Google OAuth, Microsoft OAuth, email + password, or phone + SMS
 - **Identity:** nickname, English/Chinese names, gender, date of birth (students)
 - **Contact:** WeChat ID, email, residential address (street, city, state, ZIP)
 - **Family:** system **Family Identifier**, **Family Relationship** (Self, Spouse, Child)
 - **Roles:** **School Assigned Role** (multiple allowed)
 - **Placement:** current regular school name and grade (students)
 
-Full step-by-step guide: **[Registration flow (complete)](registration-flow.md)**.
-
 ## Enrollment flow (happy path)
 
-1. Parent registers with **mobile + SMS verification** and password (see [Authentication](authentication.md)).
+1. Parent registers or signs in via **Google OAuth**, **Microsoft OAuth**, **email + password**, or **phone + SMS** (see [Authentication](authentication.md)).
 2. Parent completes **Self** profile; system assigns **Family Identifier** (account).
 3. Parent adds **Spouse** and/or **Child** members with relationship and profile fields.
 4. Parent assigns **school roles** per person where applicable.

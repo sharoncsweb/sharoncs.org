@@ -52,18 +52,18 @@ flowchart LR
 
 | Field (CN) | Field (EN) | Description / details | Applies to |
 |------------|------------|----------------------|------------|
-| 手机号 | Mobile Number | Used for login and SMS verification. | User (login) |
-| 验证码 | Verification Code | For secure registration / login (OTP). | Registration flow |
-| 密码 | Password | Account security. | User (login) |
-| — | User Name | Login name (username). | User (login) |
+| 手机号 | Mobile Number | **Phone + SMS** login; OTP at registration. | User (login) |
+| 验证码 | Verification Code | SMS OTP for registration / login. | Registration flow |
+| 密码 | Password | Used with **email + password** or after phone signup. | User (login) |
+| 电子邮箱 | Email Address | **Email + password** login; contact. | User (login) |
+| — | User Name | Display / login name (optional; confirm vs email). | User |
 | 昵称 | Nickname | Display name on the platform. | User |
 | 真实姓名 | English First Name | For official enrollment records. | User / Student |
 | — | English Last Name | For official enrollment records. | User / Student |
 | — | Chinese Name | For official enrollment records. | User / Student |
 | 性别 | Gender | Male / Female / Other. | User / Student |
 | 出生日期 | Date of Birth | Used to determine age group / level. | Student (primarily) |
-| 微信号 | WeChat ID | For communication and notifications. | User |
-| 电子邮箱 | Email Address | Alternative contact method. | User |
+| 微信号 | WeChat ID | For communication and notifications (not a login method). | User |
 | 居住地址 | Address | Residential address (street). | Account / User |
 | — | City | Residential city. | Account / User |
 | — | State | Residential state. | Account / User |
@@ -123,7 +123,7 @@ Family Relationship:
 
 Recommended order for the vendor:
 
-1. **Account creation** — mobile + verification code + password (+ optional username).
+1. **Account creation** — choose: **Google OAuth**, **Microsoft OAuth**, **email + password**, or **phone + SMS** (see [Authentication](authentication.md)).
 2. **Primary profile (Self)** — nickname, names, contact, address, WeChat, email.
 3. **Family Identifier** — assign or display system ID.
 4. **Add family members** — Spouse and/or Child rows with relationship + profile fields.
@@ -143,7 +143,8 @@ Recommended order for the vendor:
 | ID | Requirement | Status |
 |----|-------------|--------|
 | REQ-REG-01 | Collect fields per catalog when creating users and students. | Confirmed (May 2026) |
-| REQ-REG-02 | Mobile number used for login and SMS verification. | Confirmed |
+| REQ-REG-02 | **Phone + SMS** supported for login and verification. | Confirmed |
+| REQ-REG-02b | **Email + password**, **Google OAuth**, and **Microsoft OAuth** supported. | Confirmed |
 | REQ-REG-03 | Support verification code step during registration/login. | Confirmed |
 | REQ-REG-04 | Family Identifier is system-generated and visible to the family. | Confirmed |
 | REQ-REG-05 | Family Relationship ∈ {Self, Spouse, Child}. | Confirmed |
@@ -159,7 +160,7 @@ Recommended order for the vendor:
 | Topic | Question |
 |-------|----------|
 | Required vs optional | Which fields are mandatory on first signup vs later? |
-| Username vs mobile | Is login mobile-only, username-only, or either? |
+| User Name field | Display only vs alternate login — confirm with school (login is email or phone/OAuth). |
 | WeChat notifications | In-app only in v1, or WeChat API integration? |
 | Child login | Do students get credentials when role = Student? |
 | Address scope | One address per **account** vs per **user**? |
