@@ -33,6 +33,17 @@ Learning is **primarily in-person**. The LMS supports:
 
 It should **not** assume fully online video-first instruction in v1.
 
+## Backend configuration
+
+| Frontend (dynamic) | Configure in admin / teacher |
+|--------------------|------------------------------|
+| Catalog course name, fee, schedule summary | **Admin → Academic year → Courses** |
+| Student course page content | **Teacher portal → Course → Content** |
+| Class announcements on course page | **Teacher portal → Course → Announcements** |
+| Single-session time / substitute | **Admin → Master schedule** · **Teacher/Admin → Session → Reschedule** |
+
+See **[Frontend ↔ backend configuration map](frontend-backend-config.md)**.
+
 ## Course lifecycle
 
 ### Annual setup (admin)

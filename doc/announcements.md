@@ -24,17 +24,19 @@
 
 ## Overview
 
-Communications happen in **three places**:
+The platform provides an **activity feed** and **announcements** with role-based posting and visibility scopes.
 
-| Channel | Audience | Who publishes |
-|---------|----------|----------------|
-| **[Public homepage](public-homepage.md)** | Anyone on the internet | Users with homepage permissions (admin, staff, teachers, etc.) |
-| **School-wide feed** (logged in) | Families and staff in the platform | Admin and staff (typical); permission-based |
-| **Class-level feed** | One class | Teachers and TAs for that class |
+## Backend configuration
 
-This page covers **authenticated** feeds. For the **landing page**, hero, events, and public announcements, see **[Public homepage](public-homepage.md)**.
+| Frontend (dynamic) | Configure in admin |
+|--------------------|-------------------|
+| Public homepage announcements / events | **Admin → Content → Homepage → Announcements / Events** — [map](frontend-backend-config.md#homepage-announcements) |
+| School-wide feed (logged in) | **Admin → Communications → School announcements** (or staff post UI) |
+| Class announcements | **Teacher portal → Course → Announcements** |
 
-## Who can post (inside the platform)
+Full table: **[Frontend ↔ backend configuration map](frontend-backend-config.md)**.
+
+## Who can post
 
 | Role | Scope |
 |------|--------|
@@ -44,8 +46,6 @@ This page covers **authenticated** feeds. For the **landing page**, hero, events
 | **TAs** | Class(es) where they assist |
 
 Parent volunteers helping with **advertising** or school communications may receive staff-level announcement permissions.
-
-Homepage publishing uses separate permissions (`homepage.post_*`)—see [RBAC](rbac.md).
 
 ## Visibility levels
 
@@ -63,11 +63,13 @@ Homepage publishing uses separate permissions (`homepage.post_*`)—see [RBAC](r
 | REQ-ANN-02 | Teachers and TAs can create **class-level** announcements. | Confirmed |
 | REQ-ANN-03 | Feed respects visibility so users only see relevant posts. | Confirmed |
 | REQ-ANN-04 | Grade-level targeting may be added later. | Future |
-| REQ-ANN-05 | Public homepage announcements/events documented in [public homepage](public-homepage.md). | Confirmed |
+
+## Public website overlap
+
+Legacy site sections (*Announcement*, *News*) should migrate into this model or dedicated CMS pages on the new public site. Coordinate content strategy with [Overview](overview.md).
 
 ## Related documents
 
-- [Public homepage & landing page](public-homepage.md)
 - [RBAC](rbac.md)
 - [Teacher portal](teacher-portal.md)
 - [Admin portal](admin-portal.md)

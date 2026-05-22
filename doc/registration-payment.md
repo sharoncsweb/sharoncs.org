@@ -16,6 +16,17 @@ Phase 1 registration breaks into:
 
 Implement profile fields per [user fields](registration-user-fields.md) and the enrollment/payment requirements below.
 
+## Backend configuration
+
+| Frontend (dynamic) | Configure in admin |
+|--------------------|-------------------|
+| Cart line prices & discounts | **Admin → Pricing → Tuition rules** · **Admin → Pricing → Discount rules** |
+| Course offerings & capacity | **Admin → Academic year → Courses** · **Admin → Enrollment → Capacity** |
+| Payment (Stripe / Square) | **Admin → Settings → Payment gateways** |
+| Paid / unpaid status | **Admin → Enrollment → Payments** |
+
+Full map: **[Frontend ↔ backend configuration map](frontend-backend-config.md#registration--checkout)**.
+
 ## Diagrams
 
 | | | | | |

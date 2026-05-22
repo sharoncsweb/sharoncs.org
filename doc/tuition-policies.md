@@ -6,6 +6,17 @@ Business rules migrated from the [legacy discount & refund page](https://www.sha
 
 The registration system must **enforce or display** these rules at checkout and in admin reporting.
 
+## Backend configuration
+
+| Frontend (dynamic) | Configure in admin |
+|--------------------|-------------------|
+| Catalog & cart **prices** | **Admin → Academic year → Courses → Pricing** |
+| Early bird, sibling, multi-class, exclusions | **Admin → Pricing → Discount rules** |
+| Late-registration tiers | **Admin → Pricing → Tuition rules** |
+| Policy text on public tuition page | **Admin → Content → Pages → Tuition** |
+
+Full map: **[Frontend ↔ backend configuration map](frontend-backend-config.md#registration--checkout)**.
+
 ---
 
 ## Discounts

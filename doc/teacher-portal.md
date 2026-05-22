@@ -2,6 +2,17 @@
 
 [← Wiki home](../README.md)
 
+## Backend configuration
+
+| Frontend (dynamic) | Configure in admin / teacher |
+|--------------------|------------------------------|
+| My courses list | **Admin → Academic year → Courses** (teacher assignment) |
+| Session schedule & substitutes | **Admin → Master schedule** · **Session → Reschedule** |
+| Course materials, assignments, grades | **Teacher portal → Course → Content / Assignments / Grading** |
+| Class announcements | **Teacher portal → Course → Announcements** |
+
+Full map: **[Frontend ↔ backend configuration map](frontend-backend-config.md#teacher-portal)**.
+
 ## Diagrams
 
 | | | | | |

@@ -112,6 +112,21 @@ Both types are **public** (visible without login). Logged-in users may see the s
 
 ---
 
+## Backend configuration
+
+Each dynamic homepage block is managed in the admin backend. Full map: **[Frontend ↔ backend configuration map](frontend-backend-config.md)**.
+
+| Frontend (dynamic) | Configure in admin |
+|--------------------|-------------------|
+| Hero (headline, image, CTAs) | **Admin → Content → Homepage → Hero** |
+| Announcements strip | **Admin → Content → Homepage → Announcements** — [detail](frontend-backend-config.md#homepage-announcements) |
+| Events list | **Admin → Content → Homepage → Events** — [detail](frontend-backend-config.md#homepage-events) |
+| Footer contact & links | **Admin → Settings → School contact** · **Admin → Content → Navigation / footer** |
+
+Permissions: [RBAC](rbac.md) (`homepage.post_*`, `homepage.publish`).
+
+---
+
 ## Requirements
 
 | ID | Requirement | Status |
@@ -142,8 +157,6 @@ Both types are **public** (visible without login). Logged-in users may see the s
 
 ## Diagrams
 
-**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
-
 | | | | | |
 |:---:|:---:|:---:|:---:|:---:|
 | ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
@@ -159,8 +172,9 @@ Both types are **public** (visible without login). Logged-in users may see the s
 
 ### Public site vs logged-in portals
 
-![Public site vs logged-in portals](assets/diagrams/homepage-vs-portals.svg)
+![Public site vs portals](assets/diagrams/homepage-vs-portals.svg)
 
+---
 
 ## Related documents
 

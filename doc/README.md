@@ -10,6 +10,7 @@ Each page has **2–3 flat SVG diagrams** with English labels and simple charact
 
 | Page | Topic |
 |------|--------|
+| [frontend-backend-config.md](frontend-backend-config.md) | Dynamic frontend content → admin configuration |
 | [overview.md](overview.md) | Project goals, stakeholders, scope |
 | [glossary.md](glossary.md) | Term definitions |
 | [platform.md](platform.md) | Single-tenant platform model |

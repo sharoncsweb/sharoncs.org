@@ -426,6 +426,18 @@ def diagram_registration_flow_complete():
     return wrap("Complete registration flow phase 1", b)
 
 
+def diagram_frontend_backend_map():
+    b = (
+        box(40, 55, 150, 50, "Public site\\nCourses · Events · Prices", "#EFF6FF", "#93C5FD")
+        + arrow(190, 80, 230, 80)
+        + box(230, 55, 170, 50, "Admin config\\nContent · Academic year", "#FEF3C7", "#FCD34D")
+        + box(40, 125, 150, 50, "Portals\\nSchedules · Announcements", "#ECFDF5", "#6EE7B7")
+        + arrow(190, 150, 230, 150)
+        + box(230, 125, 170, 50, "Admin config\\nPricing · Enrollment", "#FEF3C7", "#FCD34D")
+    )
+    return wrap("Dynamic frontend content is configured in admin", b)
+
+
 def diagram_vendor_collab():
     b = (
         char_school(60, 55)
@@ -489,6 +501,7 @@ ALL = {
     "platform-payment": diagram_cart_flow,
     "README-platform-map": diagram_platform_map,
     "registration-flow-complete": diagram_registration_flow_complete,
+    "frontend-backend-map": diagram_frontend_backend_map,
 }
 
 for name, fn in ALL.items():

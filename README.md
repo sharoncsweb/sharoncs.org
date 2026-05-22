@@ -82,6 +82,7 @@ Enhancements and legacy content migration as the school prioritizes.
 
 | Document | Description |
 |----------|-------------|
+| [Frontend ↔ backend configuration map](doc/frontend-backend-config.md) | Links dynamic UI (courses, announcements, prices, schedules) to admin config |
 | [Project overview](doc/overview.md) | Goals, stakeholders, legacy site, scope |
 | [Platform structure](doc/platform.md) | Single-tenant model, funding, high-level architecture |
 | [Glossary](doc/glossary.md) | Terms: Account, User, Student, Staff, TA, etc. |

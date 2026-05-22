@@ -32,6 +32,10 @@ Parents who also hold **Teacher**, **Staff**, or other roles use the same login;
 
 The parent portal is the **family command center**: manage the account, students, enrollment, payments, and visibility into each child’s school activity—without using the [student portal](student-portal.md) unless viewing as or assisting a child.
 
+## Backend configuration
+
+Dynamic portal data (courses, cart, announcements, schedules) is configured in admin — see **[Frontend ↔ backend configuration map](frontend-backend-config.md#parent-portal)**.
+
 ---
 
 ## Primary features

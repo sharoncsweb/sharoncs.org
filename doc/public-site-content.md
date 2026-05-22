@@ -44,6 +44,16 @@ Legacy site lets visitors **browse courses before registering** (semester, name 
 
 Filters (legacy): class day, course type — preserve if still used by school.
 
+### Backend configuration
+
+| Frontend (dynamic) | Configure in admin | Spec |
+|--------------------|-------------------|------|
+| Course list, fees, class days | **Admin → Academic year → Courses** (publish to catalog) | [frontend-backend-config.md](frontend-backend-config.md#public-website-no-login) |
+| Early bird vs regular price | **Admin → Courses → Pricing** + **Admin → Pricing → Tuition rules** | [tuition-policies.md](tuition-policies.md) |
+| Tuition / discount / refund page copy | **Admin → Pricing → Discounts & refunds** + **Admin → Content → Pages → Tuition** | [tuition-policies.md](tuition-policies.md) |
+| School calendar | **Admin → Content → School calendar** | [contact-and-calendar.md](contact-and-calendar.md) |
+| Registration open/closed | **Admin → Registration → Seasons & deadlines** | [registration-flow.md](registration-flow.md) |
+
 ---
 
 ## News vs announcements
@@ -92,6 +102,7 @@ Migrate as readable public pages (CMS or markdown), no special LMS logic in v1:
 
 ## Related documents
 
+- [Frontend ↔ backend configuration map](frontend-backend-config.md)
 - [Legacy content migration](legacy-content-migration.md)
 - [About the school](about-school.md)
 - [Public homepage](public-homepage.md)

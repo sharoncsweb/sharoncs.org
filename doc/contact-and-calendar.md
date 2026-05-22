@@ -37,6 +37,15 @@ Legacy: [School calendar and schedule](https://www.sharoncs.org/school/page/scho
 | **Updates** | Admin or staff with permission republish each year |
 | **Distinction** | Not the same as per-student **class schedule** in the LMS (see [student portal](student-portal.md)) |
 
+## Backend configuration
+
+| Frontend (dynamic) | Configure in admin |
+|--------------------|-------------------|
+| Contact page & footer email/phone/addresses | **Admin → Settings → School contact** |
+| Public school calendar (PDF / view) | **Admin → Content → School calendar** |
+
+See **[Frontend ↔ backend configuration map](frontend-backend-config.md)**.
+
 ---
 
 ## Requirements

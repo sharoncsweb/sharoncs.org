@@ -22,6 +22,10 @@
 
 See [Public homepage](public-homepage.md) and [Public site content](public-site-content.md).
 
+## Backend configuration
+
+Every dynamic step (homepage, catalog, cart, payment) maps to an admin screen — **[Frontend ↔ backend configuration map](frontend-backend-config.md)**.
+
 ---
 
 ## End-to-end flow (summary)
@@ -186,21 +190,20 @@ See REQ-ACC-03 in [Accounts & enrollment](accounts.md).
 
 ## Diagrams
 
-**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
-
 | | | | | |
 |:---:|:---:|:---:|:---:|:---:|
 | ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
 | Parent | Student | Teacher | Admin | School |
 
-### Complete registration flow
+### Complete flow
 
 ![Complete registration flow](assets/diagrams/registration-flow-complete.svg)
 
-### Registration sequence
+### Profile vs enrollment
 
 ![Registration sequence](assets/diagrams/accounts-registration-flow.svg)
 
+---
 
 ## Document map
 

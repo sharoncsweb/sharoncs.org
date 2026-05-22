@@ -76,6 +76,19 @@ See [Registration & payment](registration-payment.md).
 - Manage [RBAC](rbac.md) roles and custom roles
 - Reset credentials and assist account recovery
 
+### Frontend ↔ backend map
+
+All dynamic content on the public site and portals is configured here (or in the teacher portal for class-level items). See **[Frontend ↔ backend configuration map](frontend-backend-config.md)** for a full table: courses, announcements, prices, schedules, homepage events, discounts, payment gateways, and more.
+
+| Config area (admin) | Drives on frontend |
+|---------------------|-------------------|
+| Academic year → Courses | [Course catalog](public-site-content.md#public-course-catalog), enrollment picker, schedules |
+| Content → Homepage | [Homepage](public-homepage.md) announcements, events, hero |
+| Pricing → Tuition & discounts | Catalog prices, cart, [tuition page](tuition-policies.md) |
+| Master schedule & sessions | [Student](student-portal.md) / [parent](parent-portal.md) schedules |
+| Communications | School-wide [announcements](announcements.md) |
+| Settings | [Contact](contact-and-calendar.md), [authentication](authentication.md), payment gateways |
+
 ## Requirements
 
 | ID | Requirement | Status |

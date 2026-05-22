@@ -6,6 +6,16 @@
 
 Logged-in **students**. Parents monitor and manage children through the **[Parent portal](parent-portal.md)** (schedule, assignments, progress)—not by default through this portal. Confirm whether young students without their own login ever use this UI via a parent “act as student” mode (TBD).
 
+## Backend configuration
+
+| Frontend (dynamic) | Configure in admin / teacher |
+|--------------------|------------------------------|
+| Daily / weekly schedule | **Admin → Academic year → Master schedule** (+ session overrides) |
+| Course list (enrolled) | **Admin → Enrollment → Rosters** |
+| Materials, homework, grades | **Teacher portal → Course → …** |
+
+Full map: **[Frontend ↔ backend configuration map](frontend-backend-config.md#student-portal)**.
+
 ## Diagrams
 
 | | | | | |
