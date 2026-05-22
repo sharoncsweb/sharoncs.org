@@ -93,8 +93,8 @@ Do not apply discounts to (legacy list — confirm annually):
 
 | ID | Requirement | Status |
 |----|-------------|--------|
-| REQ-TUIT-01 | System supports **early bird** pricing by deadline. | Confirmed (legacy rules) |
-| REQ-TUIT-02 | System enforces **non-combined** discounts unless school changes rule. | Confirmed (legacy) |
+| REQ-TUIT-01 | System supports **early bird** pricing by deadline. | Confirmed |
+| REQ-TUIT-02 | System enforces **non-combined** discounts unless school changes rule. | Confirmed |
 | REQ-TUIT-03 | Excluded courses configured per year. | Confirmed |
 | REQ-TUIT-04 | Late registration proration rules configurable. | Confirmed |
 | REQ-TUIT-05 | Refund schedule configurable by week of withdrawal. | Confirmed |

@@ -2,7 +2,7 @@
 
 [← Wiki home](../README.md)
 
-Questions from **The Web Design LLC** and answers from the school (primarily **Kyna**, 2026-03-21). Use this page when resolving ambiguities; update the component docs when answers change.
+Questions from **The Web Design LLC** and school answers. Use this page when resolving ambiguities; update the component docs when answers change.
 
 ## Diagrams
 
@@ -139,37 +139,26 @@ Questions from **The Web Design LLC** and answers from the school (primarily **K
 
 ## 9. Roles & permissions
 
-Documented in consolidated requirements — see [RBAC](rbac.md).
+See [RBAC](rbac.md).
 
 ---
 
 ## 10. Authentication
 
-Documented in consolidated requirements — see [Authentication](authentication.md).
+See [Authentication](authentication.md).
 
 ---
 
 ## 11. Registration & payment
 
-**Status:** Marked “to be defined” in Q&A doc; consolidated requirements add cart, discounts, Stripe/Square. See [Registration & payment](registration-payment.md) for open items.
+**Status:** Cart, discounts, and Stripe/Square are documented in [Registration & payment](registration-payment.md). See that page for open items.
 
 ---
 
-## 12. Vendor meeting — registration priority (May 2026)
+## 12. Registration priority
 
-**Context:** Meeting with The Web Design LLC. School emphasized **registration / course enrollment first**; phase 1 now also includes the **public homepage** (hero, mission, events, announcements).
+**Phase 1** includes the **public homepage** (hero, mission, events, announcements) and **registration / course enrollment**.
 
-**Vendor request:** More detail on registration data.
-
-**School response:** Kyna provided profile field specification:
-
-- WeChat summary table → **`WebSiteUserFields.xlsx`**
-- Wiki: [Registration — user fields](registration-user-fields.md)
+Profile fields: [`WebSiteUserFields.xlsx`](WebSiteUserFields.xlsx) and [Registration — user fields](registration-user-fields.md).
 
 **Fields cover:** login (Google, Microsoft, email/password, phone/SMS), profile names (EN/CN), nickname, gender, DOB, WeChat ID, email, address, family ID/relationship, school roles, student’s regular school and grade.
-
----
-
-## Original question document
-
-Full vendor question list (without answers): see parent project `documents/ShaornCS-lms-queries (1).docx`.

@@ -4,19 +4,17 @@
 
 ## Phase 1 priority
 
-After the vendor meeting (May 2026), the school confirmed:
-
-> **Phase 1** includes the **public homepage** and **registration / course enrollment** (vendor meeting, May 2026).
+**Phase 1** includes the **public homepage** and **registration / course enrollment**.
 
 Phase 1 registration breaks into:
 
 | Part | Document | Status |
 |------|----------|--------|
 | **Public homepage** | [Public homepage](public-homepage.md), [About](about-school.md) | Confirmed — phase 1 |
-| **A. User & family profiles** | [Registration — user fields](registration-user-fields.md) | Field list from Kyna (`WebSiteUserFields.xlsx`) |
+| **A. User & family profiles** | [Registration — user fields](registration-user-fields.md) | [`WebSiteUserFields.xlsx`](WebSiteUserFields.xlsx) |
 | **B. Course enrollment & payment** | This page (cart, classes, discounts, gateway) | Requirements confirmed |
 
-Send vendors **both**: profile fields (Excel + wiki) and the enrollment/payment requirements below.
+Implement profile fields per [user fields](registration-user-fields.md) and the enrollment/payment requirements below.
 
 ## Diagrams
 
@@ -78,7 +76,7 @@ See [Registration — user fields](registration-user-fields.md) for steps before
 | REQ-PAY-04 | Only **primary owner** completes checkout (billing). | Implied |
 | REQ-PAY-05 | Admin dashboard for enrollment and payment tracking. | Confirmed |
 | REQ-PAY-06 | Admin can manage rosters tied to payment status. | Confirmed |
-| REQ-PAY-07 | Phase 1 includes end-to-end **registration + enrollment + payment**. | Confirmed (May 2026) |
+| REQ-PAY-07 | Phase 1 includes end-to-end **registration + enrollment + payment**. | Confirmed |
 
 ## Admin capabilities
 
@@ -94,7 +92,7 @@ See [Registration — user fields](registration-user-fields.md) for steps before
 | Course catalog fields | Class ID, fee, capacity, schedule — vendor sheet TBD |
 | Refund policy | Business rules + UI |
 | Waitlist | When class is full |
-| Installment plans | Not in consolidated doc — confirm |
+| Installment plans | Confirm with school |
 | Tax / fee line items | Confirm with school |
 
 ## Related documents

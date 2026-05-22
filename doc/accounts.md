@@ -69,7 +69,7 @@ Student ──required──► one Account
 
 ## Profile data at registration
 
-When parents and students are created, collect the fields defined in **[Registration — user fields](registration-user-fields.md)** (source: `WebSiteUserFields.xlsx`):
+When parents and students are created, collect the fields defined in **[Registration — user fields](registration-user-fields.md)** and [`WebSiteUserFields.xlsx`](WebSiteUserFields.xlsx):
 
 - **Login:** Google OAuth, Microsoft OAuth, email + password, or phone + SMS
 - **Identity:** nickname, English/Chinese names, gender, date of birth (students)

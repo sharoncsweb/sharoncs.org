@@ -14,7 +14,7 @@ Welcome to the requirements wiki for the new **Sharon Chinese School** website a
 
 Replace the aging public website with a modern, easy-to-use experience and add a **single-school Learning Management System (LMS)** so families can register, pay, and stay connected while teachers and staff run classes day to day.
 
-This wiki is the **source of truth** for product and technical requirements. Detailed specs live under [`doc/`](doc/). Each page includes **flat-design SVG diagrams** (English labels) for the vendor and school team.
+This wiki documents product and technical requirements. Detailed specs live under [`doc/`](doc/). Each page includes **flat-design SVG diagrams** (English labels) for the vendor and school team.
 
 ### Platform map
 
@@ -24,7 +24,7 @@ This wiki is the **source of truth** for product and technical requirements. Det
 
 ## Implementation phases
 
-Agreed with **The Web Design LLC** (May 2026). Build in order: **phase 1 first**, then student/teacher LMS, then ongoing improvements. Full context: [Project overview](doc/overview.md).
+Build in order: **phase 1 first**, then student/teacher LMS, then ongoing improvements. Full context: [Project overview](doc/overview.md).
 
 ![Implementation phases](doc/assets/diagrams/overview-phases.svg)
 
@@ -131,19 +131,6 @@ Enhancements and legacy content migration as the school prioritizes.
 | Document | Description |
 |----------|-------------|
 | [Vendor Q&A log](doc/vendor-qa.md) | Questions from The Web Design LLC and school answers |
-
----
-
-## Source documents
-
-Requirements were consolidated from school materials (also kept locally in the parent project `documents/` folder):
-
-- `Sharon_Chinese_School_LMS_Requirements.docx` — consolidated requirements
-- `sharon_chinese_school-lms-queries.docx` — vendor questions with answers (Kyna, 2026-03-21)
-- `ShaornCS-lms-queries (1).docx` — original vendor question set
-- `WebSiteUserFields.xlsx` — registration profile fields (Kyna, May 2026); copy in [`doc/`](doc/WebSiteUserFields.xlsx)
-
-When the wiki and Word docs disagree, **prefer the answered Q&A** (`vendor-qa.md`) and update the wiki.
 
 ---
 

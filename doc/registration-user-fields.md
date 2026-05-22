@@ -2,7 +2,7 @@
 
 [← Wiki home](../README.md) · [Registration & payment](registration-payment.md)
 
-**Phase 1 priority** (agreed with The Web Design LLC, May 2026): **public homepage** plus registration and course enrollment. This document specifies **data collected at signup** and when adding family members.
+**Phase 1 priority:** **public homepage** plus registration and course enrollment. This document specifies **data collected at signup** and when adding family members.
 
 Field list: [`WebSiteUserFields.xlsx`](WebSiteUserFields.xlsx).
 
@@ -45,7 +45,7 @@ Field list: [`WebSiteUserFields.xlsx`](WebSiteUserFields.xlsx).
 | Address | Residential address (street). | Account / User |
 | City | Residential city. | Account / User |
 | State | Residential state. | Account / User |
-| Zip Code | Residential ZIP (use **Residential** in UI; fix typo from source sheet). | Account / User |
+| Zip Code | Residential ZIP (use **Residential** in UI; fix typo from field list). | Account / User |
 | Family Identifier | System-generated family ID. | Account |
 | Family Relationship | **Self**, **Spouse**, **Child** | Links person to family account |
 | School Assigned Role | Multiple allowed. See [roles](#school-assigned-role). | User |
@@ -115,7 +115,7 @@ Recommended order for the vendor:
 
 | ID | Requirement | Status |
 |----|-------------|--------|
-| REQ-REG-01 | Collect fields per catalog when creating users and students. | Confirmed (May 2026) |
+| REQ-REG-01 | Collect fields per catalog when creating users and students. | Confirmed |
 | REQ-REG-02 | **Phone + SMS** supported for login and verification. | Confirmed |
 | REQ-REG-02b | **Email + password**, **Google OAuth**, and **Microsoft OAuth** supported. | Confirmed |
 | REQ-REG-03 | Support verification code step during registration/login. | Confirmed |
@@ -124,7 +124,7 @@ Recommended order for the vendor:
 | REQ-REG-06 | School Assigned Role supports multiple values per user. | Confirmed |
 | REQ-REG-07 | Date of Birth used to determine age group / class level. | Confirmed |
 | REQ-REG-08 | Current regular school and grade captured for students. | Confirmed |
-| REQ-REG-09 | **Homepage** + registration + course enrollment are **phase 1** delivery priority. | Confirmed (vendor meeting) |
+| REQ-REG-09 | **Homepage** + registration + course enrollment are **phase 1** delivery priority. | Confirmed |
 
 ---
 

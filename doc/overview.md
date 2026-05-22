@@ -39,7 +39,7 @@ The current site at [www.sharoncs.org](https://www.sharoncs.org/) is dated and d
 
 | Role | Responsibility |
 |------|----------------|
-| **School committee / Kyna** | Product decisions, answers to vendor questions |
+| **School committee** | Product decisions, answers to vendor questions |
 | **Parents & students** | Primary end users for registration and learning |
 | **Teachers, TAs, volunteers** | Classroom and operational workflows |
 | **Administrators** | Yearly course setup, schedules, rosters, payments |
@@ -47,14 +47,10 @@ The current site at [www.sharoncs.org](https://www.sharoncs.org/) is dated and d
 
 ## Implementation priority
 
-Agreed with **The Web Design LLC** (May 2026):
-
 | Phase | Focus | Documentation |
 |-------|--------|----------------|
 | **1 (now)** | **Public homepage** (hero, mission, events, announcements), About/contact, **registration**, parent portal, enrollment, payment | [Public homepage](public-homepage.md), [About](about-school.md), [Registration flow](registration-flow.md), [Parent portal](parent-portal.md) |
 | **2+** | Student/teacher LMS depth, materials, assignments, full admin tooling | [Student](student-portal.md), [Teacher](teacher-portal.md), [Admin](admin-portal.md) portals |
-
-The vendor requested detailed registration fields; the school provided **`WebSiteUserFields.xlsx`** (see wiki).
 
 ## Scope
 

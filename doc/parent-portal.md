@@ -66,7 +66,7 @@ For each child on the account:
 
 ### Registration & enrollment (phase 1)
 
-Central to phase 1 delivery — see **[Registration flow](registration-flow.md)** and [Registration & payment](registration-payment.md):
+Central to phase 1 delivery ([Registration & payment](registration-payment.md)):
 
 1. Browse **course catalog** by grade / level (using student DOB and regular-school grade as hints)
 2. Select classes per student → **cart**
@@ -132,7 +132,7 @@ Use one session; do not require a second account.
 | REQ-PAR-01 | Dedicated **parent portal** for family account management. | Confirmed |
 | REQ-PAR-02 | Parents manage **student profiles** and view all children on one dashboard. | Confirmed |
 | REQ-PAR-03 | **Primary owner** completes payments; portal shows billing to all parents on account. | Confirmed |
-| REQ-PAR-04 | Parents complete **course enrollment** and cart checkout from the portal. | Confirmed (phase 1) |
+| REQ-PAR-04 | Parents complete **course enrollment** and cart checkout from the portal. | Confirmed |
 | REQ-PAR-05 | Parents view each child’s **schedule, assignments, progress, and class announcements**. | Confirmed |
 | REQ-PAR-06 | Parents see **school-wide** announcements and feeds. | Confirmed |
 | REQ-PAR-07 | Users with Parent + other roles access other portals without re-login. | Confirmed |
