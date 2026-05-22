@@ -4,7 +4,7 @@
 
 **Phase 1 priority** (agreed with The Web Design LLC, May 2026): **public homepage** plus registration and course enrollment. This document specifies **data collected at signup** and when adding family members.
 
-**Source:** `WebSiteUserFields.xlsx` (Kyna, 2026) — also in the parent project `documents/` folder. A copy is stored in this repo as [`WebSiteUserFields.xlsx`](WebSiteUserFields.xlsx).
+Field list: [`WebSiteUserFields.xlsx`](WebSiteUserFields.xlsx).
 
 ## Diagrams
 
@@ -27,8 +27,6 @@
 
 
 ## Field catalog
-
-Chinese labels exist only in `WebSiteUserFields.xlsx` (for the school committee). **Vendor UI and this wiki use English only.**
 
 | Field (EN) | Description / details | Applies to |
 |------------|----------------------|------------|
