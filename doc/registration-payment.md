@@ -1,43 +1,56 @@
 # Registration & payment
 
-[← Wiki home](../README.md) · **[Complete registration flow](registration-flow.md)**
+[← Wiki home](../README.md)
 
 ## Phase 1 priority
 
 After the vendor meeting (May 2026), the school confirmed:
 
-> **Registration and course enrollment are the first delivery priority.**
+> **Phase 1** includes the **public homepage** and **registration / course enrollment** (vendor meeting, May 2026).
 
-Phase 1 breaks into two parts:
+Phase 1 registration breaks into:
 
 | Part | Document | Status |
 |------|----------|--------|
+| **Public homepage** | [Public homepage](public-homepage.md), [About](about-school.md) | Confirmed — phase 1 |
 | **A. User & family profiles** | [Registration — user fields](registration-user-fields.md) | Field list from Kyna (`WebSiteUserFields.xlsx`) |
-| **B. Course enrollment & payment** | This page (cart, classes, discounts, gateway) | Requirements confirmed; detailed field spec TBD |
+| **B. Course enrollment & payment** | This page (cart, classes, discounts, gateway) | Requirements confirmed |
 
 Send vendors **both**: profile fields (Excel + wiki) and the enrollment/payment requirements below.
 
 ## Diagrams
 
-**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
+### 🛒 选课付款一条龙
 
-| | | | | |
-|:---:|:---:|:---:|:---:|:---:|
-| ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
-| Parent | Student | Teacher | Admin | School |
+```mermaid
+flowchart LR
+  A["👨‍👩‍👧 选孩子"] --> B["📚 挑班级"]
+  B --> C["🛒 购物车"]
+  C --> D["🏷️ 折扣"]
+  D --> E["💳 付款"]
+  E --> F["🧾 收据 ✅"]
+  style E fill:#d4edda
+```
 
-### Enrollment and payment
+### 🏷️ 三种常见折扣
 
-![Enrollment and payment](assets/diagrams/payment-cart.svg)
+```mermaid
+flowchart TB
+  CART["🛒 购物车"] --> E["🐦 早鸟 Early bird"]
+  CART --> S["👫 兄弟姐妹 Sibling"]
+  CART --> M["📚 多班 Multi-class"]
+```
 
-### Discount types
+### 👨‍👩‍👧 谁按下付款键
 
-![Discount types](assets/diagrams/payment-discounts.svg)
+```mermaid
+flowchart TB
+  PO["⭐ 主家长\n能付款"] --> CHECKOUT["💳 Checkout"]
+  SP["配偶\n一般只看"] -.-> CHECKOUT
+  CHECKOUT --> OK["✅ 报名成功\n孩子进班级名单"]
+```
 
-### Who can checkout
-
-![Who can checkout](assets/diagrams/payment-checkout.svg)
-
+---
 
 ## Overview
 
@@ -59,28 +72,15 @@ See [Registration — user fields](registration-user-fields.md) for steps before
 - Enforce prerequisites or capacity limits if school defines them (TBD)
 - One cart may include multiple students and multiple classes
 
-## Public course catalog
+## Discounts
 
-Before login, visitors can **browse** the current semester course list (name, schedule summary, tuition, early vs regular price). See [Public site content](public-site-content.md) and legacy `/course`.
+| Type | Status |
+|------|--------|
+| Early bird | Confirmed (concept) |
+| Sibling | Confirmed (concept) |
+| Multi-class | Confirmed (concept) |
 
-| ID | Requirement | Status |
-|----|-------------|--------|
-| REQ-CAT-01 | Anonymous course catalog browse | Confirmed |
-
----
-
-## Discounts & refunds
-
-Detailed rules (amounts, exclusions, late enrollment, refunds) are documented in **[Tuition, discounts & refunds](tuition-policies.md)** — migrated from the legacy site. Summary:
-
-| Type | Legacy rule (confirm annually) |
-|------|-------------------------------|
-| Early registration | $15 off per course by deadline |
-| Multi-course (3+ youth) | $30/year or $15/semester for 3rd+ course |
-| Teacher’s child / Military | $30/year or $15/semester per course |
-| Stacking | Discounts **cannot be combined** (legacy) |
-
-Checkout must show applied discounts and link to the full policy page.
+*Exact rules, amounts, and date windows — define with school business office.*
 
 ## Payment integration
 
@@ -106,15 +106,13 @@ Checkout must show applied discounts and link to the full policy page.
 | Topic | Notes |
 |-------|--------|
 | Course catalog fields | Class ID, fee, capacity, schedule — vendor sheet TBD |
+| Refund policy | Business rules + UI |
 | Waitlist | When class is full |
-| Payment processor | Stripe/Square vs legacy PayPal fee wording |
-| Policy dates | Early-bird deadlines per semester |
+| Installment plans | Not in consolidated doc — confirm |
+| Tax / fee line items | Confirm with school |
 
 ## Related documents
 
-- [Tuition, discounts & refunds](tuition-policies.md)
-- [Registration flow](registration-flow.md)
-- [Public site content](public-site-content.md)
 - [Parent portal](parent-portal.md)
 - [Registration — user fields](registration-user-fields.md)
 - [Accounts & enrollment](accounts.md)

@@ -22,11 +22,14 @@ Replace the aging public website with a modern, easy-to-use experience and add a
 
 ## Phase 1 priority (May 2026)
 
-**Registration and course enrollment** are the first deliverables (vendor meeting with The Web Design LLC).
+Agreed with **The Web Design LLC**: deliver a **professional public homepage** and **registration / course enrollment** together.
 
-1. **[Registration flow (complete guide)](doc/registration-flow.md)** — end-to-end for vendor
-2. **[User & profile fields](doc/registration-user-fields.md)** — Kyna’s field spec (`WebSiteUserFields.xlsx`)
-3. **[Enrollment & payment](doc/registration-payment.md)** — class cart, discounts, Stripe/Square
+| Track | Deliverables |
+|-------|----------------|
+| **Public website** | [Homepage](doc/public-homepage.md) (hero, mission, events, announcements) · [About](doc/about-school.md) · [Contact](doc/contact-and-calendar.md) · [Public content map](doc/public-site-content.md) |
+| **Registration** | [Registration flow](doc/registration-flow.md) · [User fields](doc/registration-user-fields.md) · [Enrollment & payment](doc/registration-payment.md) · [Tuition policies](doc/tuition-policies.md) |
+
+**Vendor start here:** [Registration flow](doc/registration-flow.md) + [Public homepage](doc/public-homepage.md)
 
 ---
 
@@ -35,7 +38,7 @@ Replace the aging public website with a modern, easy-to-use experience and add a
 | Area | Summary |
 |------|---------|
 | **Public site** | Mission, About, homepage, course catalog, contact, tuition policies |
-| **Phase 1** | Parent portal, registration, family profiles, course enrollment, payment |
+| **Phase 1** | Public homepage (mission, events) + registration, parent portal, enrollment, payment |
 | **Platform** | One school only (Sharon Chinese School); no SaaS / subscription to use the platform |
 | **Users** | Parents self-register; manage students; admins can assist when needed |
 | **Learning** | In-person classes first; LMS for materials, assignments, schedules, communication |

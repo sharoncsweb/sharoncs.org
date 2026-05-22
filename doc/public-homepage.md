@@ -1,6 +1,10 @@
 # Public homepage & landing page
 
-[← Wiki home](../README.md)
+[← Wiki home](../README.md) · [Registration flow](registration-flow.md)
+
+## Phase 1
+
+The **public homepage** is a **phase 1 deliverable** (same priority as registration and enrollment). Families and the community must see a professional site before and during signup.
 
 ## Summary
 

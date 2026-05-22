@@ -10,9 +10,9 @@ Pages and features visitors expect from [www.sharoncs.org](https://www.sharoncs.
 
 | Page / feature | Wiki spec | Legacy reference | Priority |
 |----------------|-----------|------------------|----------|
-| Homepage | [public-homepage.md](public-homepage.md) | `/` | P0 |
-| About + mission | [about-school.md](about-school.md) | `about_our_school` | P0 |
-| Contact | [contact-and-calendar.md](contact-and-calendar.md) | `contact_us` | P0 |
+| Homepage | [public-homepage.md](public-homepage.md) | `/` | **P0 — Phase 1** |
+| About + mission | [about-school.md](about-school.md) | `about_our_school` | **P0 — Phase 1** |
+| Contact | [contact-and-calendar.md](contact-and-calendar.md) | `contact_us` | **P0 — Phase 1** |
 | Course catalog (browse) | Below | `/course` | P0 |
 | Registration | [registration-flow.md](registration-flow.md) | `/register` | P0 |
 | Tuition, discounts, refunds | [tuition-policies.md](tuition-policies.md) | `discount_and_refund` | P0 |

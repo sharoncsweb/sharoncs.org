@@ -6,25 +6,36 @@ Questions from **The Web Design LLC** and answers from the school (primarily **K
 
 ## Diagrams
 
-**Characters:** Parent · Student (ages 7–13) · Teacher · Admin · School
+### 🤝 学校 ↔ 外包公司怎么协作
 
-| | | | | |
-|:---:|:---:|:---:|:---:|:---:|
-| ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
-| Parent | Student | Teacher | Admin | School |
+```mermaid
+flowchart LR
+  SCH["🏫 学校委员会\nKyna 等"] -->|需求/答疑| VEN["🖥️ The Web Design LLC"]
+  VEN -->|问题清单| SCH
+  SCH -->|答案+字段表| WIKI["📖 本 Wiki"]
+  WIKI --> VEN
+```
 
-### School and vendor
+### 📅 问答时间线
 
-![School and vendor](assets/diagrams/vendor-collaboration.svg)
+```mermaid
+flowchart LR
+  Q1["❓ _vendor 问题 doc_\nMar 2026"] --> A1["✅ Kyna 回答"]
+  A1 --> MTG["🤝 会议: 注册优先\nMay 2026"]
+  MTG --> XLS["📊 WebSiteUserFields.xlsx"]
+```
 
-### Requirements timeline
+### 🥇 他们现在最该做什么
 
-![Requirements timeline](assets/diagrams/vendor-timeline.svg)
+```mermaid
+flowchart TB
+  NOW["🎯 现在 Focus"] --> REG["📝 注册+家庭字段"]
+  NOW --> ENR["🛒 选课+付款"]
+  NOW --> PAR["🏠 家长门户"]
+  LATER["⏳ 稍后"] --> LMS["📚 完整 LMS 功能"]
+```
 
-### Current vendor focus
-
-![Current vendor focus](assets/diagrams/vendor-focus.svg)
-
+---
 
 ## 1. Platform structure
 
@@ -159,7 +170,7 @@ Documented in consolidated requirements — see [Authentication](authentication.
 
 ## 12. Vendor meeting — registration priority (May 2026)
 
-**Context:** Meeting with The Web Design LLC. School emphasized **registration / course enrollment first**.
+**Context:** Meeting with The Web Design LLC. School emphasized **registration / course enrollment first**; phase 1 now also includes the **public homepage** (hero, mission, events, announcements).
 
 **Vendor request:** More detail on registration data.
 

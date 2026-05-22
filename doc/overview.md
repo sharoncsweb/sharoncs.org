@@ -10,27 +10,41 @@ Sharon Chinese School (MA Sharon Chinese Language School) needs a **modern publi
 - Parents manage students, class enrollment, and payments in one place
 - Teachers run classes with materials, assignments, and communication similar to Google Classroom
 - Administrators manage courses, schedules, staff, volunteers, and school-wide announcements
-- The **public homepage** is professional and modern, with a hero section and school events/announcements posted by authorized staff
 
 ## Diagrams
 
-| | | | | |
-|:---:|:---:|:---:|:---:|:---:|
-| ![Parent](assets/characters/parent.svg) | ![Student](assets/characters/student.svg) | ![Teacher](assets/characters/teacher.svg) | ![Admin](assets/characters/admin.svg) | ![School](assets/characters/school.svg) |
-| Parent | Student | Teacher | Admin | School |
+### 🏫 Who we are building for
 
-### Who we are building for
+```mermaid
+flowchart TB
+  subgraph school["🏫 莎伦中文学校 Sharon Chinese School"]
+    P["👨‍👩‍👧 家长 Parent\n帮家庭注册缴费"]
+    S["👦👧 学生 Student\n7–13 岁 · 学中文"]
+    T["👩‍🏫 老师 Teacher\n教课 · 批改作业"]
+    A["📋 管理员 Admin\n排课 · 收款"]
+  end
+  P -->|"管理"| S
+  T -->|"教"| S
+  A -->|"安排课程"| T
+  P -->|"选课付款"| A
+```
 
-![Who we are building for](assets/diagrams/overview-stakeholders.svg)
+### 📅 Build order (phase 1 first)
 
-### Build order (phase 1 first)
+```mermaid
+flowchart LR
+  P1["🥇 Phase 1\n家长门户 + 注册缴费"] --> P2["🥈 Phase 2\n学生/老师 LMS"]
+  P2 --> P3["🥉 持续改进\n通知 · 更多功能"]
+  style P1 fill:#fff3cd
+```
 
-![Build order (phase 1 first)](assets/diagrams/overview-phases.svg)
+### 😅 Old site → ✨ New platform
 
-### Legacy site to new platform
-
-![Legacy site to new platform](assets/diagrams/overview-legacy-new.svg)
-
+```mermaid
+flowchart LR
+  OLD["😵 旧网站\n难找 · 难注册"] --> NEW["✨ 新平台\n清晰 · 一家一户账号"]
+  NEW --> LMS["📚 LMS\n作业 · 课表 · 公告"]
+```
 
 ## Problem with the legacy site
 
@@ -52,7 +66,7 @@ Agreed with **The Web Design LLC** (May 2026):
 
 | Phase | Focus | Documentation |
 |-------|--------|----------------|
-| **1 (now)** | Registration, **parent portal**, course enrollment, payment | [Parent portal](parent-portal.md), [User fields](registration-user-fields.md), [Registration & payment](registration-payment.md) |
+| **1 (now)** | **Public homepage** (hero, mission, events, announcements), About/contact, **registration**, parent portal, enrollment, payment | [Public homepage](public-homepage.md), [About](about-school.md), [Registration flow](registration-flow.md), [Parent portal](parent-portal.md) |
 | **2+** | Student/teacher LMS depth, materials, assignments, full admin tooling | [Student](student-portal.md), [Teacher](teacher-portal.md), [Admin](admin-portal.md) portals |
 
 The vendor requested detailed registration fields; the school provided **`WebSiteUserFields.xlsx`** (see wiki).
@@ -62,9 +76,7 @@ The vendor requested detailed registration fields; the school provided **`WebSit
 ### In scope
 
 - Single-school platform (not multi-tenant SaaS)
-- **Public website** — professional homepage with **mission**, About, contact, course catalog, policies ([public-site-content](public-site-content.md))
-- **Public homepage** — hero, mission line, events, announcements ([spec](public-homepage.md))
-- **About the school** — nonprofit mission, history, leadership ([about-school](about-school.md))
+- Public marketing / information pages (modern UX)
 - Parent self-service registration and student profiles
 - Class enrollment and payment
 - LMS features supporting **in-person** instruction
@@ -94,11 +106,6 @@ The vendor requested detailed registration fields; the school provided **`WebSit
 
 ## Related documents
 
-- [Public site content](public-site-content.md)
-- [About the school](about-school.md)
-- [Public homepage](public-homepage.md)
-- [Tuition policies](tuition-policies.md)
-- [Legacy content migration](legacy-content-migration.md)
 - [Parent portal](parent-portal.md)
 - [Registration — user fields](registration-user-fields.md)
 - [Registration & payment](registration-payment.md)

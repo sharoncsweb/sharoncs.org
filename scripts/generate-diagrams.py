@@ -109,7 +109,7 @@ def diagram_stakeholders():
 
 def diagram_phase_timeline():
     b = (
-        box(40, 70, 180, 70, "Phase 1\\nRegistration &\\nParent portal", "#FEF3C7", "#FCD34D")
+        box(40, 70, 200, 70, "Phase 1\\nHomepage &\\nRegistration", "#FEF3C7", "#FCD34D")
         + arrow(220, 105, 260, 105)
         + box(260, 70, 180, 70, "Phase 2\\nStudent & Teacher\\nLMS features", "#E0E7FF", "#A5B4FC")
         + arrow(440, 105, 480, 105)

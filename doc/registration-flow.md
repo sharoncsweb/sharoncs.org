@@ -3,7 +3,7 @@
 [← Wiki home](../README.md)
 
 **Audience:** The Web Design LLC and school committee.  
-**Purpose:** Single end-to-end reference for **phase 1** — family signup, profiles, class enrollment, and payment.
+**Purpose:** Single end-to-end reference for **phase 1** — public homepage entry, family signup, profiles, class enrollment, and payment.
 
 **Related detail pages:** [User fields](registration-user-fields.md) · [Payment & cart](registration-payment.md) · [Parent portal](parent-portal.md) · [Accounts model](accounts.md) · [Field spreadsheet](WebSiteUserFields.xlsx)
 
@@ -13,10 +13,14 @@
 
 | In scope | Out of scope |
 |----------|----------------|
+| **Public homepage** (hero, mission, events, announcements) | Full LMS (assignments, etc.) — later phases |
+| About, contact, public course catalog (browse) | Gallery, news archive (optional phase 2) |
 | Parent **self-registration** | Platform subscription fee |
 | Family account + student profiles | Admin-created accounts (except assist) |
-| Class selection, cart, discounts, pay | Full LMS (assignments, etc.) — later phases |
+| Class selection, cart, discounts, pay | |
 | Primary owner pays tuition | |
+
+See [Public homepage](public-homepage.md) and [Public site content](public-site-content.md).
 
 ---
 
