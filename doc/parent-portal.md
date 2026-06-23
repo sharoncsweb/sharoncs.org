@@ -116,8 +116,9 @@ Non-primary parents may browse and build a cart; **payment** requires primary ow
 
 | Feature | Notes | Acceptance criteria |
 |---------|--------|---------------------|
-| Payment history | Per student and per term | Export or resend receipt for primary owner. |
-| Receipts | Download or resend | Matches gateway transaction id when online. |
+| Payment history | Per student and per term; spans **all past academic years/sessions** | Export or resend receipt for primary owner. Filter by year/session. |
+| Receipts | Download or resend any past receipt | Matches gateway transaction ID when online; offline payments show admin-recorded date and method. |
+| Enrollment history | Classes enrolled per student per year | Read-only; shows class name, session, payment status, and dates. |
 | Unpaid / balance due | Alerts on dashboard | Clears when admin marks offline paid or gateway succeeds. |
 | Offline payments | Admin-marked paid — visible to parent | Shows paid date and method note without card data. |
 

@@ -137,6 +137,8 @@ Discount evaluation order (recommended): compute **line price** (including early
 | REQ-PAY-05 | Admin dashboard for enrollment and payment tracking. | Confirmed |
 | REQ-PAY-06 | Admin can manage rosters tied to payment status. | Confirmed |
 | REQ-PAY-07 | Phase 1 includes end-to-end **registration + enrollment + payment**. | Confirmed |
+| REQ-PAY-08 | Parent can view **full payment and enrollment history** across all past academic years/sessions from the parent portal. | Confirmed |
+| REQ-PAY-09 | Parent can **download or resend any past receipt** from the payment history view. | Confirmed |
 
 ## Admin capabilities
 
