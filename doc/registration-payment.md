@@ -22,7 +22,7 @@ Implement profile fields per [user fields](registration-user-fields.md) and the 
 |--------------------|-------------------|
 | Cart line prices & discounts | **Admin → Pricing → Tuition rules** · **Admin → Pricing → Discount rules** |
 | Course offerings & capacity | **Admin → Academic year → Courses** · **Admin → Enrollment → Capacity** |
-| Payment (Stripe / Square) | **Admin → Settings → Payment gateways** |
+| Payment (Stripe / Square / PayPal) | **Admin → Settings → Payment gateways** |
 | Paid / unpaid status | **Admin → Enrollment → Payments** |
 
 Full map: **[Frontend ↔ backend configuration map](frontend-backend-config.md#registration--checkout)**.
@@ -95,7 +95,7 @@ Discount evaluation order (recommended): compute **line price** (including early
 
 1. Select student(s) and add classes to cart from catalog or parent portal.
 2. Review line items: course name, schedule summary, base fee, early bird adjustment, applied policy discount.
-3. Confirm total; redirect to payment gateway (Stripe or Square).
+3. Confirm total; redirect to payment gateway (Stripe, Square, or PayPal).
 4. On success: mark enrollment **paid**, send receipt, show confirmation with class list.
 5. On failure: keep cart intact; show retry; do not create duplicate charges for the same cart session.
 
@@ -130,7 +130,7 @@ Discount evaluation order (recommended): compute **line price** (including early
 
 | ID | Requirement | Status |
 |----|-------------|--------|
-| REQ-PAY-01 | Integrate payment gateway (**Stripe**, **Square**, or similar). | Confirmed |
+| REQ-PAY-01 | Integrate payment gateway (**Stripe**, **Square**, **PayPal**, or similar). | Confirmed |
 | REQ-PAY-02 | Track payment status: paid / unpaid / partial. | Confirmed |
 | REQ-PAY-03 | Generate or email **receipts** on successful payment. | Confirmed |
 | REQ-PAY-04 | Only **primary owner** completes checkout (billing). | Implied |
