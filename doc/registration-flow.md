@@ -24,7 +24,7 @@ See [Public homepage](public-homepage.md) and [Public site content](public-site-
 
 ### Phase 1 acceptance criteria (end-to-end)
 
-- A new visitor can start from the public homepage, complete account creation, add at least one student, enroll in one or more classes, pay as primary owner, and land in the parent portal with paid status visible.
+- A new visitor can start from the public homepage, complete account creation, enroll in one or more classes (as an adult learner, or by adding children as students), pay as primary owner, and land in the parent portal with paid status visible.
 - A returning parent can sign in, add classes for an existing student, and pay without re-entering family ID.
 - Registration closed season shows clear messaging on homepage and blocks new enrollments while preserving sign-in.
 - Admin can complete or fix a family record via assisted registration with audit trail.
@@ -34,7 +34,7 @@ See [Public homepage](public-homepage.md) and [Public site content](public-site-
 
 - **Split wizard vs single flow** — school may require profile completion before catalog; system must not lose cart when user signs out mid-flow.
 - **OAuth without mobile on file** — prompt for required fields before enrollment if phone is mandatory for school contact.
-- **Zero children at enroll step** — redirect to add child or block with actionable message.
+- **Zero children at enroll step** — allowed; adult learners can enroll themselves in adult classes without adding any children. The enrollment screen must let a parent-role user select themselves as the enrollee when no children are present.
 - **Spouse attempts checkout** — deny with explanation and name of primary owner contact.
 - **Class full at pay** — reconcile cart before gateway charge.
 - **Browser back after pay** — show confirmation, not double charge.
@@ -52,7 +52,7 @@ Public site (Register) → Sign in / Sign up
   → Sign up (Google / Microsoft / email / phone+SMS)
   → Parent profile (Self) → Family ID created
   → Add Spouse and/or Children (optional)
-  → Enroll each child in classes → Cart → Discounts → Pay
+  → Enroll self (adult classes) and/or each child in classes → Cart → Discounts → Pay
   → Confirmation → Parent portal (ongoing)
 ```
 
@@ -157,7 +157,7 @@ Done in the **[Parent portal](parent-portal.md)** (or continuation of registrati
 
 | # | Screen / action | Detail |
 |---|-----------------|--------|
-| 5.1 | Select student | Which child to enroll |
+| 5.1 | Select enrollee | Self (adult classes) or one or more children; if no children on file, defaults to self |
 | 5.2 | Browse catalog | Classes by grade / subject; use DOB + regular-school grade for placement hints |
 | 5.3 | Add to cart | Multiple students and multiple classes allowed |
 | 5.4 | Apply discounts | Early bird, sibling, multi-class (rules TBD with school) |
